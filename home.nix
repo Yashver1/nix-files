@@ -169,7 +169,7 @@
     enable = true;
     settings = {
       logo = {
-        source = "nixos_old";
+        source = "gnu";
       };
 
       modules = [
