@@ -128,7 +128,7 @@
     enableZshIntegration = true;
     settings = {
       command = "zsh";
-      theme = "Gitlab Dark Grey";
+      theme = "GitLab Dark Grey";
       window-decoration = "server";
       gtk-titlebar = false;
       gtk-tabs-location = "hidden";
