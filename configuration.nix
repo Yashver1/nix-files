@@ -2,26 +2,34 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+    inputs.home-manager.nixosModules.default
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-	
+
   # ZSH
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
   programs.nix-ld.enable = true;
 
   # Flakes
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -117,7 +125,10 @@
   users.users.yash = {
     isNormalUser = true;
     description = "Yashver Shori";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
     ];
     shell = pkgs.zsh;
@@ -126,11 +137,12 @@
 
   # Home Manager
   home-manager = {
-    extraSpecialArgs = {inherit inputs;};
+    extraSpecialArgs = { inherit inputs; };
     users = {
       "yash" = import ./home.nix;
     };
-  
+    backupFileExtension = "backup";
+
   };
 
   # Steam
@@ -147,45 +159,46 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-     tmux
-     nixfmt
-     fastfetch
-     mangohud
-     protonup
-     rustc
-     fzf
-     gcc 
-     gnumake
-     pkg-config
-     python3
-     cargo
-     neovim
-     ghostty
-     google-chrome
-     lsd
-     zoxide
-     git
-     lazygit
-     gnutar
-     curl
-     tree-sitter
-     ripgrep
-     nodejs_24
-     libgccjit
-     gdb
-     unzip
-     go
+    discord-ptb
+    tmux
+    nixfmt
+    fastfetch
+    mangohud
+    protonup
+    rustc
+    fzf
+    gcc
+    gnumake
+    pkg-config
+    python3
+    cargo
+    neovim
+    ghostty
+    google-chrome
+    lsd
+    zoxide
+    git
+    lazygit
+    gnutar
+    curl
+    tree-sitter
+    ripgrep
+    nodejs_24
+    libgccjit
+    gdb
+    unzip
+    go
 
-
-     # GNOME Extensions
-     gnomeExtensions.blur-my-shell
-     gnomeExtensions.space-bar
-     gnomeExtensions.forge
-     gnomeExtensions.just-perfection
-     gnomeExtensions.user-themes
-     whitesur-gtk-theme
-     whitesur-cursors
-     whitesur-icon-theme
+    # GNOME Extensions
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.space-bar
+    gnomeExtensions.forge
+    gnomeExtensions.just-perfection
+    gnomeExtensions.user-themes
+    gnome-tweaks
+    whitesur-gtk-theme
+    whitesur-cursors
+    whitesur-icon-theme
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
