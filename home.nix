@@ -128,7 +128,7 @@
     enableZshIntegration = true;
     settings = {
       command = "zsh";
-      theme = "Nord Wave";
+      theme = "Vercel";
       window-decoration = "server";
       gtk-titlebar = false;
       gtk-tabs-location = "hidden";
