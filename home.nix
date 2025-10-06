@@ -140,7 +140,7 @@
     enable = true;
     prefix = "C-\\\\";
     plugins = with pkgs.tmuxPlugins; [
-      tmux-sensible
+      sensible
       vim-tmux-navigator
       minimal-tmux-status
     ];
