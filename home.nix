@@ -128,7 +128,7 @@
     enableZshIntegration = true;
     settings = {
       command = "zsh";
-      theme = "Tommorrow Night";
+      theme = "Tomorrow Night";
       window-decoration = "server";
       gtk-titlebar = false;
       gtk-tabs-location = "hidden";
