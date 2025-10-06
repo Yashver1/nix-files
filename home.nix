@@ -200,8 +200,8 @@
         "disk"
         "battery"
         "powerAdapter"
-        "localip"
-        "publicip"
+        # "localip"
+        # "publicip"
         "date"
         "time"
 
