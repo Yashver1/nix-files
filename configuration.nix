@@ -182,6 +182,7 @@
     gnutar
     curl
     tree-sitter
+    nix-search-tv
     ripgrep
     nodejs_24
     libgccjit
