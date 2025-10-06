@@ -148,6 +148,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      tmux
+     nixpkgs-fmt
      fastfetch
      mangohud
      protonup
