@@ -314,12 +314,12 @@
       };
 
       "org/gnome/desktop/interface" = {
-        font-name = "Inter Variable Medium";
-        document-font-name = "Inter Variable Medium";
-        monospace-font-name = "Inter Variable Medium"; # Inter is not monospaced; see note below
+        font-name = "Inter Variable Medium 11";
+        document-font-name = "Inter Variable Medium 11";
+        monospace-font-name = "Inter Variable Medium 11"; # Inter is not monospaced; see note below
       };
       "org/gnome/desktop/wm/preferences" = {
-        titlebar-font = "Inter Variable Medium";
+        titlebar-font = "Inter Variable Medium 11";
       };
 
     };
