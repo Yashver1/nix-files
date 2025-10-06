@@ -101,16 +101,16 @@
       "cp *"
     ];
 
-    envExtra = "
-    KEYTIMEOUT=1
-    VI_MODE_SET_CURSOR=true
-    VI_MODE_CURSOR_NORMAL=2
-    VI_MODE_CURSOR_VISUAL=2
-    VI_MODE_CURSOR_INSERT=6
-    VI_MODE_CURSOR_OPPEND=6
-    MODE_INDICATOR=''
-    INSERT_MODE_INDICATOR=''
-    ";
+    envExtra = ''
+      KEYTIMEOUT=1
+      VI_MODE_SET_CURSOR=true
+      VI_MODE_CURSOR_NORMAL=2
+      VI_MODE_CURSOR_VISUAL=2
+      VI_MODE_CURSOR_INSERT=6
+      VI_MODE_CURSOR_OPPEND=6
+      MODE_INDICATOR=""
+      INSERT_MODE_INDICATOR=""
+    '';
 
     oh-my-zsh = {
       enable = true;
