@@ -87,7 +87,7 @@
       ll = "lsd -l";
       la = "lsd -la";
       ls = "lsd";
-      rb = "git -C /home/yash/.config/nix add . && git -C /home/yash/.config/nix commit -m 'flake update: nixos' && sudo nixos-rebuild switch --flake /home/yash/.config/nix/ && git -C /home/yash/.config/nix push origin master";
+      rb = "git -C /home/yash/.config/nix add . && git -C /home/yash/.config/nix commit -m 'flake update: nixos' && git -C /home/yash/.config/nix push  origin master && sudo nixos-rebuild switch --flake /home/yash/.config/nix/ ";
     };
 
     history.size = 10000;
