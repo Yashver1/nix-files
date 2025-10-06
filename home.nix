@@ -311,6 +311,7 @@
           pkgs.gnomeExtensions.forge.extensionUuid
           pkgs.gnomeExtensions.just-perfection.extensionUuid
           pkgs.gnomeExtensions.user-themes.extensionUuid
+          pkgs.gnomeExtensions.rounded-window-corners-reborn.extensionUuid
         ];
       };
 

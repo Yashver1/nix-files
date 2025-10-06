@@ -193,6 +193,7 @@
     gnomeExtensions.forge
     gnomeExtensions.just-perfection
     gnomeExtensions.user-themes
+    gnomeExtensions.rounded-window-corners-reborn
     gnome-tweaks
     whitesur-gtk-theme
     whitesur-cursors
