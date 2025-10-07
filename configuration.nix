@@ -178,7 +178,7 @@
     fzf
     gcc
     gnumake
-    pkg-config
+    pkgconfig
     python3
     cargo
     neovim
