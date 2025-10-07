@@ -70,7 +70,7 @@
   #
   home.sessionVariables = {
     EDITOR = "neovim";
-    NIX_BUILD_SHELL = "zsh";
+    NIX_BUILD_SHELL = "${pkgs.zsh}/bin/zsh";
 
   };
 
