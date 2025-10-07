@@ -182,7 +182,7 @@
     git
     lazygit
     gnutar
-    curl
+    curlFull
     tree-sitter
     nix-search-tv
     ripgrep
