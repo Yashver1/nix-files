@@ -16,7 +16,7 @@
     inputs.home-manager.nixosModules.default
   ];
 
-  # Allow wakeup
+  # Fix wakeup
   services.udev.extraRules = ''
     ACTION=="add|change", SUBSYSTEM=="usb", ATTRS{idVendor}=="706b", ATTRS{idProduct}=="0011", ATTR{power/wakeup}="enabled"
     ACTION=="add|change", SUBSYSTEM=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c08b", ATTR{power/wakeup}="enabled"
