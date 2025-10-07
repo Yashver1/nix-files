@@ -117,6 +117,7 @@
     oh-my-zsh = {
       enable = true;
       plugins = [
+        "nix-shell"
         "git"
         "z"
         "vi-mode"
