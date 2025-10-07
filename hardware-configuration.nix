@@ -23,8 +23,9 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [ "kvm-amt" ];
   boot.extraModulePackages = [ ];
+  boot.kernelParams = [ "module_blacklist=amdgpu" ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/cad69950-69c0-431e-bee6-480270c6d78d";
@@ -40,6 +41,9 @@
     ];
   };
 
+  # swapDevices = [
+  #   { device = "/dev/disk/by-uuid/b8e6c6a7-2180-4317-8d8c-934807f2a824"; }
+  # ];
   swapDevices = lib.mkForce [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
