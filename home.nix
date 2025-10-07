@@ -68,6 +68,7 @@
   #
   #  /etc/profiles/per-user/yash/etc/profile.d/hm-session-vars.sh
   #
+
   home.sessionVariables = {
     EDITOR = "neovim";
     NIX_BUILD_SHELL = "zsh";
