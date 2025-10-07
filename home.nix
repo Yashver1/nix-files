@@ -70,8 +70,7 @@
   #
   home.sessionVariables = {
     EDITOR = "neovim";
-    NIX_BUILD_SHELL = "${pkgs.zsh}/bin/zsh";
-
+    NIX_BUILD_SHELL = "zsh";
   };
 
   # Let Home Manager install and manage itself.
