@@ -182,7 +182,6 @@
     git
     lazygit
     gnutar
-    cur
     curl.dev
     tree-sitter
     nix-search-tv
