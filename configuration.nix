@@ -5,6 +5,7 @@
 {
   config,
   pkgs,
+  lib,
   inputs,
   ...
 }:
@@ -15,6 +16,9 @@
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.default
   ];
+
+  #Disable swap
+  swapDevices = lib.mkForce [ ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
