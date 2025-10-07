@@ -85,6 +85,7 @@
     syntaxHighlighting.enable = true;
 
     shellAliases = {
+      cppdev = "nix develop /home/yash/Workspace/dev-shells/cpp";
       ll = "lsd -l";
       la = "lsd -la";
       ls = "lsd";
