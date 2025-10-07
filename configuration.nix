@@ -22,6 +22,12 @@
     ACTION=="add|change", SUBSYSTEM=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c08b", ATTR{power/wakeup}="enabled"
   '';
 
+  systemd.services."systemd-suspend" = {
+    serviceConfig = {
+      Environment = ''"SYSTEMD_SLEEP_FREEZE_USER_SESSIONS=false"'';
+    };
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
