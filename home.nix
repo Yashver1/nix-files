@@ -102,6 +102,7 @@
     ];
 
     envExtra = ''
+      ZSH_CUSTOM=~/.config/oh-my-zsh
       KEYTIMEOUT=1
       VI_MODE_SET_CURSOR=true
       VI_MODE_CURSOR_NORMAL=2
