@@ -180,6 +180,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     usbutils
+    ttyper
     cmake
     gparted
     kmod
