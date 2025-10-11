@@ -1,6 +1,6 @@
-{ ... }:
+{ lib, pkgs,... }:
 {
-  programs.ghostty = {
+  programs.ghostty =  {
     enable = true;
     enableZshIntegration = true;
   };

@@ -18,6 +18,21 @@
        # Necessary for using flakes on this system.
     nix.settings.experimental-features = "nix-command flakes";
 
+    users.users.yashver = {
+      name = "yashver";
+      home = "/Users/yashver";
+      shell = pkgs.zsh;
+    };
+
+
+    home-manager = {
+        extraSpecialArgs = { inherit inputs; };
+        users = {
+          "yashver" = import ./home.nix;
+        };
+        backupFileExtension = "backup";
+      };
+
     # Enable alternative shell support in nix-darwin.
     # programs.fish.enable = true;
 
