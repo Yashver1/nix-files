@@ -68,6 +68,10 @@
   #
   #  /etc/profiles/per-user/yash/etc/profile.d/hm-session-vars.sh
   #
+  #
+  imports = [
+
+  ];
 
   home.sessionVariables = {
     EDITOR = "neovim";

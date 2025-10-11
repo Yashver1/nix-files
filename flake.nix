@@ -21,7 +21,7 @@
         system = system;
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
+          ./arceus/configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
