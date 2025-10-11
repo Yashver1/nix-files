@@ -13,9 +13,16 @@
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
-   };
+  };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nix-homebrew, ... }:
+  outputs =
+    inputs@{
+      self,
+      nix-darwin,
+      nixpkgs,
+      nix-homebrew,
+      ...
+    }:
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -28,19 +35,19 @@
 
       darwinConfigurations."Yashvers-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = {inherit inputs;};
-        modules = [ 
-            ./giratina/configuration.nix
-            inputs.home-manager.darwinModules.default
-            nix-homebrew.darwinModules.nix-homebrew 
-            {
-              nix-homebrew = {
-                enable = true;
-                user = "yashver";
-                autoMigrate = true;
-              };
-            }
-          ];
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./giratina/configuration.nix
+          inputs.home-manager.darwinModules.default
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              user = "yashver";
+              autoMigrate = true;
+            };
+          }
+        ];
       };
     };
 }
