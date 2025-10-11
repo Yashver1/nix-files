@@ -6,15 +6,6 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    shellAliases = {
-      cppdev = "nix develop /home/yash/Workspace/dev-shells/cpp";
-      ll = "lsd -l";
-      la = "lsd -la";
-      ls = "lsd";
-      nb = "git -C /home/yash/.config/nix add . && git -C /home/yash/.config/nix commit -m 'flake update: nixos' && git -C /home/yash/.config/nix push  origin master && sudo nixos-rebuild switch --flake /home/yash/.config/nix/ ";
-      ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
-    };
-
     history.size = 1000000;
     history.ignoreAllDups = true;
     history.path = "$HOME/.zsh_history";
