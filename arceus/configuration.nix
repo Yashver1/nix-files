@@ -181,6 +181,7 @@
   environment.systemPackages = with pkgs; [
     usbutils
     ttyper
+    obsidian
     cmake
     gparted
     kmod
