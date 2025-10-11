@@ -70,7 +70,9 @@
   #
   #
   imports = [
-
+    ../terminal/ghostty.nix
+    ../terminal/tmux.nix
+    ../terminal/zsh.nix
   ];
 
   home.sessionVariables = {
@@ -80,114 +82,30 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
   programs.neovim = {
     enable = true;
   };
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-
-    shellAliases = {
-      cppdev = "nix develop /home/yash/Workspace/dev-shells/cpp";
-      ll = "lsd -l";
-      la = "lsd -la";
-      ls = "lsd";
-      nb = "git -C /home/yash/.config/nix add . && git -C /home/yash/.config/nix commit -m 'flake update: nixos' && git -C /home/yash/.config/nix push  origin master && sudo nixos-rebuild switch --flake /home/yash/.config/nix/ ";
-      ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
-    };
-
-    history.size = 1000000;
-    history.ignoreAllDups = true;
-    history.path = "$HOME/.zsh_history";
-    history.ignorePatterns = [
-      "rm *"
-      "pkill *"
-      "cp *"
-    ];
-
-    envExtra = ''
-      ZSH_CUSTOM=~/.config/oh-my-zsh
-      KEYTIMEOUT=1
-      VI_MODE_SET_CURSOR=true
-      VI_MODE_CURSOR_NORMAL=2
-      VI_MODE_CURSOR_VISUAL=2
-      VI_MODE_CURSOR_INSERT=6
-      VI_MODE_CURSOR_OPPEND=6
-      MODE_INDICATOR=" "
-      INSERT_MODE_INDICATOR=" "
-    '';
-
-    plugins = [
-      {
-        name = "zsh-nix-shell";
-        file = "nix-shell.plugin.zsh";
-        src = pkgs.fetchFromGitHub {
-          owner = "chisui";
-          repo = "zsh-nix-shell";
-          rev = "v0.8.0";
-          sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
-        };
-      }
-    ];
-
-    oh-my-zsh = {
-      enable = true;
-      plugins = [
-        "git"
-        "z"
-        "vi-mode"
-      ];
-      theme = "robbyrussell";
-    };
+  programs.zsh.shellAliases = {
+    cppdev = "nix develop /home/yash/Workspace/dev-shells/cpp";
+    ll = "lsd -l";
+    la = "lsd -la";
+    ls = "lsd";
+    nb = "git -C /home/yash/.config/nix add . && git -C /home/yash/.config/nix commit -m 'flake update: nixos' && git -C /home/yash/.config/nix push  origin master && sudo nixos-rebuild switch --flake /home/yash/.config/nix/ ";
+    ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
   };
 
-  programs.ghostty = {
-    enable = true;
-    enableZshIntegration = true;
-    settings = {
-      command = "zsh";
-      # background-opacity = 0.8;
-      theme = "GitLab Dark Grey";
-      window-decoration = "server";
-      gtk-titlebar = false;
-      gtk-tabs-location = "hidden";
-      window-padding-balance = true;
-      window-padding-x = 25;
-      window-padding-y = 15;
-    };
-
-  };
-
-  programs.tmux = {
-    enable = true;
-    prefix = "C-\\\\";
-    plugins = with pkgs.tmuxPlugins; [
-      sensible
-      vim-tmux-navigator
-      minimal-tmux-status
-    ];
-    extraConfig = ''
-      set -g mouse 
-      set -g @minimal-tmux-left false
-      set -g @minimal-tmux-fg "#000000"
-      set -g @minimal-tmux-bg "#f2ba7b"
-      set -g @minimal-tmux-status "bottom"
-
-      set -g @vim_navigator_mapping_left 'C-h'
-      set -g @vim_navigator_mapping_right 'C-l'
-      set -g @vim_navigator_mapping_up 'C-k'
-      set -g @vim_navigator_mapping_down 'C-j'
-      set -g @vim_navigator_mapping_prev ''''''
-
-      bind -n M-k resize-pane -U 5
-      bind -n M-j resize-pane -D 5
-      bind -n M-h resize-pane -L 5
-      bind -n M-l resize-pane -R 5
-    '';
-
+  programs.ghostty.settings = {
+    command = "zsh";
+    # background-opacity = 0.8;
+    theme = "GitLab Dark Grey";
+    window-decoration = "server";
+    gtk-titlebar = false;
+    gtk-tabs-location = "hidden";
+    window-padding-balance = true;
+    window-padding-x = 25;
+    window-padding-y = 15;
   };
 
   programs.fastfetch = {
