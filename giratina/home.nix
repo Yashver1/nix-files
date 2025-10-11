@@ -96,7 +96,7 @@
       l  = "lsd -l";
       la = "lsd -la";
       ls = "lsd";
-      nix-darwin-rebuild = "sudo darwin-rebuild switch --flake ~/.config/nix";
+      nb = "sudo darwin-rebuild switch --flake ~/.config/nix";
     };
 
     initContent = ''
@@ -144,9 +144,9 @@
     NIX_BUILD_SHELL = "zsh";
   };
 
-  programs.tmux.shell = "/bin/zsh";
+  programs.tmux.shell = "${pkgs.zsh}/bin/zsh";
   programs.tmux.extraConfig = ''
-    set-option -g default-command "/nix/store/d52zb40s3fi49ad26npvwh6gylpwf44x-reattach-to-user-namespace-2.9/bin/reattach-to-user-namespace -l /bin/zsh"
+    set-option -g default-command "/nix/store/d52zb40s3fi49ad26npvwh6gylpwf44x-reattach-to-user-namespace-2.9/bin/reattach-to-user-namespace -l ${pkgs.zsh}/bin/zsh"
   '';
 
   programs.neovim = {
