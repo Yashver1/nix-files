@@ -70,5 +70,6 @@
     ./util/persistence.nix
     ./util/project-nvim.nix
     ./util/package-info.nix
+    ./util/tmux-navigator.nix
   ];
 }
