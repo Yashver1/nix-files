@@ -46,7 +46,6 @@
 
     opts = {
       number = true;
-      colorcolumn = "80";
       relativenumber = true;
       shiftwidth = 2;
       tabstop = 2;
