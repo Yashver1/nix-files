@@ -37,8 +37,8 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./arceus/configuration.nix
-	  inputs.homeModules.nixvim
           inputs.home-manager.nixosModules.default
+	  inputs.homeModules.nixvim
         ];
       };
 
