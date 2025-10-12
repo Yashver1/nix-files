@@ -71,7 +71,6 @@
       eslint_d # JavaScript/TypeScript linter
       netcoredbg # C# debugger
       asm-lsp # Assembly LSP
-      bashdb # Bash debugger
       delve # Go debugger
 
     ];
