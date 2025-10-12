@@ -75,7 +75,7 @@
   #
   #
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
 
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
@@ -85,7 +85,7 @@
   
   programs.nixvim = {
      enable = true;
-     colorschemes.gruvbox.enable = true;
+     plugins.nix.enable = true;
   };
 
   home.sessionVariables = {
