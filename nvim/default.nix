@@ -1,44 +1,91 @@
-{ lib, config, ... }:
+{ pkgs, lib, ... }:
 {
   programs.nixvim = {
     enable = true;
-
     imports = [
-      ./bufferlines
-      ./colorschemes
-      ./completion
-      ./dap
-      ./filetrees
-      ./git
-      ./keys.nix
-      ./languages
-      ./lsp
-      ./none-ls
-      ./pluginmanagers
-      ./sets
-      ./snippets
-      ./statusline
-      ./telescope
-      ./ui
-      ./utils
+      ./keymaps.nix
+      ./treesitter.nix
+      ./toggleterm.nix
+      ./themes.nix
+      ./lazygit.nix
+      ./lualine.nix
+      ./dashboard.nix
+      ./bufferline.nix
+      ./snacks.nix
+      ./gitsigns.nix
+      ./whichkey.nix
+      ./hlchunk.nix
+      ./yanky.nix
+      ./autopairs.nix
+      ./blink-cmp.nix
+      ./tmux-navigator.nix
+      ./smear-cursor.nix
+      ./lsp/conform.nix
+      ./lsp/fidget.nix
+      ./lsp/lsp.nix
+      ./nix-develop.nix
+      ./kulala.nix
+      ./aerial.nix
+      ./autosave.nix
+      ./notify.nix
+      ./barbecue.nix
+      ./noice.nix
+      ./neoscroll.nix
+      ./markview.nix
+      ./zen-mode.nix
+      ./yazi.nix
+      ./wtf.nix
+      # ./windsurf-vim.nix if you want to use this plugin uncomment it and run nix develop --impure
+      ./ts-comments.nix
+      ./timerly.nix
+      ./treesj.nix
+      ./web-devicons.nix
     ];
 
-    bufferlines.enable = lib.mkDefault true;
-    colorschemes.enable = lib.mkDefault true;
-    completion.enable = lib.mkDefault true;
-    dap.enable = lib.mkDefault true;
-    filetrees.enable = lib.mkDefault false;
-    git.enable = lib.mkDefault true;
-    keys.enable = true;
-    languages.enable = true;
-    lsp.enable = lib.mkDefault true;
-    none-ls.enable = lib.mkDefault false;
-    sets.enable = lib.mkDefault true;
-    pluginmanagers.enable = lib.mkDefault true;
-    snippets.enable = lib.mkDefault true;
-    statusline.enable = lib.mkDefault true;
-    telescope.enable = lib.mkDefault true;
-    ui.enable = lib.mkDefault true;
-    utils.enable = lib.mkDefault true;
+    config = {
+      globals = {
+        mapleader = " ";
+      };
+
+      opts = {
+        number = true;
+        colorcolumn = "80";
+        relativenumber = true;
+        shiftwidth = 2;
+        tabstop = 2;
+        wrap = false;
+        swapfile = false; # Undotree
+        backup = false; # Undotree
+        undofile = true;
+        hlsearch = false;
+        incsearch = true;
+        termguicolors = true;
+        scrolloff = 8;
+        signcolumn = "yes";
+        updatetime = 50;
+        foldlevelstart = 99;
+      };
+      extraPackages = with pkgs; [
+        # base
+        nerd-fonts.jetbrains-mono # Font
+        fzf
+        ripgrep
+        fd
+        # Formatters
+        stylua # Lua formatter
+        csharpier # C# formatter
+        nixfmt-rfc-style # Nix formatter
+        # Linters
+        golangci-lint # Go linter
+        shellcheck # Shell script linter
+        eslint_d # JavaScript/TypeScript linter
+        # Debuggers
+        netcoredbg # C# debugger
+        asm-lsp # Assembly LSP
+        bashdb # Bash debugger
+        delve # Go debugger
+
+      ];
+    };
   };
 }
