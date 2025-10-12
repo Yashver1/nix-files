@@ -21,19 +21,16 @@
       servers = {
         clangd = {
           enable = true;
-          config = {
-            cmd = [
-              "clangd"
-              "--query-driver=/nix/store/*-gcc-wrapper-*/bin/g++,/nix/store/*-gcc-*/bin/g++,/run/current-system/sw/bin/g++"
-              "--background-index"
-              "--clang-tidy"
-              "--header-insertion=iwyu"
-              "--completion-style=detailed"
-              "--function-arg-placeholders"
-              "--fallback-style=llvm"
-            ];
-
-          };
+          cmd = [
+            "clangd"
+            "--query-driver=/nix/store/*-gcc-wrapper-*/bin/g++,/nix/store/*-gcc-*/bin/g++,/run/current-system/sw/bin/g++"
+            "--background-index"
+            "--clang-tidy"
+            "--header-insertion=iwyu"
+            "--completion-style=detailed"
+            "--function-arg-placeholders"
+            "--fallback-style=llvm"
+          ];
 
         };
         omnisharp = {
