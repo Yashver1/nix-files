@@ -35,7 +35,7 @@
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs self; };
         modules = [
           ./arceus/configuration.nix
           inputs.home-manager.nixosModules.default
@@ -44,7 +44,7 @@
 
       darwinConfigurations."Yashvers-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = { inherit inputs; };
+        specialArgs = { inherit inputs self; };
         modules = [
           ./giratina/configuration.nix
           inputs.home-manager.darwinModules.default
