@@ -2,7 +2,6 @@
   config,
   pkgs,
   inputs,
-  nixvim,
   ...
 }:
 {
@@ -75,7 +74,7 @@
   #
   #
   imports = [
-    nixvim.homeModules.nixvim
+    inputs.nixvim.homeModules.nixvim
 
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
