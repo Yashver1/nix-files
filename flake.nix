@@ -38,7 +38,7 @@
         modules = [
           ./arceus/configuration.nix
           inputs.home-manager.nixosModules.default
-	  inputs.nixosModules.nixvim
+	  nixvim.nixosModules.nixvim
         ];
       };
 
