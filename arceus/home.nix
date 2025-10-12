@@ -80,7 +80,7 @@
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
     ../terminal/zsh.nix
-    ../nvim
+    ../nvim/config.nix
   ];
 
   home.sessionVariables = {
