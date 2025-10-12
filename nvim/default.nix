@@ -1,14 +1,19 @@
-# MODULE SHAPE
 { pkgs, ... }:
 {
   programs.nixvim = {
     enable = true;
-    nixpkgs.useGlobalPackages = true;
 
-    # everything else directly here (no extra `config = {}` needed)
-    options.termguicolors = true;
-    plugins.gruvbox.enable = true;  # your schema likely uses plugins + colorscheme
-    colorscheme = "gruvbox";
+    # using the wrapper => use the `.config = { ... }` style
+    nixpkgs.useGlobalPackages = true;
+    # (alternatively: nixpkgs.pkgs = pkgs;)
+
+    config = {
+      options.termguicolors = true;
+
+      # your nixvim revision doesn't support `colorschemes.*` — use plugins + colorscheme
+      plugins.gruvbox.enable = true;
+      colorscheme = "gruvbox";
+    };
   };
 }
 
