@@ -33,9 +33,6 @@
       };
     };
 
-    window.mappings = {
-      "<space>" = "none";
-    };
   };
 
   keymaps = [
