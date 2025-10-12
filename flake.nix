@@ -15,7 +15,7 @@
     };
 
     nixvim = {
-      url = "github:nix-community/nixvim";
+      url = "github:nix-community/nixvim/nixos-24.05";
     };
 
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
