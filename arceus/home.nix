@@ -74,7 +74,7 @@
   #
   #
   imports = [
-    inputs.nixvim.homeModules.nixvim
+    inputs.nixvim.homeManagerModules.nixvim
 
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
