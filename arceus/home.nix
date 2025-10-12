@@ -83,8 +83,8 @@
   ];
   
   programs.nixvim = {
-	enable = true;
-	colorschemes.gruvbox.enable = true;
+     enable = true;
+     colorschemes.gruvbox.enable = true;
   };
 
   home.sessionVariables = {
