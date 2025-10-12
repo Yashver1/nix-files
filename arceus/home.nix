@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -73,6 +78,8 @@
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
     ../terminal/zsh.nix
+    inputs.nixvim.homeModules.nixvim
+    ../nvim
   ];
 
   home.sessionVariables = {

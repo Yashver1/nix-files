@@ -9,8 +9,16 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nix-darwin.url = "github:nix-darwin/nix-darwin/master";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    nix-darwin = {
+      url = "github:nix-darwin/nix-darwin/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
   };
@@ -18,6 +26,7 @@
   outputs =
     inputs@{
       self,
+      nixvim,
       nix-darwin,
       nixpkgs,
       nix-homebrew,
@@ -49,5 +58,6 @@
           }
         ];
       };
+
     };
 }
