@@ -3,95 +3,23 @@
     bufferline = {
       enable = true;
       settings = {
-        highlights = {
-          background = {
-            bg = "#252434";
-            fg = "#605f6f";
-          };
+        options = {
+          diagnostics = "nvim_lsp";
+          mode = "buffers";
 
-          buffer_selected = {
-            bg = "#1E1D2D";
-            fg = "#D9E0EE";
-          };
-          buffer_visible = {
-            fg = "#605f6f";
-            bg = "#252434";
-          };
+          close_icon = " ";
+          buffer_close_icon = "󰱝 ";
+          modified_icon = "󰔯 ";
 
-          error = {
-            fg = "#605f6f";
-            bg = "#252434";
-          };
-          error_diagnostic = {
-            fg = "#605f6f";
-            bg = "#252434";
-          };
-
-          close_button = {
-            fg = "#605f6f";
-            bg = "#252434";
-          };
-          close_button_visible = {
-            fg = "#605f6f";
-            bg = "#252434";
-          };
-          fill = {
-            bg = "#1E1D2D";
-            fg = "#605f6f";
-          };
-          indicator_selected = {
-            bg = "#1E1D2D";
-            fg = "#1E1D2D";
-          };
-
-          modified = {
-            fg = "#F38BA8";
-            bg = "#252434";
-          };
-          modified_visible = {
-            fg = "#F38BA8";
-            bg = "#252434";
-          };
-          modified_selected = {
-            fg = "#ABE9B3";
-            bg = "#1E1D2D";
-          };
-
-          separator = {
-            bg = "#252434";
-            fg = "#252434";
-          };
-          separator_visible = {
-            bg = "#252434";
-            fg = "#252434";
-          };
-          separator_selected = {
-            bg = "#252434";
-            fg = "#252434";
-          };
-
-          duplicate = {
-            fg = "NONE";
-            bg = "#252434";
-          };
-          duplicate_selected = {
-            fg = "#F38BA8";
-            bg = "#1E1D2D";
-          };
-          duplicate_visible = {
-            fg = "#89B4FA";
-            bg = "#252434";
-          };
+          offsets = [
+            {
+              filetype = "neo-tree";
+              text = "Neo-tree";
+              highlight = "Directory";
+              text_align = "left";
+            }
+          ];
         };
-
-        options.offsets = [
-          {
-            filetype = "neo-tree";
-            text = "Neo-tree";
-            highlight = "Directory";
-            text_align = "left";
-          }
-        ];
       };
     };
   };
@@ -99,7 +27,7 @@
   keymaps = [
     {
       mode = "n";
-      key = "<C-Tab>";
+      key = "]b";
       action = "<cmd>BufferLineCycleNext<cr>";
       options = {
         desc = "Cycle to next buffer";
@@ -108,7 +36,7 @@
 
     {
       mode = "n";
-      key = "<C-S-Tab>";
+      key = "[b";
       action = "<cmd>BufferLineCyclePrev<cr>";
       options = {
         desc = "Cycle to previous buffer";
@@ -117,10 +45,28 @@
 
     {
       mode = "n";
-      key = "<leader>br";
-      action = "<cmd>BufferLineCloseRight<cr>";
+      key = "<S-l>";
+      action = "<cmd>BufferLineCycleNext<cr>";
       options = {
-        desc = "Delete buffers to the right";
+        desc = "Cycle to next buffer";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<S-h>";
+      action = "<cmd>BufferLineCyclePrev<cr>";
+      options = {
+        desc = "Cycle to previous buffer";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>bd";
+      action = "<cmd>bdelete<cr>";
+      options = {
+        desc = "Delete buffer";
       };
     }
 
@@ -130,6 +76,15 @@
       action = "<cmd>BufferLineCloseLeft<cr>";
       options = {
         desc = "Delete buffers to the left";
+      };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>bo";
+      action = "<cmd>BufferLineCloseOthers<cr>";
+      options = {
+        desc = "Delete other buffers";
       };
     }
 
