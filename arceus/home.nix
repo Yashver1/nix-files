@@ -83,6 +83,12 @@
 
   ];
 
+  programs.nixvim= {
+    enable = true;
+    defaultEditor = true;
+    nixpkgs.useGlobalPackages = true;
+  };
+
   home.sessionVariables = {
     EDITOR = "neovim";
     NIX_BUILD_SHELL = "zsh";
