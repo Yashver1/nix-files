@@ -79,15 +79,10 @@
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
     ../terminal/zsh.nix
+    ../nvim
 
   ];
 
-  programs.nixvim = {
-    enable = true;
-
-    colorschemes.catppuccin.enable = true;
-    plugins.lualine.enable = true;
-  };
 
   home.sessionVariables = {
     NIX_BUILD_SHELL = "zsh";
