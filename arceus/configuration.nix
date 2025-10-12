@@ -6,7 +6,6 @@
   config,
   pkgs,
   inputs,
-  self,
   ...
 }:
 
@@ -159,7 +158,7 @@
 
   # Home Manager
   home-manager = {
-    extraSpecialArgs = { inherit inputs self; };
+    extraSpecialArgs = { inherit inputs; };
     users = {
       "yash" = import ./home.nix;
     };

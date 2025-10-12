@@ -1,7 +1,7 @@
 {
-  self,
   pkgs,
   lib,
+  inputs,
   ...
 }:
 {
@@ -34,7 +34,7 @@
       enable = true;
       settings =
         let
-          flake = ''(builtins.getFlake "${self}")'';
+          flake = ''(builtins.getFlake "${inputs.self}")'';
           system = ''''${builtins.currentSystem}'';
         in
         {

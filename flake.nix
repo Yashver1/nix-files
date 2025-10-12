@@ -35,7 +35,7 @@
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs self; };
+        specialArgs = { inherit inputs; };
         modules = [
           ./arceus/configuration.nix
           inputs.home-manager.nixosModules.default
