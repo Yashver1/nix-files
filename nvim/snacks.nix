@@ -3,7 +3,7 @@
   plugins.snacks = {
     enable = true;
     autoLoad = true;
-    luaConfig = {
+    settings = {
       picker.sources.explorer.layout.layout.position = "right";
     };
   };
