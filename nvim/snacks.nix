@@ -3,9 +3,9 @@
   plugins.snacks = {
     enable = true;
     autoLoad = true;
-		luaConfig = {
-			picker.sources.explorer.layout.layout.position = "right"
-		};
+    luaConfig = {
+      picker.sources.explorer.layout.layout.position = "right";
+    };
   };
   keymaps = [
     {
