@@ -1,6 +1,6 @@
 _: {
 
-  packages.nixvim = {
+  programs.nixvim = {
     enable = true;
 
   imports = [
