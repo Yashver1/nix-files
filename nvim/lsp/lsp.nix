@@ -54,6 +54,7 @@
         };
         ansiblels = {
           enable = true;
+	  package = null;
         };
         jsonls = {
           enable = true;
