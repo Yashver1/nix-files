@@ -1,62 +1,44 @@
-{ pkgs, ... }:
+{ lib, config, ... }:
 {
-
   programs.nixvim = {
     enable = true;
 
     imports = [
-      # General Configuration
-      ./settings.nix
-      ./keymaps.nix
-      ./auto_cmds.nix
-      ./file_types.nix
-
-      # Themes
-      ./plugins/themes
-
-      # Completion
-      ./plugins/cmp/cmp.nix
-      ./plugins/cmp/cmp-copilot.nix
-      ./plugins/cmp/lspkind.nix
-      ./plugins/cmp/autopairs.nix
-      ./plugins/cmp/schemastore.nix
-
-      # Snippets
-      ./plugins/snippets/luasnip.nix
-
-      # Editor plugins and configurations
-      ./plugins/editor/neo-tree.nix
-      ./plugins/editor/treesitter.nix
-      ./plugins/editor/undotree.nix
-      ./plugins/editor/illuminate.nix
-      ./plugins/editor/indent-blankline.nix
-      ./plugins/editor/todo-comments.nix
-      ./plugins/editor/copilot-chat.nix
-      ./plugins/editor/navic.nix
-
-      # UI plugins
-      ./plugins/ui/bufferline.nix
-      ./plugins/ui/lualine.nix
-      ./plugins/ui/startup.nix
-
-      # LSP and formatting
-      ./plugins/lsp/lsp.nix
-      ./plugins/lsp/conform.nix
-      ./plugins/lsp/fidget.nix
-
-      # Git
-      ./plugins/git/lazygit.nix
-      ./plugins/git/gitsigns.nix
-
-      # Utils
-      ./plugins/utils/telescope.nix
-      ./plugins/utils/whichkey.nix
-      ./plugins/utils/extra_plugins.nix
-      ./plugins/utils/mini.nix
-      ./plugins/utils/markdown-preview.nix
-      ./plugins/utils/obsidian.nix
-      ./plugins/utils/toggleterm.nix
-      ./plugins/utils/web-devicons.nix
+      ./bufferlines
+      ./colorschemes
+      ./completion
+      ./dap
+      ./filetrees
+      ./git
+      ./keys.nix
+      ./languages
+      ./lsp
+      ./none-ls
+      ./pluginmanagers
+      ./sets
+      ./snippets
+      ./statusline
+      ./telescope
+      ./ui
+      ./utils
     ];
+
+    bufferlines.enable = lib.mkDefault true;
+    colorschemes.enable = lib.mkDefault true;
+    completion.enable = lib.mkDefault true;
+    dap.enable = lib.mkDefault true;
+    filetrees.enable = lib.mkDefault false;
+    git.enable = lib.mkDefault true;
+    keys.enable = true;
+    languages.enable = true;
+    lsp.enable = lib.mkDefault true;
+    none-ls.enable = lib.mkDefault false;
+    sets.enable = lib.mkDefault true;
+    pluginmanagers.enable = lib.mkDefault true;
+    snippets.enable = lib.mkDefault true;
+    statusline.enable = lib.mkDefault true;
+    telescope.enable = lib.mkDefault true;
+    ui.enable = lib.mkDefault true;
+    utils.enable = lib.mkDefault true;
   };
 }
