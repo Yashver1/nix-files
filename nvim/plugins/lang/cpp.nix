@@ -31,15 +31,13 @@
         enable = true;
         cmd = [
           "clangd"
-          "--offset-encoding=utf-16"
-          "--header-insertion=iwyu"
+          "--query-driver=/nix/store/*-gcc-wrapper-*/bin/g++,/nix/store/*-gcc-*/bin/g++,/run/current-system/sw/bin/g++"
           "--background-index"
           "--clang-tidy"
-          "--all-scopes-completion"
+          "--header-insertion=iwyu"
           "--completion-style=detailed"
           "--function-arg-placeholders"
           "--fallback-style=llvm"
-          "-j=6"
         ];
         onAttach.function = ''
           vim.keymap.set('n', 'gh', "<cmd>ClangdSwitchSourceHeader<cr>", { desc = "Switch Source/Header (C/C++)", buffer = bufnr })
