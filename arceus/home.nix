@@ -81,15 +81,12 @@
     ../terminal/zsh.nix
 
   ];
-  
+
   programs.nixvim = {
-     enable = true;
-     colorschemes =  {
-     catppuccin = {
-     enable = true;
-     };
-     };
-     plugins.nix.enable = true;
+    enable = true;
+
+    colorschemes.catppuccin.enable = true;
+    plugins.lualine.enable = true;
   };
 
   home.sessionVariables = {
