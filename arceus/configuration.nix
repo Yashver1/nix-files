@@ -203,7 +203,6 @@
     pkg-config
     python3
     cargo
-    neovim
     ghostty
     google-chrome
     lsd
