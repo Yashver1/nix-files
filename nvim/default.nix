@@ -18,6 +18,7 @@
       ./yanky.nix
       ./autopairs.nix
       ./blink-cmp.nix
+      ./kubectl.nix
       ./tmux-navigator.nix
       ./smear-cursor.nix
       ./lsp/conform.nix
