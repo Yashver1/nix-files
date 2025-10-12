@@ -1,3 +1,4 @@
+{ inputs, ... }:
 {
   imports = [
     ./completion/blink.nix
