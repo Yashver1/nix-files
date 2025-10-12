@@ -17,6 +17,7 @@
           };
           type = "text";
           val = [
+            ""
           ];
         }
         (padding 6)
