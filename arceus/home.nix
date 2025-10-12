@@ -79,13 +79,13 @@
     ../terminal/tmux.nix
     ../terminal/zsh.nix
     inputs.nixvim.homeModules.nixvim
-    ../nvim
 
   ];
 
-  programs.nixvim= {
-    enable = true;
-    defaultEditor = true;
+  programs.nixvim = {
+        enable = true;
+        options.termguicolors = true;
+	colorschemes.gruvbox.enable = true;
   };
 
   home.sessionVariables = {
