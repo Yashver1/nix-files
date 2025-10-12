@@ -44,7 +44,7 @@
 
       darwinConfigurations."Yashvers-MacBook-Pro" = nix-darwin.lib.darwinSystem {
         system = "aarch64-darwin";
-        specialArgs = { inherit inputs self; };
+        specialArgs = { inherit inputs; };
         modules = [
           ./giratina/configuration.nix
           inputs.home-manager.darwinModules.default
