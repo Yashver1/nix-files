@@ -4,7 +4,14 @@
   inputs,
   ...
 }:
-
+let
+  nixvim = import (
+    builtins.fetchGit {
+      url = "https://github.com/nix-community/nixvim";
+      ref = "main";
+    }
+  );
+in
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -75,7 +82,7 @@
   #
   #
   imports = [
-    inputs.nixvim.homeModules.nixvim
+    nixvim.homeModules.nixvim
 
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
