@@ -24,7 +24,6 @@
       ./lsp/fidget.nix
       ./lsp/lsp.nix
       ./nix-develop.nix
-      ./kulala.nix
       ./aerial.nix
       ./autosave.nix
       ./notify.nix
@@ -40,7 +39,6 @@
       ./treesj.nix
       ./web-devicons.nix
     ];
-};
+  };
 
- 
 }
