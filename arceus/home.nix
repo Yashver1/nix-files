@@ -82,12 +82,12 @@
 
   ];
 
-  programs.nixvim = {
-        enable = true;
-        options.termguicolors = true;
-	colorschemes.gruvbox.enable = true;
-  };
-
+	#  programs.nixvim = {
+	#        enable = true;
+	#        options.termguicolors = true;
+	# colorschemes.gruvbox.enable = true;
+	#  };
+	#
   home.sessionVariables = {
     NIX_BUILD_SHELL = "zsh";
   };
