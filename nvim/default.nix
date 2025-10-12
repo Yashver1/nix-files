@@ -2,6 +2,7 @@
 {
   programs.nixvim = {
     colorschemes.gruvbox.enable = true;
+
     colorschemes.kanagawa = {
           enable = false;
           settings = {
