@@ -63,20 +63,12 @@
       foldlevelstart = 99;
     };
     extraPackages = with pkgs; [
-      # base
-      nerd-fonts.jetbrains-mono # Font
-      fzf
-      ripgrep
-      fd
-      # Formatters
       stylua # Lua formatter
       csharpier # C# formatter
       nixfmt-rfc-style # Nix formatter
-      # Linters
       golangci-lint # Go linter
       shellcheck # Shell script linter
       eslint_d # JavaScript/TypeScript linter
-      # Debuggers
       netcoredbg # C# debugger
       asm-lsp # Assembly LSP
       bashdb # Bash debugger
