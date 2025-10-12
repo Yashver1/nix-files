@@ -40,6 +40,7 @@
       ./treesj.nix
       ./web-devicons.nix
     ];
+};
 
     config = {
       globals = {
@@ -85,5 +86,5 @@
 
       ];
     };
-  };
+ 
 }
