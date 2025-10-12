@@ -78,6 +78,9 @@
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
     ../terminal/zsh.nix
+    inputs.nixvim.homeModules.nixvim
+    ../nvim
+
   ];
 
   home.sessionVariables = {
