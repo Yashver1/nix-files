@@ -25,7 +25,7 @@ plugins.mini-ai = {
           "^().*()$",
         },
 
-	g = function()
+	g =  function()
 		  local start_line, end_line = 1, vim.fn.line("$")
 		  if ai_type == "i" then
 		    -- Skip first and last blank lines for `i` textobject
@@ -39,7 +39,7 @@ plugins.mini-ai = {
 
 		  local to_col = math.max(vim.fn.getline(end_line):len(), 1)
 		  return { from = { line = start_line, col = 1 }, to = { line = end_line, col = to_col } }
-	end
+	end,
 
         u = ai.gen_spec.function_call(),
         U = ai.gen_spec.function_call({ name_pattern = "[%w_]" }),
