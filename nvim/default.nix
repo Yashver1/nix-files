@@ -5,6 +5,7 @@
     imports = [
       ./coding
       ./colorscheme
+      ./utils
     ];
   };
 

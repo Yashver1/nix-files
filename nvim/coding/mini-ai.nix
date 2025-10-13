@@ -25,29 +25,21 @@ plugins.mini-ai = {
           "^().*()$",
         },
 
-        g = {
-          a = function()
-            local last = vim.fn.line("$")
-            local lastcol = math.max(vim.fn.getline(last):len(), 1)
-            return { from = { line = 1, col = 1 }, to = { line = last, col = lastcol } }
-          end,
-          i = function()
-            local last = vim.fn.line("$")
-            local first_nonblank = 1
-            while first_nonblank <= last and vim.fn.getline(first_nonblank):match("^%s*$") do
-              first_nonblank = first_nonblank + 1
-            end
-            local last_nonblank = last
-            while last_nonblank >= 1 and vim.fn.getline(last_nonblank):match("^%s*$") do
-              last_nonblank = last_nonblank - 1
-            end
-            if first_nonblank > last_nonblank then
-              return { from = { line = 1, col = 1 }, to = { line = 1, col = 1 } }
-            end
-            local lastcol = math.max(vim.fn.getline(last_nonblank):len(), 1)
-            return { from = { line = first_nonblank, col = 1 }, to = { line = last_nonblank, col = lastcol } }
-          end,
-        },
+	g = function()
+		  local start_line, end_line = 1, vim.fn.line("$")
+		  if ai_type == "i" then
+		    -- Skip first and last blank lines for `i` textobject
+		    local first_nonblank, last_nonblank = vim.fn.nextnonblank(start_line), vim.fn.prevnonblank(end_line)
+		    -- Do nothing for buffer with all blanks
+		    if first_nonblank == 0 or last_nonblank == 0 then
+		      return { from = { line = start_line, col = 1 } }
+		    end
+		    start_line, end_line = first_nonblank, last_nonblank
+		  end
+
+		  local to_col = math.max(vim.fn.getline(end_line):len(), 1)
+		  return { from = { line = start_line, col = 1 }, to = { line = end_line, col = to_col } }
+	end
 
         u = ai.gen_spec.function_call(),
         U = ai.gen_spec.function_call({ name_pattern = "[%w_]" }),
