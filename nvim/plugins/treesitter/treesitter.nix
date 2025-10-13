@@ -6,6 +6,7 @@
       folding = true;
 
       settings = {
+        ensure_installed = "all";
         highlight = {
           additional_vim_regex_highlighting = true;
           enable = true;
