@@ -1,0 +1,6 @@
+{ ... }:
+{
+  imports = [
+    ./mini-pairs.nix
+  ];
+}
