@@ -75,11 +75,11 @@
   #
   #
   imports = [
-    inputs.nixvim.homeModules.nixvim
+    # inputs.nixvim.homeModules.nixvim
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
     ../terminal/zsh.nix
-    ../nvim
+    # ../nvim
 
   ];
 
