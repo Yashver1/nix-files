@@ -2,7 +2,7 @@
 
 plugins.mini-ai = {
   enable = true;
-  luaConfig.content = ''
+  luaConfig.post = ''
     local ai = require("mini.ai")
     ai.setup({
       n_lines = 500,
