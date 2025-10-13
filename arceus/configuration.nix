@@ -181,6 +181,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     nix-prefetch-git
+    neovim
     fd
     ripgrep
     statix
