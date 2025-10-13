@@ -6,7 +6,7 @@
       folding = true;
 
       settings = {
-        ensure_installed = "cpp";
+        ensure_installed = [ "cpp" ];
         highlight = {
           additional_vim_regex_highlighting = true;
           enable = true;
