@@ -4,7 +4,7 @@
 	    name = "vague";
 	    src = pkgs.fetchFromGitHub {
 		owner = "vague-theme";
-		repo = "vague-theme/vague.nvim";
+		repo = "vague.nvim";
 		rev = "cdbfdc8cc1122b8aa9609a7a681c5c501976a387";
 		hash = "sha256-bUFTpI5sKmA3qktISFZH5pHLRE57lqClZPp5AfFd/ac=";
 	};
