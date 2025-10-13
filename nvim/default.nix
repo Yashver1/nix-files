@@ -4,6 +4,7 @@
     enable = true;
     imports = [
       ./coding
+      ./colorscheme
     ];
   };
 
