@@ -40,8 +40,8 @@
 
           {
 
-            nixpkgs.localSystem.system = "x86_64-linux";
-            nixpkgs.crossSystem.system = "riscv64-linux";
+            nixpkgs.buildPlatform = "x86_64-linux";
+            nixpkgs.hostPlatform = "riscv64-linux";
 
           }
           ./arceus/configuration.nix
