@@ -149,6 +149,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "docker"
     ];
     packages = with pkgs; [
     ];
@@ -176,6 +177,10 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  virtualisation.docker = {
+    enable = true;
+  };
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
