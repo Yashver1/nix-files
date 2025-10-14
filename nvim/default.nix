@@ -6,6 +6,7 @@
       ./coding
       ./colorscheme
       ./utils
+      ./editor
 
       ./options.nix
     ];
