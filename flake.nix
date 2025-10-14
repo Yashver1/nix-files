@@ -37,6 +37,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
+
           {
 
             nixpkgs.localSystem.system = "x86_64-linux";
