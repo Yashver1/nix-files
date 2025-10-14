@@ -37,13 +37,6 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-
-          {
-
-            nixpkgs.buildPlatform = "x86_64-linux";
-            nixpkgs.hostPlatform = "riscv64-linux";
-
-          }
           ./arceus/configuration.nix
           inputs.home-manager.nixosModules.default
 
