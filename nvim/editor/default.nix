@@ -1,4 +1,5 @@
-{...}:{
+{ ... }:
+{
   imports = [
     ./grug-far.nix
   ];

@@ -1,5 +1,6 @@
-{...}:{
-	plugins.ts-comments = {
-	enable = true;
-	};
+{ ... }:
+{
+  plugins.ts-comments = {
+    enable = true;
+  };
 }
