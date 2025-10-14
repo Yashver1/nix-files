@@ -39,6 +39,12 @@
         modules = [
           ./arceus/configuration.nix
           inputs.home-manager.nixosModules.default
+          {
+
+            nixpkgs.localSystem.system = "x86_64-linux";
+            nixpkgs.crossSystem.system = "riscv64-linux";
+
+          }
         ];
       };
 
@@ -75,8 +81,6 @@
           }
         ];
       };
-
-
 
     };
 }
