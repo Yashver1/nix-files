@@ -185,6 +185,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    qemu-user
     nix-prefetch-git
     fd
     ripgrep
