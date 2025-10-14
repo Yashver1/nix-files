@@ -59,5 +59,24 @@
         ];
       };
 
+      darwinConfigurations."Yashs-MacBook-Air" = nix-darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./mesprit/configuration.nix
+          inputs.home-manager.darwinModules.default
+          nix-homebrew.darwinModules.nix-homebrew
+          {
+            nix-homebrew = {
+              enable = true;
+              user = "yash-netvirta";
+              autoMigrate = true;
+            };
+          }
+        ];
+      };
+
+
+
     };
 }
