@@ -6,6 +6,8 @@
       ./coding
       ./colorscheme
       ./utils
+
+      ./options.nix
     ];
   };
 

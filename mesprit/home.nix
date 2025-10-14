@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs,inputs, ... }:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -83,8 +83,10 @@
   #
   #
   imports = [
+    inputs.nixvim.homeModules.nixvim
     ../terminal/zsh.nix
     ../terminal/tmux.nix
+    ../nvim
   ];
 
   # Let Home Manager install and manage itself.
@@ -147,11 +149,6 @@
   programs.tmux.extraConfig = ''
     set-option -g default-command "/nix/store/d52zb40s3fi49ad26npvwh6gylpwf44x-reattach-to-user-namespace-2.9/bin/reattach-to-user-namespace -l ${pkgs.zsh}/bin/zsh"
   '';
-
-  programs.neovim = {
-    enable = true;
-  };
-
   programs.zsh.oh-my-zsh.plugins = [
     "macos"
     "zsh-interactive-cd"
