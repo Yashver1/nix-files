@@ -52,9 +52,6 @@
       "pkg-config"
       "lazygit"
       "ruby"
-      "pipx"
-
-      "llvm@20"
     ];
 
     casks = [
@@ -65,11 +62,8 @@
       "font-fira-code"
       "font-hack-nerd-font"
       "hopper-disassembler"
-      "mactex"
       "ngrok"
       "pgadmin4"
-      "playcover-community"
-      "stats"
     ];
 
     taps = [
