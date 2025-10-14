@@ -83,10 +83,10 @@
   #
   #
   imports = [
-    inputs.nixvim.homeModules.nixvim
+    # inputs.nixvim.homeModules.nixvim
     ../terminal/zsh.nix
     ../terminal/tmux.nix
-    ../nvim
+    # ../nvim
   ];
 
   # Let Home Manager install and manage itself.
