@@ -1,4 +1,9 @@
-{ config, pkgs,inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
   # Home Manager needs a bit of information about you and the paths it should
@@ -142,7 +147,7 @@
     VCPKG_ROOT = "$HOME/vcpkg";
     GOOGLE_APPLICATION_CREDENTIALS = "$HOME/Downloads/coin-lol-5015cc7b478d.json";
     FZF_COMPLETION_TRIGGER = "~~";
-    NIX_BUILD_SHELL = "zsh";
+    # NIX_BUILD_SHELL = "zsh";
   };
 
   programs.tmux.shell = "${pkgs.zsh}/bin/zsh";
