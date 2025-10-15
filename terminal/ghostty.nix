@@ -2,6 +2,6 @@
 {
   programs.ghostty = {
     enable = true;
-    # enableZshIntegration = true;
+    enableZshIntegration = true;
   };
 }
