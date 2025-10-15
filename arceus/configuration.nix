@@ -153,7 +153,7 @@
     ];
     packages = with pkgs; [
     ];
-    # shell = pkgs.zsh;
+    shell = pkgs.zsh;
 
   };
 
