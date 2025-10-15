@@ -83,10 +83,6 @@
 
   ];
 
-  home.sessionVariables = {
-    NIX_BUILD_SHELL = "bash";
-  };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
