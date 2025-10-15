@@ -34,7 +34,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # ZSH
-  # programs.zsh.enable = true;
+  programs.zsh.enable = true;
   # users.defaultUserShell = pkgs.zsh;
 
   # LD
