@@ -7,6 +7,7 @@
 {
   imports = [
     ./homebrew.nix
+    inputs.home-manager.darwinModules.home-manager
   ];
   nixpkgs.config.allowUnfree = true;
   nix.enable = false;

@@ -46,7 +46,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./giratina/configuration.nix
-          inputs.home-manager.darwinModules.home-manager
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
@@ -63,7 +62,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./mesprit/configuration.nix
-          inputs.home-manager.darwinModules.home-manager
           nix-homebrew.darwinModules.nix-homebrew
           {
             nix-homebrew = {
