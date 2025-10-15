@@ -38,8 +38,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./arceus/configuration.nix
-          inputs.home-manager.nixosModules.home-manager
-
         ];
       };
 
