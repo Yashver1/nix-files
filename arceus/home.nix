@@ -84,7 +84,6 @@
   ];
 
   home.sessionVariables = {
-    NIX_BUILD_SHELL = "bash";
   };
 
   # Let Home Manager install and manage itself.
@@ -101,7 +100,7 @@
   };
 
   programs.ghostty.settings = {
-    # command = "zsh";
+    command = "zsh";
     # background-opacity = 0.8;
     theme = "GitLab Dark Grey";
     window-decoration = "server";
