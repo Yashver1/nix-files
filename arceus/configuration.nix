@@ -35,7 +35,7 @@
 
   # ZSH
   programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
+  # users.defaultUserShell = pkgs.zsh;
 
   # LD
   programs.nix-ld.enable = true;
@@ -153,7 +153,7 @@
     ];
     packages = with pkgs; [
     ];
-    shell = pkgs.zsh;
+    # shell = pkgs.zsh;
 
   };
 
