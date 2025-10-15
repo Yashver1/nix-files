@@ -188,6 +188,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     riscv-pk
+
     spike
     file
     doxygen
