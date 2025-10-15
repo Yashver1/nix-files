@@ -208,7 +208,7 @@
 
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ghostty" = {
         name = "Launch Ghostty";
-        command = "/home/yash/.nix-profile/bin/ghostty";
+        command = "/etc/profiles/per-user/yash/bin/ghostty";
         binding = "<Super>t";
       };
 
