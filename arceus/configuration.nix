@@ -189,7 +189,6 @@
   environment.systemPackages = with pkgs; [
     file
     doxygen
-    llvmPackages_21.libcxxClang
     qemu-user
     nix-prefetch-git
     fd
