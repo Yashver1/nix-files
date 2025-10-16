@@ -87,8 +87,9 @@
   programs.home-manager.enable = true;
 
   programs.vscode = {
-    # enable = true;
+    enable = true;
     extensions = with pkgs.vscode.profiles.default.extensions; [
+      vscodevim.vim
     ];
 
   };
