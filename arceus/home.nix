@@ -88,7 +88,7 @@
 
   programs.vscode = {
     enable = true;
-    profiles.default.extensions = with pkgs; [
+    profiles.default.extensions = with pkgs.vscode-extensions; [
       vscodevim.vim
     ];
 
