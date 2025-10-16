@@ -17,6 +17,10 @@
 
   ];
 
+  inputs.nixpkgs.overlays = [
+    inputs.nix-vscode-extensions.overlays.default
+  ];
+
   # Fix wakeup
   services.udev.extraRules = ''
     ACTION=="add|change", SUBSYSTEM=="usb", ATTRS{idVendor}=="706b", ATTRS{idProduct}=="0011", ATTR{power/wakeup}="enabled"
