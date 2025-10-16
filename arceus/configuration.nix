@@ -17,7 +17,7 @@
 
   ];
 
-  inputs.nixpkgs.overlays = [
+  nixpkgs.overlays = [
     (final: prev: inputs.nix-vscode-extensions.overlays.default)
   ];
 
