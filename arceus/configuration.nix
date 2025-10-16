@@ -18,7 +18,7 @@
   ];
 
   inputs.nixpkgs.overlays = [
-    inputs.nix-vscode-extensions.overlays.default
+    (final: prev: inputs.nix-vscode-extensions.overlays.default)
   ];
 
   # Fix wakeup
