@@ -89,8 +89,11 @@
   programs.vscode = {
     enable = true;
     profiles.default.extensions = with pkgs.vscode-extensions; [
-      vscodevim.vim
+      open-vsx.asvetliakov.vscode-neovim
+
     ];
+
+    mutableExtensionsDir = false;
 
   };
 
