@@ -90,9 +90,9 @@
     enable = true;
     profiles.default.extensions = with pkgs.nix-vscode-extensions; [
       open-vsx.asvetliakov.vscode-neovim
-      extensions.vscode-marketplace.ms-vscode.cpptools
-      extensions.vscode-marketplace.ms-vscode.cpptools-themes
-      extensions.vscode-marketplace.ms-vscode.cpptools-extension-pack
+      vscode-marketplace.ms-vscode.cpptools
+      vscode-marketplace.ms-vscode.cpptools-themes
+      vscode-marketplace.ms-vscode.cpptools-extension-pack
 
     ];
 
