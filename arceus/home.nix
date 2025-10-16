@@ -88,7 +88,7 @@
 
   programs.vscode = {
     enable = true;
-    profiles.default.extensions = with pkgs.vscode-extensions; [
+    profiles.default.extensions = with pkgs.nix-vscode-extensions; [
       open-vsx.asvetliakov.vscode-neovim
 
     ];
