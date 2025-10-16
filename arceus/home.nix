@@ -96,6 +96,13 @@
 
     ];
 
+    profiles.default.userSettings = {
+      "workbench.sideBar.location" = "right";
+      "github.copilot.editor.enableAutoCompletions" = false;
+      "vscode-neovim.neovimExecutablePaths.linux" = "/etc/profiles/per-user/yash/bin/nvim";
+
+    };
+
     mutableExtensionsDir = false;
 
   };
