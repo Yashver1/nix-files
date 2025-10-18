@@ -11,12 +11,13 @@
   ];
   nixpkgs.config.allowUnfree = true;
   nix.enable = false;
-  environment.systemPackages = [
-    pkgs.ttyper
-    pkgs.fastfetch
-    pkgs.rustc
-    pkgs.cargo
-    pkgs.rustfmt
+  environment.systemPackages = with pkgs; [
+    ttyper
+    fastfetch
+    rustc
+    cargo
+    rustfmt
+    dtc
   ];
 
   system.primaryUser = "yash-netvirta";

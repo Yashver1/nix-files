@@ -52,9 +52,16 @@
       "pkg-config"
       "lazygit"
       "ruby"
+      "qemu"
+      "riscv-tools"
+      "riscv-gnu-toolchain"
+      "riscv-isa-sim"
+      "riscv-pk"
+      "nixfmt"
     ];
 
     casks = [
+      "postman"
       "slack"
       "ghostty"
       "aerospace"
@@ -67,7 +74,9 @@
     ];
 
     taps = [
+      "riscv-software-src/riscv"
       "nikitabobko/tap"
+
     ];
 
     onActivation.cleanup = "zap";
