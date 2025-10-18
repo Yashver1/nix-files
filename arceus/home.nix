@@ -113,7 +113,7 @@
     ll = "lsd -l";
     la = "lsd -la";
     ls = "lsd";
-    nb = "git -C /home/yash/.config/nix add . && git -C /home/yash/.config/nix commit -m 'flake update: nixos' && git -C /home/yash/.config/nix push  origin master && sudo nixos-rebuild switch --flake /home/yash/.config/nix/ ";
+    nb = "sudo nixos-rebuild switch --flake /home/yash/.config/nix/ && git -C /home/yash/.config/nix add . && git -C /home/yash/.config/nix commit -m 'flake update: nixos' && git -C /home/yash/.config/nix push  origin master ";
     ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
   };
 
@@ -213,6 +213,7 @@
         switch-to-application-6 = [ ];
         switch-to-application-7 = [ ];
         switch-to-application-8 = [ ];
+
         switch-to-application-9 = [ ];
 
         switch-to-workspace-1 = [ "<Shift><Alt>1" ];
