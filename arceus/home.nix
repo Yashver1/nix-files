@@ -74,6 +74,12 @@
   #  /etc/profiles/per-user/yash/etc/profile.d/hm-session-vars.sh
   #
   #
+  #
+  home.sessionVariables = {
+    CC = "gcc";
+    CXX = "g++";
+  };
+
   imports = [
     # inputs.nixvim.homeModules.nixvim
     ../terminal/ghostty.nix
