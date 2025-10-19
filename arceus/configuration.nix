@@ -241,6 +241,7 @@
     gdb
     unzip
     go
+    bear
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
