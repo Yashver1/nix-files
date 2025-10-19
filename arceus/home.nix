@@ -75,9 +75,10 @@
   #
   #
   #
+  #
   home.sessionVariables = {
-    CC = "gcc";
-    CXX = "g++";
+    CC = "${pkgs.gcc}/bin/gcc";
+    CXX = "${pkgs.gcc}/bin/g++";
   };
 
   imports = [
