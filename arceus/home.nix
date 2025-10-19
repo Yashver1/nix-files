@@ -531,7 +531,7 @@
             "<leader>"
             "E"
           ];
-          commands = [ "workbench.explorer.fileView.toggleVisibility" ];
+          commands = [ "workbench.action.toggleSidebarVisibility" ];
         }
 
         # Output / Noice-ish
