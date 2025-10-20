@@ -242,6 +242,7 @@
     unzip
     go
     bear
+    telegram-desktop
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
