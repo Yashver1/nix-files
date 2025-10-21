@@ -33,6 +33,17 @@
     };
   };
 
+  systemd.services.deepcool = {
+    description = "Enable Deepcool gui";
+    wantedBy = [ "multi-user.target" ];
+
+    serviceConfig = {
+      ExecStart = "${pkgs.deepcool-digital-linux}/bin/deepcool-digital-linux";
+      Restart = "always";
+    };
+
+  };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
