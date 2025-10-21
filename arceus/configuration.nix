@@ -243,6 +243,7 @@
     go
     bear
     telegram-desktop
+    deepcool-digital-linux
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
