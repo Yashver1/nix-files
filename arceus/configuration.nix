@@ -203,6 +203,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     lm_sensors
+    thinkfan
     jq
     dtc
     spike
