@@ -107,6 +107,8 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
+  hardware.opengl.enable = true;
+
   # Enable Nvidia
   hardware.graphics = {
     enable = true;
