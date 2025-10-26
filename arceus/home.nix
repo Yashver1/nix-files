@@ -910,11 +910,11 @@
         enabled-extensions = [
           pkgs.gnomeExtensions.blur-my-shell.extensionUuid
           pkgs.gnomeExtensions.space-bar.extensionUuid
-          pkgs.gnomeExtensions.forge.extensionUuid
-          # pkgs.gnomeExtensions.just-perfection.extensionUuid
-          # pkgs.gnomeExtensions.user-themes.extensionUuid
-          #
-          # pkgs.gnomeExtensions.rounded-window-corners-reborn.extensionUuid
+          # pkgs.gnomeExtensions.forge.extensionUuid
+          pkgs.gnomeExtensions.just-perfection.extensionUuid
+          pkgs.gnomeExtensions.user-themes.extensionUuid
+          pkgs.gnomeExtensions.rounded-window-corners-reborn.extensionUuid
+
         ];
       };
 
