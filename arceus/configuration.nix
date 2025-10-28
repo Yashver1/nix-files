@@ -63,6 +63,8 @@
     openssl
     curl
     expat
+    wayland
+    libxkbcommon
 
   ];
 
@@ -272,6 +274,10 @@
     whitesur-gtk-theme
     whitesur-cursors
     whitesur-icon-theme
+
+    wayland
+    libxkbcommon
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
