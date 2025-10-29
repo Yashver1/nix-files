@@ -10,7 +10,14 @@
   # manage.
   home.username = "yash";
   home.homeDirectory = "/home/yash";
+  imports = [
+    # inputs.nixvim.homeModules.nixvim
+    ../terminal/ghostty.nix
+    ../terminal/tmux.nix
+    ../terminal/zsh.nix
+    # ../nvim
 
+  ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -90,15 +97,6 @@
     CC = "${pkgs.gcc}/bin/gcc";
     CXX = "${pkgs.gcc}/bin/g++";
   };
-
-  imports = [
-    # inputs.nixvim.homeModules.nixvim
-    ../terminal/ghostty.nix
-    ../terminal/tmux.nix
-    ../terminal/zsh.nix
-    # ../nvim
-
-  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
