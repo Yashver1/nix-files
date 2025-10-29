@@ -263,6 +263,8 @@
     telegram-desktop
     deepcool-digital-linux
     man
+    man-pages
+    man-pages-posix
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
