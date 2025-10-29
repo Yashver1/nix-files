@@ -48,6 +48,7 @@
         "vi-mode"
       ];
       theme = "robbyrussell";
+      custom = "~/.config/custom-zsh-themes";
     };
   };
 
