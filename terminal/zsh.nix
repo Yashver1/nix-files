@@ -47,7 +47,7 @@
         "z"
         "vi-mode"
       ];
-      theme = "rgm";
+      theme = "robbyrussel";
     };
   };
 
