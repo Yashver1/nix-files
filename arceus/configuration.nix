@@ -262,6 +262,7 @@
     bear
     telegram-desktop
     deepcool-digital-linux
+    man
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
@@ -274,9 +275,6 @@
     whitesur-gtk-theme
     whitesur-cursors
     whitesur-icon-theme
-
-    wayland
-    libxkbcommon
 
   ];
 
