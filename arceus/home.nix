@@ -56,7 +56,7 @@
     #   org.gradle.daemon.idletimeout=3600000
     # '';
     #
-    ".config/custom-zsh-themes/robbyrussell2.zsh-theme".text = ''
+    ".config/custom-zsh-themes/robbyrussell.zsh-theme".text = ''
       PROMPT="[%F{yellow}$ZSH_LEVEL%f] %(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%c%{$reset_color%}"
       PROMPT+=' $(git_prompt_info)'
 
