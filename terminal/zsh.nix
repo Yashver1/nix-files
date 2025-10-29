@@ -48,7 +48,7 @@
         "vi-mode"
       ];
       theme = "robbyrussell2";
-      custom = "~/.config/custom-oh-my-zsh/";
+      custom = "/home/yash/.config/custom-oh-my-zsh/";
     };
   };
 
