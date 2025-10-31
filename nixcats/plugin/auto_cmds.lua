@@ -1,7 +1,6 @@
 vim.api.nvim_create_autocmd("FileType", {
   pattern = {
-    "Make*",
-    "make*",
+    "make",
   },
   callback = function()
     vim.o.softtabstop = 4
