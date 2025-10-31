@@ -266,6 +266,7 @@
     man
     man-pages
     man-pages-posix
+    neovim
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
