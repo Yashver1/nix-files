@@ -1,2 +1,1 @@
--- require("options")
 vim.notify("Hello World")
