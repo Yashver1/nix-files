@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = {
+  pattern = { 
     "Make*",
     "make*",
   },
