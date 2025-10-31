@@ -1,1 +1,0 @@
-vim.notify("POOPITY SCOOP")
