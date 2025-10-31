@@ -18,7 +18,7 @@ in {
       ];
       # see the packageDefinitions below.
       # This says which of those to install.
-      packageNames = [ "myHomeModuleNvim" ];
+      packageNames = [ "nvim" ];
 
       luaPath = ./.;
 
@@ -132,7 +132,7 @@ in {
       packageDefinitions.replace = {
         # These are the names of your packages
         # you can include as many as you wish.
-        myHomeModuleNvim = {pkgs, name, ... }: {
+        nvim = {pkgs, name, ... }: {
           # they contain a settings set defined above
           # see :help nixCats.flake.outputs.settings
           settings = {

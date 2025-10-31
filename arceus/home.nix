@@ -749,7 +749,7 @@
 
   };
 
-  programs.neovim.enable = true;
+  # programs.neovim.enable = true;
   programs.zsh.shellAliases = {
     cppdev = "nix develop /home/yash/Workspace/dev-shells/cpp";
     ll = "lsd -l";
