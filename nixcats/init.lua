@@ -2,11 +2,7 @@ require("lze").load({
   {
     "nvim-treesitter",
     enabled = nixCats("general") or false,
-    -- cmd = { "" },
     event = "DeferredUIEnter",
-    -- ft = "",
-    -- keys = "",
-    -- colorscheme = "",
     load = function(name)
       vim.cmd.packadd(name)
       vim.cmd.packadd("nvim-treesitter-textobjects")
@@ -14,6 +10,7 @@ require("lze").load({
     after = function(plugin)
       -- [[ Configure Treesitter ]]
       -- See `:help nvim-treesitter`
+      require("nvim-treesitter.parsers").disable("blade")
       require("nvim-treesitter.configs").setup({
         highlight = { enable = true },
         indent = { enable = false },
