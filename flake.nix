@@ -19,6 +19,11 @@
 
     };
 
+    "plugins-vague" = {
+      url = "github.com:vague-theme/vague.nvim";
+      flake = false;
+    };
+
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
