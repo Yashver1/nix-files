@@ -83,9 +83,9 @@ in
               # but as a demo, we do it anyway.
               lze
               lzextras
-              snacks-nvim
-              onedark-nvim
-              vim-sleuth
+              # snacks-nvim
+              # onedark-nvim
+              # vim-sleuth
             ];
           };
 
