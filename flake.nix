@@ -20,7 +20,7 @@
     };
 
     "plugins-vague" = {
-      url = "github.com:vague-theme/vague.nvim";
+      url = "github:vague-theme/vague.nvim";
       flake = false;
     };
 
