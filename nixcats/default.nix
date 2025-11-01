@@ -86,6 +86,7 @@ in
               # snacks-nvim
               # onedark-nvim
               # vim-sleuth
+              pkgs.neovimPlugins.vague
             ];
           };
 
