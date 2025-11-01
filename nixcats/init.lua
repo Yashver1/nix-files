@@ -10,7 +10,6 @@ require("lze").load({
     after = function(plugin)
       -- [[ Configure Treesitter ]]
       -- See `:help nvim-treesitter`
-      require("nvim-treesitter.parsers").disable("blade")
       require("nvim-treesitter.configs").setup({
         highlight = { enable = true },
         indent = { enable = false },
