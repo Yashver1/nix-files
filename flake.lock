@@ -288,6 +288,22 @@
         "type": "github"
       }
     },
+    "plugins-vague": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1761315067,
+        "narHash": "sha256-EVkOpFFb7EeaA+ptNHSUj6hh1DNPPh4SCm/sorreG4M=",
+        "owner": "vague-theme",
+        "repo": "vague.nvim",
+        "rev": "5689afda42d60c8db12ff93dd6e1322f59e46a93",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vague-theme",
+        "repo": "vague.nvim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "home-manager": "home-manager",
@@ -296,7 +312,8 @@
         "nix-vscode-extensions": "nix-vscode-extensions",
         "nixCats": "nixCats",
         "nixpkgs": "nixpkgs_2",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "plugins-vague": "plugins-vague"
       }
     },
     "systems": {
