@@ -242,7 +242,7 @@
     solana-cli
     gcc
     gnumake
-    bzip
+    bzip3
     gzip
     gnutar
     pkg-config
