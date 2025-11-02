@@ -239,6 +239,7 @@
     protonup
     fzf
     virtualgl
+    solana-cli
     gcc
     gnumake
     pkg-config
