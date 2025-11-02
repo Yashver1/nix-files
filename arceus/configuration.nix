@@ -259,6 +259,7 @@
     libgccjit
     gdb
     unzip
+    rustfmt
     rust-analyzer
     go
     bear
