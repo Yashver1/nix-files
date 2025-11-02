@@ -238,6 +238,7 @@
     mangohud
     protonup
     fzf
+    virtualgl
     gcc
     gnumake
     pkg-config
