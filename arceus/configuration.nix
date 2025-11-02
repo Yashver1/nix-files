@@ -269,6 +269,7 @@
     man-pages-posix
     neovim
     luajitPackages.luarocks
+    lean4
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
