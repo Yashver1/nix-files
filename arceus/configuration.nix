@@ -242,6 +242,9 @@
     solana-cli
     gcc
     gnumake
+    bzip
+    gzip
+    gnutar
     pkg-config
     python3
     cargo
