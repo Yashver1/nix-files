@@ -270,7 +270,6 @@
     neovim
     luajitPackages.luarocks
     lean4
-    lean
     elan
 
     # GNOME Extensions
