@@ -259,6 +259,7 @@
     libgccjit
     gdb
     unzip
+    rust-analyzer
     go
     bear
     telegram-desktop
@@ -267,6 +268,7 @@
     man-pages
     man-pages-posix
     neovim
+    luajitPackages.luarocks
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
