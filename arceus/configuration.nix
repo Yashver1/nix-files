@@ -271,6 +271,7 @@
     luajitPackages.luarocks
     lean4
     lean
+    elan
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
