@@ -237,7 +237,6 @@
     fastfetch
     mangohud
     protonup
-    rustc
     fzf
     gcc
     gnumake
@@ -259,8 +258,6 @@
     libgccjit
     gdb
     unzip
-    rustfmt
-    rust-analyzer
     go
     bear
     telegram-desktop
