@@ -270,7 +270,6 @@
     neovim
     luajitPackages.luarocks
     lean4
-    elan
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
