@@ -239,7 +239,6 @@
     protonup
     fzf
     virtualgl
-    solana-cli
     gcc
     gnumake
     bzip3
