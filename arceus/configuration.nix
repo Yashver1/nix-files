@@ -246,7 +246,6 @@
     gnutar
     pkg-config
     python3
-    cargo
     ghostty
     google-chrome
     lsd
