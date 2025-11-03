@@ -247,7 +247,6 @@
     pkg-config
     python3
     ghostty
-    cargo
     google-chrome
     lsd
     zoxide
