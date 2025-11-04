@@ -250,6 +250,7 @@
     google-chrome
     btop
     lsd
+    boot.kernelPackages.perf
     trace-cmd
     zoxide
     git
