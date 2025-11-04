@@ -249,7 +249,6 @@
     ghostty
     google-chrome
     btop
-    perf
     lsd
     trace-cmd
     zoxide
