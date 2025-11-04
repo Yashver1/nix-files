@@ -47,6 +47,7 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelPackages = [ "perf" ];
 
   # ZSH
   programs.zsh.enable = true;
@@ -250,7 +251,6 @@
     google-chrome
     btop
     lsd
-    boot.kernelPackages.perf
     trace-cmd
     zoxide
     git
