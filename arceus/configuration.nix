@@ -47,7 +47,6 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = [ "perf" ];
 
   # ZSH
   programs.zsh.enable = true;
@@ -213,6 +212,7 @@
     fancontrol-gui
     jq
     dtc
+    perf
     spike
     file
     doxygen
