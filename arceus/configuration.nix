@@ -250,7 +250,6 @@
     google-chrome
     btop
     perf
-    perf-tools
     lsd
     zoxide
     git
