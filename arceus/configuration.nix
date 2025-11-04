@@ -248,6 +248,7 @@
     python3
     ghostty
     google-chrome
+    htop
     lsd
     zoxide
     git
