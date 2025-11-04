@@ -249,6 +249,7 @@
     ghostty
     google-chrome
     btop
+    perf
     lsd
     zoxide
     git
