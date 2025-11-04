@@ -251,6 +251,7 @@
     btop
     perf
     lsd
+    trace-cmd
     zoxide
     git
     lazygit
