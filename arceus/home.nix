@@ -107,7 +107,6 @@
   programs.vscode = {
     enable = true;
     profiles.default.extensions = with pkgs.nix-vscode-extensions; [
-      pkgs.vscode-extensions.vscodevim.vim
       vscode-marketplace.ms-vscode.cpptools
       vscode-marketplace.ms-vscode.cpptools-themes
       vscode-marketplace.ms-vscode.cpptools-extension-pack
