@@ -253,6 +253,7 @@
     lsd
     trace-cmd
     zoxide
+    telegram-desktop
     git
     lazygit
     gnutar
