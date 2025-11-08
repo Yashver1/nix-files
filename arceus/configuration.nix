@@ -207,9 +207,13 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+
+    # NIRI pkgs
+    rofi
     fuzzel
     swaylock
     swaybg
+
     luajitPackages.lua-lsp
     foundry
     telegram-desktop
