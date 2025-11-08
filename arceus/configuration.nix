@@ -213,6 +213,7 @@
     fuzzel
     swaylock
     swaybg
+    inputs.noctalia.packages.${system}.default
 
     luajitPackages.lua-lsp
     foundry
