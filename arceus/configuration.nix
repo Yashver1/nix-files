@@ -206,6 +206,7 @@
   environment.systemPackages = with pkgs; [
     luajitPackages.lua-lsp
     foundry
+    telegram-desktop
     lm_sensors
     fancontrol-gui
     jq
