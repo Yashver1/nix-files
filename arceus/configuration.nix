@@ -214,6 +214,7 @@
     swaylock
     swaybg
     inputs.noctalia.packages.${system}.default
+    xwayland-satellite
 
     luajitPackages.lua-lsp
     foundry
