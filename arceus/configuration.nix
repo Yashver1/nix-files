@@ -254,6 +254,7 @@
     trace-cmd
     zoxide
     git
+    telegram-desktop
     lazygit
     gnutar
     curl.dev
