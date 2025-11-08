@@ -28,7 +28,7 @@
 
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
-    # nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions/fd5c5549692ff4d2dbee1ab7eea19adc2f97baeb";
+    nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
   };
 
@@ -39,7 +39,7 @@
       nix-darwin,
       nixpkgs,
       nix-homebrew,
-      # nix-vscode-extensions,
+      nix-vscode-extensions,
       nixCats,
       ...
     }:
