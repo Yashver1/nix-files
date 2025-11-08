@@ -237,7 +237,7 @@
     nixfmt
     fastfetch
     mangohud
-    protonup
+    protonup-ng
     fzf
     virtualgl
     gcc
