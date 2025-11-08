@@ -266,7 +266,6 @@
     unzip
     go
     bear
-    telegram-desktop
     deepcool-digital-linux
     man
     man-pages
