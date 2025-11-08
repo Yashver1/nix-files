@@ -39,7 +39,7 @@
       nix-darwin,
       nixpkgs,
       nix-homebrew,
-      nix-vscode-extensions,
+      # nix-vscode-extensions,
       nixCats,
       ...
     }:
