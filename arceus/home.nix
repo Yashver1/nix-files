@@ -16,6 +16,7 @@
     ../terminal/tmux.nix
     ../terminal/zsh.nix
     ../nixcats
+
     # ../nvim
 
   ];
