@@ -213,7 +213,6 @@
   environment.systemPackages = with pkgs; [
     libva-utils
     # NIRI pkgs
-    rofi
     fuzzel
     swaylock
     swaybg

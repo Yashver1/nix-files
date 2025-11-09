@@ -51,6 +51,11 @@
     # '')
   ];
 
+  programs.rofi = {
+    enable = true;
+    theme = "/home/yash/.config/rofi/launchers/type-3/style-2.rasi";
+  };
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
