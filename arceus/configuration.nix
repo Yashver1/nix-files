@@ -23,8 +23,13 @@
   ];
 
   # Niri
-  programs.niri.package = pkgs.niri;
-  programs.niri.enable = true;
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri;
+    settings = {
+      outputs."eDP-1".scale = 2.0;
+    };
+  };
 
   # Fix wakeup
   services.udev.extraRules = ''
