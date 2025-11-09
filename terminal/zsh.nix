@@ -15,11 +15,12 @@
       "cp *"
     ];
 
-    initContent = lib.mkOrder 500 ''
+    initContent = lib.mkOrder 550 ''
       function zvm_config() {
-        ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BEAM
+        ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
         ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
         ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+        ZVM_VI_HIGHLIGHT_BACKGROUND='#ffffff'
       }
     '';
 
