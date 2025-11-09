@@ -110,7 +110,7 @@
   services.desktopManager.gnome.enable = true;
 
   # Enable Opengl
-  hardware.graphics.graphics = true;
+  hardware.graphics.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
