@@ -25,6 +25,7 @@
       VI_MODE_CURSOR_OPPEND=6
       MODE_INDICATOR=" "
       INSERT_MODE_INDICATOR=" "
+      ZVM_SYSTEM_CLIPBOARD_ENABLED=true
     '';
 
     plugins = [
