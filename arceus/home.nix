@@ -11,7 +11,6 @@
   home.username = "yash";
   home.homeDirectory = "/home/yash";
   imports = [
-    inputs.niri.homeModules.config
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
     ../terminal/zsh.nix
@@ -123,12 +122,6 @@
     window-padding-balance = true;
     window-padding-x = 25;
     window-padding-y = 15;
-  };
-
-  programs.niri = {
-    settings = {
-      outputs."eDP-1".scale = 2.0;
-    };
   };
 
   programs.fastfetch = {

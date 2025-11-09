@@ -41,7 +41,10 @@
       inputs.quickshell.follows = "quickshell";
     };
 
-    niri.url = "github:sodiboo/niri-flake";
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
