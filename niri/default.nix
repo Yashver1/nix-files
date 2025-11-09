@@ -246,6 +246,7 @@
         "Mod+Ctrl+K" = {
           action.move-window-up = { };
         };
+
         "Mod+Ctrl+L" = {
           action.move-column-right = { };
         };
@@ -330,10 +331,10 @@
         "Mod+Ctrl+Page_Up" = {
           action.move-column-to-workspace-up = { };
         };
-        "Mod+Ctrl+Down" = {
+        "Mod+Ctrl+Shift+Down" = {
           action.move-column-to-workspace-down = { };
         };
-        "Mod+Ctrl+Up" = {
+        "Mod+Ctrl+Shift+Up" = {
           action.move-column-to-workspace-up = { };
         };
         "Mod+Shift+Page_Down" = {
