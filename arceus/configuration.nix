@@ -220,7 +220,6 @@
     libva-utils
     # NIRI pkgs
     swaybg
-    gtklock
     inputs.noctalia.packages.${system}.default
     xwayland-satellite
 
