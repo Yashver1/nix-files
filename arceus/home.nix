@@ -11,6 +11,7 @@
   home.username = "yash";
   home.homeDirectory = "/home/yash";
   imports = [
+    inputs.niri.homeModules.niri
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
     ../terminal/zsh.nix
