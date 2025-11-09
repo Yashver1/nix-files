@@ -112,6 +112,8 @@
   # Enable Opengl
   hardware.graphics.enable = true;
 
+  programs.niri.enable = true;
+
   services.xserver.videoDrivers = [ "nvidia" ];
 
   hardware.nvidia = {
