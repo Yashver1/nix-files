@@ -121,6 +121,8 @@
         }
       ];
 
+      hotkey-overlay.skip-at-startup = true;
+
       # 'with config.lib.niri.actions;' is removed as it's no longer needed.
       binds = {
 
