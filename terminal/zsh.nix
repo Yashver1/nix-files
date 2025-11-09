@@ -50,7 +50,7 @@
       plugins = [
         "git"
         "z"
-        "vi-mode"
+        # "vi-mode"
       ];
       theme = "robbyrussell2";
       custom = "/home/yash/.config/custom-oh-my-zsh/";
