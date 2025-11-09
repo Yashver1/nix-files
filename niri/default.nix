@@ -4,7 +4,7 @@
 
   programs.niri = {
     enable = true;
-    packages = pkgs.niri-stable;
+    packages = pkgs.niri;
     settings = {
 
       input = {
