@@ -116,6 +116,10 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  hardware.graphics.extraPackages = with pkgs; [
+    intel-media-driver
+  ];
+
   hardware.nvidia = {
 
     modesetting.enable = true;
