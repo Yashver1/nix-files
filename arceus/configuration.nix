@@ -24,6 +24,7 @@
 
   # Niri
   programs.niri.package = pkgs.niri;
+  programs.niri.enable = true;
 
   # Fix wakeup
   services.udev.extraRules = ''
