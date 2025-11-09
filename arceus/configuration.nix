@@ -22,6 +22,9 @@
     inputs.nix-vscode-extensions.overlays.default
   ];
 
+  # Niri
+  programs.niri.package = pkgs.niri;
+
   # Fix wakeup
   services.udev.extraRules = ''
     ACTION=="add|change", SUBSYSTEM=="usb", ATTRS{idVendor}=="706b", ATTRS{idProduct}=="0011", ATTR{power/wakeup}="enabled"
@@ -197,8 +200,6 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  programs.niri.enable = true;
 
   virtualisation.docker = {
     enable = true;
