@@ -16,9 +16,11 @@
     ];
 
     initExtra = ''
-      ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
-      ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
-      ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+      function zvm_config() {
+        ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+        ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
+        ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+      }
     '';
 
     envExtra = ''
