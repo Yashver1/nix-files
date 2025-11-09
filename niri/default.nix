@@ -132,6 +132,12 @@
           hotkey-overlay.title = "Open a Terminal: ghostty";
           action.spawn = [ "ghostty" ];
         };
+
+        "Mod+M" = {
+          hotkey-overlay.title = "Open a Terminal: cider";
+          action.spawn = [ "cider" ];
+        };
+
         "Mod+D" = {
           hotkey-overlay.title = "Run an Application: rofi";
           action.spawn-sh = [ "rofi -show drun" ];
