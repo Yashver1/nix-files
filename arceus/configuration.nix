@@ -218,11 +218,6 @@
   environment.systemPackages = with pkgs; [
     wl-clipboard
     libva-utils
-    # NIRI pkgs
-    swaybg
-    inputs.noctalia.packages.${system}.default
-    xwayland-satellite
-
     luajitPackages.lua-lsp
     foundry
     telegram-desktop
@@ -291,6 +286,11 @@
     neovim
     luajitPackages.luarocks
     elan
+
+    # NIRI pkgs
+    swaybg
+    inputs.noctalia.packages.${system}.default
+    xwayland-satellite
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
