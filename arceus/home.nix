@@ -132,7 +132,7 @@
 
   programs.ghostty.settings = {
     command = "zsh";
-    # background-opacity = 0.8;
+    background-opacity = 0.8;
     theme = "GitLab Dark Grey";
     window-decoration = "server";
     gtk-titlebar = false;
