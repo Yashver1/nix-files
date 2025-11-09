@@ -312,7 +312,6 @@
         "Mod+Shift+Ctrl+L" = {
           action.move-column-to-monitor-right = { };
         };
-
         "Mod+J" = {
           action.focus-workspace-down = { };
         };
@@ -337,7 +336,6 @@
         "Mod+Shift+K" = {
           action.move-column-to-workspace-up = { };
         };
-
         "Mod+Shift+Page_Down" = {
           action.move-workspace-down = { };
         };
