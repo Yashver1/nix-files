@@ -77,7 +77,7 @@
       if [[ "$IN_NIX_SHELL" == "impure" ]]; then
         RPROMPT="[%F{yellow}nix-shell%f]"
       else
-        RPROMPT="[%F{yellow}$IN_NIX_SHELL%f]"
+        RPROMPT=""
       fi
 
       ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
