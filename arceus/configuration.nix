@@ -109,14 +109,10 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
-  # Enable Nvidia
-  hardware.graphics = {
-    enable = true;
-  };
+  # Enable Opengl
+  hardware.graphics.graphics = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
-
-  hardware.opengl.enable = true;
 
   hardware.nvidia = {
 
