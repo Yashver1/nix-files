@@ -73,8 +73,12 @@
     ".config/custom-oh-my-zsh/themes/robbyrussell2.zsh-theme".text = ''
       PROMPT="%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%c%{$reset_color%}"
       PROMPT+=' $(git_prompt_info)'
-      RPROMPT="[%F{yellow}$SHLVL%f]"
 
+      if [[ "$IN_NIX_SHELL" == "impure" ]]; then
+        RPROMPT="[%F{yellow}nix-shell%f]"
+      else
+        RPROMPT="[%F{yellow}$IN_NIX_SHELL%f]"
+      fi
 
       ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
       ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
