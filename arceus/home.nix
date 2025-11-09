@@ -100,6 +100,7 @@
   home.sessionVariables = {
     CC = "${pkgs.gcc}/bin/gcc";
     CXX = "${pkgs.gcc}/bin/g++";
+    GDK_GL = "gles";
   };
 
   # Let Home Manager install and manage itself.

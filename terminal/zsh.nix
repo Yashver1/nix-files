@@ -25,7 +25,6 @@
       VI_MODE_CURSOR_OPPEND=6
       MODE_INDICATOR=" "
       INSERT_MODE_INDICATOR=" "
-      GDK_GL=gles
     '';
 
     plugins = [
