@@ -116,10 +116,6 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  hardware.graphics.extraPackages = with pkgs; [
-    intel-media-driver
-  ];
-
   hardware.nvidia = {
 
     modesetting.enable = true;
@@ -133,6 +129,8 @@
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
+    forceFullCompositionPipeline = true;
+    nvidiaPersistenced = true;
   };
 
   # Configure keymap in X11
