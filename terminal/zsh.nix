@@ -15,6 +15,12 @@
       "cp *"
     ];
 
+    initExtra = ''
+      ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+      ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
+      ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+    '';
+
     envExtra = ''
       ZSH_CUSTOM=~/.config/oh-my-zsh
       KEYTIMEOUT=1
@@ -25,10 +31,6 @@
       VI_MODE_CURSOR_OPPEND=6
       MODE_INDICATOR=" "
       INSERT_MODE_INDICATOR=" "
-
-      ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
-      ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
-      ZVM_SYSTEM_CLIPBOARD_ENABLED=true
     '';
 
     plugins = [
