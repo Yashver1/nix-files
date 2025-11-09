@@ -111,7 +111,7 @@
 
       # KDL nodes with the same name become a list in Nix
       spawn-at-startup = [
-        { spawn = [ "noctalia-shell" ]; }
+        { argv = [ "noctalia-shell" ]; }
       ];
 
       # spawn-sh-at-startup = [
