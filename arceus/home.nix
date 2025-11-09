@@ -142,7 +142,7 @@
     window-padding-y = 15;
   };
 
-  program.swaylock = {
+  programs.swaylock = {
     enable = true;
     settings = {
       image = "~/Downloads/wallpapers/minimal_c.png";
