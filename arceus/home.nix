@@ -11,7 +11,7 @@
   home.username = "yash";
   home.homeDirectory = "/home/yash";
   imports = [
-    # inputs.nixvim.homeModules.nixvim
+    inputs.niri.homeModules.config
     ../terminal/ghostty.nix
     ../terminal/tmux.nix
     ../terminal/zsh.nix
@@ -129,6 +129,7 @@
     enable = true;
     settings = {
       outputs."eDP-1".scale = 2.0;
+
     };
   };
 
