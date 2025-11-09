@@ -22,15 +22,6 @@
     inputs.nix-vscode-extensions.overlays.default
   ];
 
-  # Niri
-  programs.niri = {
-    enable = true;
-    package = pkgs.niri;
-    settings = {
-      outputs."eDP-1".scale = 2.0;
-    };
-  };
-
   # Fix wakeup
   services.udev.extraRules = ''
     ACTION=="add|change", SUBSYSTEM=="usb", ATTRS{idVendor}=="706b", ATTRS{idProduct}=="0011", ATTR{power/wakeup}="enabled"

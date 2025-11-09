@@ -18,6 +18,16 @@
     ../vscode
 
   ];
+
+  # Niri
+  programs.niri = {
+    enable = true;
+    package = pkgs.niri;
+    settings = {
+      outputs."eDP-1".scale = 2.0;
+    };
+  };
+
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -28,7 +38,7 @@
   home.stateVersion = "25.05"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
-  # environment.
+  # environment
   home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
