@@ -312,10 +312,10 @@
         "Mod+Shift+Ctrl+L" = {
           action.move-column-to-monitor-right = { };
         };
-        "Mod+J" = {
+        "Mod+Shift+Down" = {
           action.focus-workspace-down = { };
         };
-        "Mod+K" = {
+        "Mod+Shift+Down" = {
           action.focus-workspace-up = { };
         };
         "Mod+U" = {
@@ -330,10 +330,10 @@
         "Mod+Ctrl+Page_Up" = {
           action.move-column-to-workspace-up = { };
         };
-        "Mod+Shift+J" = {
+        "Mod+Ctrl+Down" = {
           action.move-column-to-workspace-down = { };
         };
-        "Mod+Shift+K" = {
+        "Mod+Ctrl+Up" = {
           action.move-column-to-workspace-up = { };
         };
         "Mod+Shift+Page_Down" = {
