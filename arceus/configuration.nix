@@ -110,8 +110,14 @@
   services.desktopManager.gnome.enable = true;
 
   # Enable Opengl
-  hardware.graphics.enable = true;
-  hardware.graphics.enable32Bit = true;
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+    extraPackages = with pkgs; [
+      nvidia-vaapi-driver
+      libvdpau-va-gl
+    ];
+  };
 
   programs.niri.enable = true;
 
