@@ -267,10 +267,10 @@
         "Mod+Shift+Left" = {
           action.focus-monitor-left = { };
         };
-        "Mod+Shift+Down" = {
+        "Mod+Alt+Down" = {
           action.focus-monitor-down = { };
         };
-        "Mod+Shift+Up" = {
+        "Mod+Alt+Up" = {
           action.focus-monitor-up = { };
         };
         "Mod+Shift+Right" = {
@@ -316,7 +316,7 @@
         "Mod+Shift+Down" = {
           action.focus-workspace-down = { };
         };
-        "Mod+Shift+Down" = {
+        "Mod+Shift+Up" = {
           action.focus-workspace-up = { };
         };
         "Mod+U" = {
