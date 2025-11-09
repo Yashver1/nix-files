@@ -14,7 +14,6 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     inputs.home-manager.nixosModules.home-manager
-    inputs.niri.nixosModules.niri
 
   ];
 
