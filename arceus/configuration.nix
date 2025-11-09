@@ -219,7 +219,6 @@
     wl-clipboard
     libva-utils
     # NIRI pkgs
-    swaylock
     swaybg
     inputs.noctalia.packages.${system}.default
     xwayland-satellite

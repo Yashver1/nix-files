@@ -142,6 +142,46 @@
     window-padding-y = 15;
   };
 
+  program.swaylock = {
+    enable = true;
+    settings = {
+      image = "~/Downloads/wallpapers/minimal_c.png";
+      inside-color = "00000000";
+      inside-clear-color = "00000000";
+      inside-ver-color = "00000000";
+      inside-wrong-color = "00000000";
+      inside-caps-lock-color = "00000000";
+
+      ring-color = "ffffffff";
+      ring-clear-color = "ffffffff";
+      ring-ver-color = "ffffffff";
+      ring-wrong-color = "ffffffff";
+      ring-caps-lock-color = "ffffffff";
+
+      indicator-radius = 50;
+      indicator-thickness = 6;
+      indicator-idle-visible = true;
+
+      text-color = "ffffffff";
+      text-clear-color = "ffffffff";
+      text-ver-color = "ffffffff";
+      text-wrong-color = "ffffffff";
+      text-caps-lock-color = "ffffffff";
+
+      layout-bg-color = "00000000";
+      layout-border-color = "ffffffff";
+      layout-text-color = "ffffffff";
+
+      key-hl-color = "ffffffff";
+      bs-hl-color = "ffffffff";
+      caps-lock-key-hl-color = "ffffffff";
+      caps-lock-bs-hl-color = "ffffffff";
+
+      separator-color = "00000000";
+
+    };
+  };
+
   programs.fastfetch = {
     enable = true;
     settings = {
