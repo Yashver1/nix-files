@@ -168,6 +168,9 @@
       text-wrong-color = "ffffffff";
       text-caps-lock-color = "ffffffff";
 
+      indicator-x-position = 0;
+      indicator-y-position = 0;
+
       layout-bg-color = "00000000";
       layout-border-color = "ffffffff";
       layout-text-color = "ffffffff";
