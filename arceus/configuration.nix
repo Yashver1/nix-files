@@ -213,7 +213,6 @@
   environment.systemPackages = with pkgs; [
     libva-utils
     # NIRI pkgs
-    fuzzel
     swaylock
     swaybg
     inputs.noctalia.packages.${system}.default

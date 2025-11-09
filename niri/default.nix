@@ -133,8 +133,8 @@
           action.spawn = [ "ghostty" ];
         };
         "Mod+D" = {
-          hotkey-overlay.title = "Run an Application: fuzzel";
-          action.spawn = [ "fuzzel" ];
+          hotkey-overlay.title = "Run an Application: rofi";
+          action.spawn-sh = [ "rofi -show drun" ];
         };
         "Super+Alt+L" = {
           hotkey-overlay.title = "Lock the Screen: swaylock";
