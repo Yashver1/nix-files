@@ -17,17 +17,8 @@
     ../terminal/zsh.nix
     ../nixcats
     ../vscode
-
+    ../niri
   ];
-
-  # Niri
-  programs.niri = {
-    enable = true;
-    package = pkgs.niri;
-    settings = {
-      outputs."eDP-1".scale = 2.0;
-    };
-  };
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
