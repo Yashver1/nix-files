@@ -20,7 +20,13 @@
         ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
         ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
         ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+
       }
+      ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+      ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
+      ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+
+
     '';
 
     envExtra = ''
@@ -49,7 +55,7 @@
       {
         name = "vi-mode";
         src = pkgs.zsh-vi-mode;
-        file = "zsh-vi-mode.plugin.zsh";
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
       }
     ];
 
