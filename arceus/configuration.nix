@@ -211,6 +211,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    libva-utils
 
     # NIRI pkgs
     rofi
