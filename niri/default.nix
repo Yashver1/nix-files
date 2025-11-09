@@ -57,10 +57,10 @@
         };
 
         focus-ring = {
-          enable = false;
-          width = 4;
+          enable = true;
+          width = 2;
           active = {
-            color = "#7fc8ff";
+            color = "#ffffff";
           };
           inactive = {
             color = "#505050";
