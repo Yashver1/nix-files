@@ -88,12 +88,9 @@
   #
   #
   imports = [
-    # inputs.nixvim.homeModules.nixvim
     ../terminal/zsh.nix
     ../terminal/tmux.nix
-    # ../nvim
   ];
-
 
   programs.neovim.enable = true;
   # Let Home Manager install and manage itself.

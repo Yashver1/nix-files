@@ -41,6 +41,8 @@
       inputs.quickshell.follows = "quickshell";
     };
 
+    niri.url = "github:sodiboo/niri-flake";
+
   };
 
   outputs =
@@ -52,6 +54,7 @@
       nix-homebrew,
       nix-vscode-extensions,
       nixCats,
+      niri,
       ...
     }:
     {

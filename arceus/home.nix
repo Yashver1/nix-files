@@ -18,8 +18,6 @@
     ../nixcats
     ../vscode
 
-    # ../nvim
-
   ];
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -125,6 +123,13 @@
     window-padding-balance = true;
     window-padding-x = 25;
     window-padding-y = 15;
+  };
+
+  programs.niri = {
+    enable = true;
+    settings = {
+      outputs."eDP-1".scale = 2.0;
+    };
   };
 
   programs.fastfetch = {
