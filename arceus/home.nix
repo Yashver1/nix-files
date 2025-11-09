@@ -118,6 +118,7 @@
   # XDG options
 
   xdg = {
+    enable = true;
     desktopEntries."google-chrome-stable" = {
       name = "Google Chrome";
       genericName = "Web Browser";
