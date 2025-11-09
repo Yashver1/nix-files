@@ -21,7 +21,7 @@
     inputs.nix-vscode-extensions.overlays.default
     (final: prev: {
       google-chrome = prev.google-chrome.override {
-        commandLineArgs = "----disable-features=GlobalShortcutsPortal";
+        commandLineArgs = "--disable-features=GlobalShortcutsPortal";
       };
     })
   ];
