@@ -1,578 +1,558 @@
+# In your home.nix
+{ config, pkgs, ... }:
 {
-  pkgs,
-  ...
-}:
-{
-  # In home.nix
-  programs.niri = {
-    enable = true;
-    package = pkgs.niri;
 
-    settings = {
+  programs.niri.settings = {
 
-      input = {
-        keyboard = {
-          xkb = {
-            # Example:
-            # layout = "us,ru";
-            # options = "grp:win_space_toggle,compose:ralt,ctrl:nocaps";
-          };
-          numlock = true;
+    input = {
+      keyboard = {
+        xkb = {
+          # Example:
+          # layout = "us,ru";
+          # options = "grp:win_space_toggle,compose:ralt,ctrl:nocaps";
         };
+        numlock = true;
+      };
 
-        touchpad = {
-          tap = true;
-          natural-scroll = true;
+      touchpad = {
+        tap = true;
+        natural-scroll = true;
+      };
+
+      mouse = { };
+      trackpoint = { };
+
+      # warp-mouse-to-focus.enable = true;
+
+      focus-follows-mouse = {
+        enable = true;
+        max-scroll-amount = "0%";
+      };
+    };
+
+    outputs."eDP-1".scale = 2.0;
+
+    # This is the commented-out example from the KDL config
+    /*
+      outputs."eDP-1" = {
+        mode = { width = 1920; height = 1080; refresh = 120.030; };
+        scale = 2;
+        transform = { rotation = 0; flipped = false; };
+        position = { x = 1280; y = 0; };
+      };
+    */
+
+    layout = {
+      gaps = 16;
+      center-focused-column = "never";
+
+      preset-column-widths = [
+        { proportion = 0.33333; }
+        { proportion = 0.5; }
+        { proportion = 0.66667; }
+      ];
+
+      # preset-window-heights = [ ];
+
+      default-column-width = {
+        proportion = 0.5;
+      };
+      # default-column-width = {};
+
+      focus-ring = {
+        enable = false;
+        width = 4;
+        active = {
+          color = "#7fc8ff";
         };
-
-        mouse = {
-          # off = true;
+        inactive = {
+          color = "#505050";
         };
+        # active = { gradient = { from = "#80c8ff"; to = "#c7ff7f"; angle = 45; }; };
+      };
 
-        trackpoint = {
-          # off = true;
+      border = {
+        enable = false;
+        width = 4;
+        active = {
+          color = "#ffc87f";
         };
-
-        # warp-mouse-to-focus = true;
-
-        focus-follows-mouse = {
-          max-scroll-amount = "0%";
+        inactive = {
+          color = "#505050";
+        };
+        urgent = {
+          color = "#9b0000";
         };
       };
 
-      /*
-        # Outputs are defined by their name. Find yours with `niri msg outputs`
-        # The user's original config had this commented out.
-        outputs."eDP-1" = {
-          # off = true;
-          mode = "1920x1080@120.030";
-          scale = 2;
-          transform = "normal";
-          position = { x = 1280; y = 0; };
+      shadow = {
+        # enable = true;
+        # draw-behind-window = true;
+        softness = 30;
+        spread = 5;
+        offset = {
+          x = 0;
+          y = 5;
         };
-      */
+        color = "#0007";
+      };
 
-      # Use the output config from your previous attempts
-      outputs."eDP-1".scale = 2.0;
+      struts = {
+        # left = 64;
+        # right = 64;
+        # top = 64;
+        # bottom = 64;
+      };
+    };
 
-      layout = {
-        gaps = 16;
-        center-focused-column = "never";
+    spawn-at-startup = [
+      { argv = [ "noctalia-shell" ]; }
+    ];
 
-        # KDL nodes with the same name become a list in Nix
-        preset-column-widths = [
-          { proportion = 0.33333; }
-          { proportion = 0.5; }
-          { proportion = 0.66667; }
-          # { fixed = 1920; }
+    hotkey-overlay = {
+      # skip-at-startup = true;
+    };
+
+    prefer-no-csd = true;
+
+    screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
+    # screenshot-path = null;
+
+    animations = {
+      # enable = false; # 'off' in KDL
+      # slowdown = 3.0;
+    };
+
+    window-rules = [
+      {
+        matches = [
+          { "app-id" = ''^org\.wezfurlong\.wezterm$''; }
         ];
-
-        # preset-window-heights = [ ];
-
-        default-column-width = {
-          proportion = 0.5;
-        };
-
-        focus-ring = {
-          off = true;
-          width = 4;
-          active-color = "#7fc8ff";
-          inactive-color = "#505050";
-          # active-gradient = { from = "#80c8ff"; to = "#c7ff7f"; angle = 45; };
-        };
-
-        border = {
-          off = true;
-          width = 4;
-          active-color = "#ffc87f";
-          inactive-color = "#505050";
-          urgent-color = "#9b0000";
-        };
-
-        shadow = {
-          # on = true;
-          # draw-behind-window = true;
-          softness = 30;
-          spread = 5;
-          offset = {
-            x = 0;
-            y = 5;
-          };
-          color = "#0007";
-        };
-
-        struts = {
-          # left = 64;
-          # right = 64;
-          # top = 64;
-          # bottom = 64;
-        };
-      };
-
-      # KDL nodes with the same name become a list in Nix
-      spawn-at-startup = [
-        { argv = [ "noctalia-shell" ]; }
-      ];
-
-      # spawn-sh-at-startup = [
-      #   "qs -c ~/source/qs/MyAwesomeShell"
-      # ];
-
-      hotkey-overlay = {
-        # skip-at-startup = true;
-      };
-
-      prefer-no-csd = true;
-
-      screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
-      # screenshot-path = null;
-
-      animations = {
-        # off = true;
-        # slowdown = 3.0;
-      };
-
-      # KDL 'window-rule' (singular) becomes 'window-rules' (plural) in Nix
-      window-rules = [
-        {
-          # KDL 'match' (singular) becomes 'match' (plural list) in Nix
-          match = [
-            # Use Nix indented strings (two single quotes) for regexes
-            { app-id = ''^org\.wezfurlong\.wezterm$''; }
-          ];
-          default-column-width = { };
-        }
-        {
-          match = [
-            {
-              app-id = ''firefox$'';
-              title = ''^Picture-in-Picture$'';
-            }
-          ];
-          open-floating = true;
-        }
-        /*
+        default-column-width = { };
+      }
+      {
+        matches = [
           {
-            match = [
-              { app-id = ''^org\.keepassxc\.KeePassXC$''; }
-              { app-id = ''^org\.gnome\.World\.Secrets$''; }
-            ];
-            block-out-from = "screen-capture";
+            "app-id" = ''firefox$'';
+            title = ''^Picture-in-Picture$'';
           }
-        */
-        /*
-          {
-            geometry-corner-radius = 12;
-            clip-to-geometry = true;
-          }
-        */
-      ];
-
-      binds = {
-        "Mod+Shift+Slash" = {
-          show-hotkey-overlay = true;
-        };
-
-        "Mod+T" = {
-          hotkey-overlay-title = "Open a Terminal: ghostty";
-          spawn = [ "ghostty" ]; # KDL 'spawn "arg"' becomes 'spawn = [ "arg" ]'
-        };
-        "Mod+D" = {
-          hotkey-overlay-title = "Run an Application: fuzzel";
-          spawn = [ "fuzzel" ];
-        };
-        "Super+Alt+L" = {
-          hotkey-overlay-title = "Lock the Screen: swaylock";
-          spawn = [ "swaylock" ];
-        };
-
-        "Super+Alt+S" = {
-          allow-when-locked = true;
-          hotkey-overlay-title = null;
-          spawn-sh = "pkill orca || exec orca";
-        };
-
-        "XF86AudioRaiseVolume" = {
-          allow-when-locked = true;
-          spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
-        };
-        "XF86AudioLowerVolume" = {
-          allow-when-locked = true;
-          spawn-sh = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
-        };
-        "XF86AudioMute" = {
-          allow-when-locked = true;
-          spawn-sh = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
-        };
-        "XF86AudioMicMute" = {
-          allow-when-locked = true;
-          spawn-sh = "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
-        };
-
-        # KDL 'spawn "arg1" "arg2"' becomes 'spawn = [ "arg1" "arg2" ]'
-        "XF86MonBrightnessUp" = {
-          allow-when-locked = true;
-          spawn = [
-            "brightnessctl"
-            "--class=backlight"
-            "set"
-            "+10%"
+        ];
+        open-floating = true;
+      }
+      /*
+        {
+          matches = [
+            { "app-id" = ''^org\.keepassxc\.KeePassXC$''; }
+            { "app-id" = ''^org\.gnome\.World\.Secrets$''; }
           ];
-        };
-        "XF86MonBrightnessDown" = {
-          allow-when-locked = true;
-          spawn = [
-            "brightnessctl"
-            "--class=backlight"
-            "set"
-            "10%-"
-          ];
-        };
+          block-out-from = "screen-capture";
+        }
+      */
+      /*
+        {
+          geometry-corner-radius.bottom-left = 12;
+          geometry-corner-radius.bottom-right = 12;
+          geometry-corner-radius.top-left = 12;
+          geometry-corner-radius.top-right = 12;
+          clip-to-geometry = true;
+        }
+      */
+    ];
 
-        "Mod+O" = {
-          repeat = false;
-          toggle-overview = true;
-        };
-        "Mod+Q" = {
-          repeat = false;
-          close-window = true;
-        };
+    binds = with config.lib.niri.actions; {
 
-        "Mod+Left" = {
-          focus-column-left = true;
-        };
-        "Mod+Down" = {
-          focus-window-down = true;
-        };
-        "Mod+Up" = {
-          focus-window-up = true;
-        };
-        "Mod+Right" = {
-          focus-column-right = true;
-        };
-        "Mod+H" = {
-          focus-column-left = true;
-        };
-        "Mod+J" = {
-          focus-window-down = true;
-        };
-        "Mod+K" = {
-          focus-window-up = true;
-        };
-        "Mod+L" = {
-          focus-column-right = true;
-        };
+      "Mod+Shift+Slash" = {
+        action = show-hotkey-overlay;
+      };
 
-        "Mod+Ctrl+Left" = {
-          move-column-left = true;
-        };
-        "Mod+Ctrl+Down" = {
-          move-window-down = true;
-        };
-        "Mod+Ctrl+Up" = {
-          move-window-up = true;
-        };
-        "Mod+Ctrl+Right" = {
-          move-column-right = true;
-        };
-        "Mod+Ctrl+H" = {
-          move-column-left = true;
-        };
-        "Mod+Ctrl+J" = {
-          move-window-down = true;
-        };
-        "Mod+Ctrl+K" = {
-          move-window-up = true;
-        };
-        "Mod+Ctrl+L" = {
-          move-column-right = true;
-        };
+      "Mod+T" = {
+        hotkey-overlay.title = "Open a Terminal: ghostty";
+        action = spawn "ghostty";
+      };
+      "Mod+D" = {
+        hotkey-overlay.title = "Run an Application: fuzzel";
+        action = spawn "fuzzel";
+      };
+      "Super+Alt+L" = {
+        hotkey-overlay.title = "Lock the Screen: swaylock";
+        action = spawn "swaylock";
+      };
 
-        "Mod+Home" = {
-          focus-column-first = true;
-        };
-        "Mod+End" = {
-          focus-column-last = true;
-        };
-        "Mod+Ctrl+Home" = {
-          move-column-to-first = true;
-        };
-        "Mod+Ctrl+End" = {
-          move-column-to-last = true;
-        };
+      "Super+Alt+S" = {
+        allow-when-locked = true;
+        hotkey-overlay.hidden = true; # KDL 'title=null'
+        action = spawn-sh "pkill orca || exec orca";
+      };
 
-        "Mod+Shift+Left" = {
-          focus-monitor-left = true;
-        };
-        "Mod+Shift+Down" = {
-          focus-monitor-down = true;
-        };
-        "Mod+Shift+Up" = {
-          focus-monitor-up = true;
-        };
-        "Mod+Shift+Right" = {
-          focus-monitor-right = true;
-        };
-        "Mod+Shift+H" = {
-          focus-monitor-left = true;
-        };
-        "Mod+Shift+J" = {
-          focus-monitor-down = true;
-        };
-        "Mod+Shift+K" = {
-          focus-monitor-up = true;
-        };
-        "Mod+Shift+L" = {
-          focus-monitor-right = true;
-        };
+      "XF86AudioRaiseVolume" = {
+        allow-when-locked = true;
+        action = spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+";
+      };
+      "XF86AudioLowerVolume" = {
+        allow-when-locked = true;
+        action = spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-";
+      };
+      "XF86AudioMute" = {
+        allow-when-locked = true;
+        action = spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
+      };
+      "XF86AudioMicMute" = {
+        allow-when-locked = true;
+        action = spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle";
+      };
 
-        "Mod+Shift+Ctrl+Left" = {
-          move-column-to-monitor-left = true;
-        };
-        "Mod+Shift+Ctrl+Down" = {
-          move-column-to-monitor-down = true;
-        };
-        "Mod+Shift+Ctrl+Up" = {
-          move-column-to-monitor-up = true;
-        };
-        "Mod+Shift+Ctrl+Right" = {
-          move-column-to-monitor-right = true;
-        };
-        "Mod+Shift+Ctrl+H" = {
-          move-column-to-monitor-left = true;
-        };
-        "Mod+Shift+Ctrl+J" = {
-          move-column-to-monitor-down = true;
-        };
-        "Mod+Shift+Ctrl+K" = {
-          move-column-to-monitor-up = true;
-        };
-        "Mod+Shift+Ctrl+L" = {
-          move-column-to-monitor-right = true;
-        };
+      "XF86MonBrightnessUp" = {
+        allow-when-locked = true;
+        action = spawn "brightnessctl" "--class=backlight" "set" "+10%";
+      };
+      "XF86MonBrightnessDown" = {
+        allow-when-locked = true;
+        action = spawn "brightnessctl" "--class=backlight" "set" "10%-";
+      };
 
-        "Mod+Page_Down" = {
-          focus-workspace-down = true;
-        };
-        "Mod+Page_Up" = {
-          focus-workspace-up = true;
-        };
-        "Mod+U" = {
-          focus-workspace-down = true;
-        };
-        "Mod+I" = {
-          focus-workspace-up = true;
-        };
-        "Mod+Ctrl+Page_Down" = {
-          move-column-to-workspace-down = true;
-        };
-        "Mod+Ctrl+Page_Up" = {
-          move-column-to-workspace-up = true;
-        };
-        "Mod+Ctrl+U" = {
-          move-column-to-workspace-down = true;
-        };
-        "Mod+Ctrl+I" = {
-          move-column-to-workspace-up = true;
-        };
+      "Mod+O" = {
+        repeat = false;
+        action = toggle-overview;
+      };
+      "Mod+Q" = {
+        repeat = false;
+        action = close-window;
+      };
 
-        "Mod+Shift+Page_Down" = {
-          move-workspace-down = true;
-        };
-        "Mod+Shift+Page_Up" = {
-          move-workspace-up = true;
-        };
-        "Mod+Shift+U" = {
-          move-workspace-down = true;
-        };
-        "Mod+Shift+I" = {
-          move-workspace-up = true;
-        };
+      "Mod+Left" = {
+        action = focus-column-left;
+      };
+      "Mod+Down" = {
+        action = focus-window-down;
+      };
+      "Mod+Up" = {
+        action = focus-window-up;
+      };
+      "Mod+Right" = {
+        action = focus-column-right;
+      };
+      "Mod+H" = {
+        action = focus-column-left;
+      };
+      "Mod+J" = {
+        action = focus-window-down;
+      };
+      "Mod+K" = {
+        action = focus-window-up;
+      };
+      "Mod+L" = {
+        action = focus-column-right;
+      };
 
-        "Mod+WheelScrollDown" = {
-          cooldown-ms = 150;
-          focus-workspace-down = true;
-        };
-        "Mod+WheelScrollUp" = {
-          cooldown-ms = 150;
-          focus-workspace-up = true;
-        };
-        "Mod+Ctrl+WheelScrollDown" = {
-          cooldown-ms = 150;
-          move-column-to-workspace-down = true;
-        };
-        "Mod+Ctrl+WheelScrollUp" = {
-          cooldown-ms = 150;
-          move-column-to-workspace-up = true;
-        };
+      "Mod+Ctrl+Left" = {
+        action = move-column-left;
+      };
+      "Mod+Ctrl+Down" = {
+        action = move-window-down;
+      };
+      "Mod+Ctrl+Up" = {
+        action = move-window-up;
+      };
+      "Mod+Ctrl+Right" = {
+        action = move-column-right;
+      };
+      "Mod+Ctrl+H" = {
+        action = move-column-left;
+      };
+      "Mod+Ctrl+J" = {
+        action = move-window-down;
+      };
+      "Mod+Ctrl+K" = {
+        action = move-window-up;
+      };
+      "Mod+Ctrl+L" = {
+        action = move-column-right;
+      };
 
-        "Mod+WheelScrollRight" = {
-          focus-column-right = true;
-        };
-        "Mod+WheelScrollLeft" = {
-          focus-column-left = true;
-        };
-        "Mod+Ctrl+WheelScrollRight" = {
-          move-column-right = true;
-        };
-        "Mod+Ctrl+WheelScrollLeft" = {
-          move-column-left = true;
-        };
+      "Mod+Home" = {
+        action = focus-column-first;
+      };
+      "Mod+End" = {
+        action = focus-column-last;
+      };
+      "Mod+Ctrl+Home" = {
+        action = move-column-to-first;
+      };
+      "Mod+Ctrl+End" = {
+        action = move-column-to-last;
+      };
 
-        "Mod+Shift+WheelScrollDown" = {
-          focus-column-right = true;
-        };
-        "Mod+Shift+WheelScrollUp" = {
-          focus-column-left = true;
-        };
-        "Mod+Ctrl+Shift+WheelScrollDown" = {
-          move-column-right = true;
-        };
-        "Mod+Ctrl+Shift+WheelScrollUp" = {
-          move-column-left = true;
-        };
+      "Mod+Shift+Left" = {
+        action = focus-monitor-left;
+      };
+      "Mod+Shift+Down" = {
+        action = focus-monitor-down;
+      };
+      "Mod+Shift+Up" = {
+        action = focus-monitor-up;
+      };
+      "Mod+Shift+Right" = {
+        action = focus-monitor-right;
+      };
+      "Mod+Shift+H" = {
+        action = focus-monitor-left;
+      };
+      "Mod+Shift+J" = {
+        action = focus-monitor-down;
+      };
+      "Mod+Shift+K" = {
+        action = focus-monitor-up;
+      };
+      "Mod+Shift+L" = {
+        action = focus-monitor-right;
+      };
 
-        "Mod+1" = {
-          focus-workspace = 1;
-        };
-        "Mod+2" = {
-          focus-workspace = 2;
-        };
-        "Mod+3" = {
-          focus-workspace = 3;
-        };
-        "Mod+4" = {
-          focus-workspace = 4;
-        };
-        "Mod+5" = {
-          focus-workspace = 5;
-        };
-        "Mod+6" = {
-          focus-workspace = 6;
-        };
-        "Mod+7" = {
-          focus-workspace = 7;
-        };
-        "Mod+8" = {
-          focus-workspace = 8;
-        };
-        "Mod+9" = {
-          focus-workspace = 9;
-        };
+      "Mod+Shift+Ctrl+Left" = {
+        action = move-column-to-monitor-left;
+      };
+      "Mod+Shift+Ctrl+Down" = {
+        action = move-column-to-monitor-down;
+      };
+      "Mod+Shift+Ctrl+Up" = {
+        action = move-column-to-monitor-up;
+      };
+      "Mod+Shift+Ctrl+Right" = {
+        action = move-column-to-monitor-right;
+      };
+      "Mod+Shift+Ctrl+H" = {
+        action = move-column-to-monitor-left;
+      };
+      "Mod+Shift+Ctrl+J" = {
+        action = move-column-to-monitor-down;
+      };
+      "Mod+Shift+Ctrl+K" = {
+        action = move-column-to-monitor-up;
+      };
+      "Mod+Shift+Ctrl+L" = {
+        action = move-column-to-monitor-right;
+      };
 
-        "Mod+Ctrl+1" = {
-          move-column-to-workspace = 1;
-        };
-        "Mod+Ctrl+2" = {
-          move-column-to-workspace = 2;
-        };
-        "Mod+Ctrl+3" = {
-          move-column-to-workspace = 3;
-        };
-        "Mod+Ctrl+4" = {
-          move-column-to-workspace = 4;
-        };
-        "Mod+Ctrl+5" = {
-          move-column-to-workspace = 5;
-        };
-        "Mod+Ctrl+6" = {
-          move-column-to-workspace = 6;
-        };
-        "Mod+Ctrl+7" = {
-          move-column-to-workspace = 7;
-        };
-        "Mod+Ctrl+8" = {
-          move-column-to-workspace = 8;
-        };
-        "Mod+Ctrl+9" = {
-          move-column-to-workspace = 9;
-        };
+      "Mod+Page_Down" = {
+        action = focus-workspace-down;
+      };
+      "Mod+Page_Up" = {
+        action = focus-workspace-up;
+      };
+      "Mod+U" = {
+        action = focus-workspace-down;
+      };
+      "Mod+I" = {
+        action = focus-workspace-up;
+      };
+      "Mod+Ctrl+Page_Down" = {
+        action = move-column-to-workspace-down;
+      };
+      "Mod+Ctrl+Page_Up" = {
+        action = move-column-to-workspace-up;
+      };
+      "Mod+Ctrl+U" = {
+        action = move-column-to-workspace-down;
+      };
+      "Mod+Ctrl+I" = {
+        action = move-column-to-workspace-up;
+      };
 
-        "Mod+BracketLeft" = {
-          consume-or-expel-window-left = true;
-        };
-        "Mod+BracketRight" = {
-          consume-or-expel-window-right = true;
-        };
-        "Mod+Comma" = {
-          consume-window-into-column = true;
-        };
-        "Mod+Period" = {
-          expel-window-from-column = true;
-        };
+      "Mod+Shift+Page_Down" = {
+        action = move-workspace-down;
+      };
+      "Mod+Shift+Page_Up" = {
+        action = move-workspace-up;
+      };
+      "Mod+Shift+U" = {
+        action = move-workspace-down;
+      };
+      "Mod+Shift+I" = {
+        action = move-workspace-up;
+      };
 
-        "Mod+R" = {
-          switch-preset-column-width = true;
-        };
-        "Mod+Shift+R" = {
-          switch-preset-window-height = true;
-        };
-        "Mod+Ctrl+R" = {
-          reset-window-height = true;
-        };
-        "Mod+F" = {
-          maximize-column = true;
-        };
-        "Mod+Shift+F" = {
-          fullscreen-window = true;
-        };
-        "Mod+Ctrl+F" = {
-          expand-column-to-available-width = true;
-        };
-        "Mod+C" = {
-          center-column = true;
-        };
-        "Mod+Ctrl+C" = {
-          center-visible-columns = true;
-        };
+      "Mod+WheelScrollDown" = {
+        cooldown-ms = 150;
+        action = focus-workspace-down;
+      };
+      "Mod+WheelScrollUp" = {
+        cooldown-ms = 150;
+        action = focus-workspace-up;
+      };
+      "Mod+Ctrl+WheelScrollDown" = {
+        cooldown-ms = 150;
+        action = move-column-to-workspace-down;
+      };
+      "Mod+Ctrl+WheelScrollUp" = {
+        cooldown-ms = 150;
+        action = move-column-to-workspace-up;
+      };
 
-        "Mod+Minus" = {
-          set-column-width = "-10%";
-        };
-        "Mod+Equal" = {
-          set-column-width = "+10%";
-        };
-        "Mod+Shift+Minus" = {
-          set-window-height = "-10%";
-        };
-        "Mod+Shift+Equal" = {
-          set-window-height = "+10%";
-        };
+      "Mod+WheelScrollRight" = {
+        action = focus-column-right;
+      };
+      "Mod+WheelScrollLeft" = {
+        action = focus-column-left;
+      };
+      "Mod+Ctrl+WheelScrollRight" = {
+        action = move-column-right;
+      };
+      "Mod+Ctrl+WheelScrollLeft" = {
+        action = move-column-left;
+      };
 
-        "Mod+V" = {
-          toggle-window-floating = true;
-        };
-        "Mod+Shift+V" = {
-          switch-focus-between-floating-and-tiling = true;
-        };
-        "Mod+W" = {
-          toggle-column-tabbed-display = true;
-        };
+      "Mod+Shift+WheelScrollDown" = {
+        action = focus-column-right;
+      };
+      "Mod+Shift+WheelScrollUp" = {
+        action = focus-column-left;
+      };
+      "Mod+Ctrl+Shift+WheelScrollDown" = {
+        action = move-column-right;
+      };
+      "Mod+Ctrl+Shift+WheelScrollUp" = {
+        action = move-column-left;
+      };
 
-        "Print" = {
-          screenshot = true;
-        };
-        "Ctrl+Print" = {
-          screenshot-screen = true;
-        };
-        "Alt+Print" = {
-          screenshot-window = true;
-        };
+      "Mod+1" = {
+        action = focus-workspace 1;
+      };
+      "Mod+2" = {
+        action = focus-workspace 2;
+      };
+      "Mod+3" = {
+        action = focus-workspace 3;
+      };
+      "Mod+4" = {
+        action = focus-workspace 4;
+      };
+      "Mod+5" = {
+        action = focus-workspace 5;
+      };
+      "Mod+6" = {
+        action = focus-workspace 6;
+      };
+      "Mod+7" = {
+        action = focus-workspace 7;
+      };
+      "Mod+8" = {
+        action = focus-workspace 8;
+      };
+      "Mod+9" = {
+        action = focus-workspace 9;
+      };
 
-        "Mod+Escape" = {
-          allow-inhibiting = false;
-          toggle-keyboard-shortcuts-inhibit = true;
-        };
+      "Mod+Ctrl+1" = {
+        action = move-column-to-workspace 1;
+      };
+      "Mod+Ctrl+2" = {
+        action = move-column-to-workspace 2;
+      };
+      "Mod+Ctrl+3" = {
+        action = move-column-to-workspace 3;
+      };
+      "Mod+Ctrl+4" = {
+        action = move-column-to-workspace 4;
+      };
+      "Mod+Ctrl+5" = {
+        action = move-column-to-workspace 5;
+      };
+      "Mod+Ctrl+6" = {
+        action = move-column-to-workspace 6;
+      };
+      "Mod+Ctrl+7" = {
+        action = move-column-to-workspace 7;
+      };
+      "Mod+Ctrl+8" = {
+        action = move-column-to-workspace 8;
+      };
+      "Mod+Ctrl+9" = {
+        action = move-column-to-workspace 9;
+      };
 
-        "Mod+Shift+E" = {
-          quit = true;
-        };
-        "Ctrl+Alt+Delete" = {
-          quit = true;
-        };
-        "Mod+Shift+P" = {
-          power-off-monitors = true;
-        };
+      "Mod+BracketLeft" = {
+        action = consume-or-expel-window-left;
+      };
+      "Mod+BracketRight" = {
+        action = consume-or-expel-window-right;
+      };
+      "Mod+Comma" = {
+        action = consume-window-into-column;
+      };
+      "Mod+Period" = {
+        action = expel-window-from-column;
+      };
+
+      "Mod+R" = {
+        action = switch-preset-column-width;
+      };
+      "Mod+Shift+R" = {
+        action = switch-preset-window-height;
+      };
+      "Mod+Ctrl+R" = {
+        action = reset-window-height;
+      };
+      "Mod+F" = {
+        action = maximize-column;
+      };
+      "Mod+Shift+F" = {
+        action = fullscreen-window;
+      };
+      "Mod+Ctrl+F" = {
+        action = expand-column-to-available-width;
+      };
+      "Mod+C" = {
+        action = center-column;
+      };
+      "Mod+Ctrl+C" = {
+        action = center-visible-columns;
+      };
+
+      "Mod+Minus" = {
+        action = set-column-width "-10%";
+      };
+      "Mod+Equal" = {
+        action = set-column-width "+10%";
+      };
+      "Mod+Shift+Minus" = {
+        action = set-window-height "-10%";
+      };
+      "Mod+Shift+Equal" = {
+        action = set-window-height "+10%";
+      };
+
+      "Mod+V" = {
+        action = toggle-window-floating;
+      };
+      "Mod+Shift+V" = {
+        action = switch-focus-between-floating-and-tiling;
+      };
+      "Mod+W" = {
+        action = toggle-column-tabbed-display;
+      };
+
+      "Print" = {
+        action = screenshot;
+      };
+      "Ctrl+Print" = {
+        action = screenshot-screen;
+      };
+      "Alt+Print" = {
+        action = screenshot-window;
+      };
+
+      "Mod+Escape" = {
+        allow-inhibiting = false;
+        action = toggle-keyboard-shortcuts-inhibit;
+      };
+
+      "Mod+Shift+E" = {
+        action = quit;
+      };
+      "Ctrl+Alt+Delete" = {
+        action = quit;
+      };
+      "Mod+Shift+P" = {
+        action = power-off-monitors;
       };
     };
   };
