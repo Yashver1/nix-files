@@ -32,7 +32,15 @@
         };
       };
 
-      outputs."eDP-1".scale = 2.0;
+      outputs."DP-2" = {
+        scale = 2.0;
+        mode = {
+          height = 2160;
+          width = 3840;
+          refresh = 144.000;
+
+        };
+      };
 
       layout = {
         gaps = 16;
