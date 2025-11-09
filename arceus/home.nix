@@ -119,16 +119,6 @@
 
   xdg = {
     enable = true;
-    desktopEntries."google-chrome-stable" = {
-      name = "Google Chrome";
-      genericName = "Web Browser";
-      exec = "google-chrome-stable --disable-features=GlobalShortcutsPortal %U";
-      terminal = false;
-      categories = [
-        "Network"
-        "WebBrowser"
-      ];
-    };
   };
 
   programs.zsh.shellAliases = {
