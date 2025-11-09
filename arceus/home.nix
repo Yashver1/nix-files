@@ -115,6 +115,21 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # XDG options
+
+  xdg = {
+    desktopEntries."google-chrome-stable" = {
+      name = "Google Chrome";
+      genericName = "Web Browser";
+      exec = "google-chrome-stable --disable-features=GlobalShortcutsPortal %U";
+      terminal = false;
+      categories = [
+        "Network"
+        "WebBrowser"
+      ];
+    };
+  };
+
   programs.zsh.shellAliases = {
     cppdev = "nix develop /home/yash/Workspace/dev-shells/cpp";
     ll = "lsd -l";
