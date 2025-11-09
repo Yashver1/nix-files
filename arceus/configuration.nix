@@ -111,6 +111,7 @@
 
   # Enable Opengl
   hardware.graphics.enable = true;
+  hardware.graphics.enable32Bit = true;
 
   programs.niri.enable = true;
 
@@ -124,13 +125,11 @@
 
     powerManagement.finegrained = false;
 
-    open = true;
+    open = false;
 
     nvidiaSettings = true;
 
     package = config.boot.kernelPackages.nvidiaPackages.stable;
-    forceFullCompositionPipeline = true;
-    nvidiaPersistenced = true;
   };
 
   # Configure keymap in X11
