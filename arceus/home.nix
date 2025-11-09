@@ -146,21 +146,25 @@
     enable = true;
     settings = {
       image = "~/Downloads/wallpapers/minimal_c.png";
+      color = "00000000";
+
+      ring-color = "00000000";
+      ring-clear-color = "00000000";
+      ring-ver-color = "00000000";
+      ring-wrong-color = "00000000";
+      ring-caps-lock-color = "00000000";
+
+      line-color = "00000000";
+      line-clear-color = "00000000";
+      line-ver-color = "00000000";
+      line-wrong-color = "00000000";
+      line-caps-lock-color = "00000000";
+
       inside-color = "00000000";
       inside-clear-color = "00000000";
       inside-ver-color = "00000000";
       inside-wrong-color = "00000000";
       inside-caps-lock-color = "00000000";
-
-      ring-color = "ffffffff";
-      ring-clear-color = "ffffffff";
-      ring-ver-color = "ffffffff";
-      ring-wrong-color = "ffffffff";
-      ring-caps-lock-color = "ffffffff";
-
-      indicator-radius = 50;
-      indicator-thickness = 6;
-      indicator-idle-visible = true;
 
       text-color = "ffffffff";
       text-clear-color = "ffffffff";
@@ -168,20 +172,15 @@
       text-wrong-color = "ffffffff";
       text-caps-lock-color = "ffffffff";
 
-      indicator-x-position = 0;
-      indicator-y-position = 0;
-
-      layout-bg-color = "00000000";
-      layout-border-color = "ffffffff";
-      layout-text-color = "ffffffff";
-
-      key-hl-color = "ffffffff";
-      bs-hl-color = "ffffffff";
-      caps-lock-key-hl-color = "ffffffff";
-      caps-lock-bs-hl-color = "ffffffff";
-
+      key-hl-color = "00000000";
+      bs-hl-color = "00000000";
       separator-color = "00000000";
 
+      layout-bg-color = "00000000";
+      layout-border-color = "00000000";
+      layout-text-color = "ffffffff";
+
+      no-unlock-indicator = true;
     };
   };
 
