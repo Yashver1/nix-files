@@ -17,11 +17,9 @@
 
     initContent = lib.mkOrder 500 ''
       function zvm_config() {
-        echo "zvm_config WAS CALLED AT $(date)" > ~/zvm_debug.log
-        ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+        ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BEAM
         ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
         ZVM_SYSTEM_CLIPBOARD_ENABLED=true
-
       }
     '';
 
