@@ -246,7 +246,6 @@
         "Mod+Ctrl+K" = {
           action.move-window-up = { };
         };
-
         "Mod+Ctrl+L" = {
           action.move-column-right = { };
         };
@@ -267,10 +266,10 @@
         "Mod+Shift+Left" = {
           action.focus-monitor-left = { };
         };
-        "Mod+Alt+Down" = {
+        "Mod+Shift+Down" = {
           action.focus-monitor-down = { };
         };
-        "Mod+Alt+Up" = {
+        "Mod+Shift+Up" = {
           action.focus-monitor-up = { };
         };
         "Mod+Shift+Right" = {
@@ -313,10 +312,11 @@
         "Mod+Shift+Ctrl+L" = {
           action.move-column-to-monitor-right = { };
         };
-        "Mod+Shift+Down" = {
+
+        "Mod+Page_Down" = {
           action.focus-workspace-down = { };
         };
-        "Mod+Shift+Up" = {
+        "Mod+Page_Up" = {
           action.focus-workspace-up = { };
         };
         "Mod+U" = {
@@ -331,12 +331,13 @@
         "Mod+Ctrl+Page_Up" = {
           action.move-column-to-workspace-up = { };
         };
-        "Mod+Ctrl+Shift+Down" = {
+        "Mod+Ctrl+U" = {
           action.move-column-to-workspace-down = { };
         };
-        "Mod+Ctrl+Shift+Up" = {
+        "Mod+Ctrl+I" = {
           action.move-column-to-workspace-up = { };
         };
+
         "Mod+Shift+Page_Down" = {
           action.move-workspace-down = { };
         };
