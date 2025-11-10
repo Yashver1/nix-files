@@ -23,7 +23,7 @@
         extraConfig = ''
           set -g @minimal-tmux-left false
           set -g @minimal-tmux-fg "#000000"
-          set -g @minimal-tmux-bg "#f2ba7b"
+          set -g @minimal-tmux-bg "#d1cecb"
           set -g @minimal-tmux-status "bottom"
         '';
       }
