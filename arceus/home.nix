@@ -303,7 +303,7 @@
 
       "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cider" = {
         name = "Launch Cider";
-        command = "/home/yash/.nix-profile/bin/cider --disable-features=WaylandFractionalScaleV1 --platform-ozone-hint=wayland";
+        command = "/run/current-system/sw/bin/cider-2 --disable-features=WaylandFractionalScaleV1 --platform-ozone-hint=wayland";
         binding = "<Super>m";
       };
 

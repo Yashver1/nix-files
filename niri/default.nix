@@ -137,7 +137,7 @@
 
         "Mod+M" = {
           hotkey-overlay.title = "Open a Terminal: cider";
-          action.spawn = [ "cider" ];
+          action.spawn = [ "cider-2" ];
         };
 
         "Mod+D" = {
