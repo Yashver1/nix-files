@@ -124,7 +124,6 @@
 
   programs.zsh.shellAliases = {
     cppdev = "nix develop /home/yash/Workspace/dev-shells/cpp";
-    Cider = "cider";
     ll = "lsd -l";
     la = "lsd -la";
     ls = "lsd";
