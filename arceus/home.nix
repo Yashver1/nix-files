@@ -54,7 +54,7 @@
   programs.rofi = {
     enable = true;
     theme = "/home/yash/.config/rofi/launchers/type-3/style-2.rasi";
-    font = "JetBrains Mono";
+    font = "JetBrainsMono Nerd Font";
   };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
