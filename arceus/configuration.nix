@@ -248,7 +248,7 @@
     gptfdisk
     docker
     bitwarden-desktop
-    discord-ptb
+    betterdiscordctl
     tmux
     nixfmt
     fastfetch
