@@ -249,6 +249,7 @@
     docker
     bitwarden-desktop
     betterdiscordctl
+    discord
     tmux
     nixfmt
     fastfetch
