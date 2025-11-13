@@ -12,17 +12,35 @@
   nixpkgs.config.allowUnfree = true;
   nix.enable = false;
   environment.systemPackages = with pkgs; [
+    obsidian
     ttyper
     fastfetch
-    rustc
-    cargo
-    rustfmt
     dtc
+    solana-cli
+    anchor
+    statix
   ];
 
   system.primaryUser = "yash-netvirta";
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
+
+  system.defaults = {
+    CustomUserPreferences = {
+      "org.hammerspoon.Hammerspoon" = {
+        MJConfigFile = "~/.config/hammerspoon/init.lua";
+      };
+    };
+  };
+
+  system.defaults.CustomUserPreferences = {
+    NSGlobalDomain = {
+      NSUserKeyEquivalents = {
+        "Hide" = "@~^H";
+        "Hide Others" = "@~^H";
+      };
+    };
+  };
 
   users.users.yash-netvirta = {
     name = "yash-netvirta";

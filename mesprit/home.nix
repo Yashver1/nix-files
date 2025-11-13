@@ -45,14 +45,12 @@
   home.file.".config/ghostty/config".text = ''
     macos-titlebar-style = hidden
     macos-option-as-alt = true
-    theme = Apple Classic
+    theme = "GitLab Dark Grey"
+    background-opacity = 0.9
+    background-blur = true
     window-padding-balance = true
     window-padding-x = 25
     window-padding-y = 15
-    keybind = "alt+right=unbind";
-    keybind = "alt+left=unbind";
-    keybind = "alt+up=unbind";
-    keybind = "alt+down=unbind";
   '';
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

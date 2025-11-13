@@ -53,14 +53,23 @@
       "lazygit"
       "ruby"
       "qemu"
+      "riscv-pk"
       "riscv-tools"
       "riscv-gnu-toolchain"
       "riscv-isa-sim"
-      "riscv-pk"
       "nixfmt"
+      "postgresql@18"
+      "gpg"
+      "poetry"
+      "pipx"
+      "rustup"
+      "nasm"
     ];
 
     casks = [
+
+      "bettertouchtool"
+      "hammerspoon"
       "postman"
       "slack"
       "ghostty"
