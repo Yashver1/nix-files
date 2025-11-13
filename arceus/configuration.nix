@@ -124,6 +124,11 @@
     ];
   };
 
+  #Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+  };
+
   programs.niri.enable = true;
 
   services.xserver.videoDrivers = [ "nvidia" ];
