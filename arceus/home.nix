@@ -122,6 +122,7 @@
     CC = "${pkgs.gcc}/bin/gcc";
     CXX = "${pkgs.gcc}/bin/g++";
     GDK_GL = "gles";
+    EDITOR = "neovim";
   };
 
   # Let Home Manager install and manage itself.
