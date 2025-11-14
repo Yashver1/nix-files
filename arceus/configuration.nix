@@ -124,10 +124,6 @@
     ];
   };
 
-  environment.sessionVariables = {
-    EDITOR = "neovim";
-  };
-
   #Bluetooth
   hardware.bluetooth = {
     enable = true;
