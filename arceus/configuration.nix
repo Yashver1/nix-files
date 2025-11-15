@@ -300,6 +300,7 @@
     man-pages-posix
     luajitPackages.luarocks
     elan
+    uv
 
     # NIRI pkgs
     swaybg
