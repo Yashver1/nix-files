@@ -511,7 +511,7 @@
           action.toggle-column-tabbed-display = { };
         };
 
-        "Print" = {
+        "Shift+Ctrl+Alt+4" = {
           action.screenshot = { };
         };
         "Ctrl+Print" = {
