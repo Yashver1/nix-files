@@ -199,7 +199,7 @@
     users = {
       "yash" = import ./home.nix;
     };
-    backupFileExtension = "backup";
+    backupFileExtension = "bakup";
 
   };
 
@@ -300,6 +300,7 @@
     man-pages-posix
     luajitPackages.luarocks
     elan
+    uv
 
     # NIRI pkgs
     swaybg
