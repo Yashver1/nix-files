@@ -127,6 +127,7 @@
             top-left = 12.0;
             top-right = 12.0;
           };
+          clip-to-geometry = true;
         }
       ];
 
