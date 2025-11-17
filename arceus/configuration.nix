@@ -312,6 +312,7 @@
     # NIRI pkgs
     swaybg
     inputs.noctalia.packages.${system}.default
+
     xwayland-satellite
 
     # GNOME Extensions
