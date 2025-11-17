@@ -119,6 +119,10 @@
           ];
           open-floating = true;
         }
+        {
+          matches = [ ];
+          geometry-corner-radius = 12;
+        }
       ];
 
       hotkey-overlay.skip-at-startup = true;
