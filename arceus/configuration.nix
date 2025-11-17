@@ -311,7 +311,7 @@
 
     # NIRI pkgs
     swaybg
-    inputs.noctalia.packages.${system}.default
+    inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
 
     xwayland-satellite
 
