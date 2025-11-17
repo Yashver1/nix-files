@@ -61,11 +61,12 @@
       plugins = [
         "git"
         "z"
-        # "vi-mode"
+        "vi-mode"
       ];
-      theme = "robbyrussell2";
+      theme = "robbyrussell";
       custom = "/home/yash/.config/custom-oh-my-zsh/";
     };
+
   };
 
 }
