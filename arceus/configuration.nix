@@ -230,6 +230,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    poppler
+    resvg
     osu-lazer
     bpftrace
     lua
@@ -249,6 +251,7 @@
     file
     doxygen
     qemu-user
+    ffmpeg
     nix-prefetch-git
     fd
     ripgrep
