@@ -201,7 +201,6 @@
       enable = true;
       plugins = [
         "git"
-        "z"
       ];
       theme = "robbyrussell2";
       custom = "/home/yash/.config/custom-oh-my-zsh/";
