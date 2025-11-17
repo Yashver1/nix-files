@@ -230,7 +230,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-
     poppler
     resvg
     osu-lazer
@@ -289,7 +288,6 @@
     btop
     lsd
     trace-cmd
-    zoxide
     git
     lazygit
     gnutar

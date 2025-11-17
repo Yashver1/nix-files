@@ -229,6 +229,10 @@
     window-padding-y = 15;
   };
 
+  programs.zoxide = {
+    enable = true;
+  };
+
   programs.swaylock = {
     enable = true;
     settings = {
