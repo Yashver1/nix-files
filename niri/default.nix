@@ -121,12 +121,13 @@
         }
         {
           matches = [ ];
-            geometry-corner-radius = {
+          geometry-corner-radius = {
             bottom-left = 12;
             bottom-right = 12;
             top-left = 12;
             top-right = 12;
           };
+        }
       ];
 
       hotkey-overlay.skip-at-startup = true;
