@@ -176,6 +176,7 @@
 
     envExtra = ''
       ZSH_CUSTOM=~/.config/oh-my-zsh
+      FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
       KEYTIMEOUT=1
       # VI_MODE_SET_CURSOR=true
       # VI_MODE_CURSOR_NORMAL=2
