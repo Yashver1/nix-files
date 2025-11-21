@@ -258,6 +258,7 @@
     statix
     cpplint
     usbutils
+    openssl
     ttyper
     obsidian
     cmake
