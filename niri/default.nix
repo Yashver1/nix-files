@@ -102,7 +102,7 @@
         }
         {
           argv = [
-            "swaybg -i /home/yash/Downloads/wallpapers/minimal_c.png"
+            "swaybg" "-i" "/home/yash/Downloads/wallpapers/minimal_c.png"
           ];
         }
       ];
