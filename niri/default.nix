@@ -44,6 +44,7 @@
       layout = {
         gaps = 16;
         center-focused-column = "never";
+        background-color = "transparent";
 
         preset-column-widths = [
           { proportion = 0.33333; }
@@ -117,17 +118,17 @@
 
       animations = { };
 
-      # layer-rules = [
-      #   {
-      #     matches = [
-      #       {
-      #         "namespace" = "^wallpaper$";
-      #       }
-      #     ];
-      #     place-within-backdrop = true;
-      #   }
-      # ];
-      #
+      layer-rules = [
+        {
+          matches = [
+            {
+              "namespace" = "^wallpaper$";
+            }
+          ];
+          place-within-backdrop = true;
+        }
+      ];
+
       window-rules = [
         {
           matches = [ { "app-id" = ''^org\.wezfurlong\.wezterm$''; } ];
