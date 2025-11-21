@@ -97,6 +97,11 @@
         {
           argv = [
             "noctalia-shell"
+          ];
+
+        }
+        {
+          argv = [
             "swaybg -i /home/yash/Downloads/wallpapers/minimal_c.png"
           ];
         }
