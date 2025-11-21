@@ -102,7 +102,9 @@
         }
         {
           argv = [
-            "swaybg" "-i" "/home/yash/Downloads/wallpapers/minimal_c.png"
+            "swaybg"
+            "-i"
+            "/home/yash/Downloads/wallpapers/minimal_c.png"
           ];
         }
       ];
@@ -114,6 +116,13 @@
       screenshot-path = "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png";
 
       animations = { };
+
+      layer-rules = [
+        {
+          matches = [ "^wallpaper$" ];
+          place-within-backdrop = true;
+        }
+      ];
 
       window-rules = [
         {
