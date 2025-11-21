@@ -119,11 +119,9 @@
 
       layer-rules = [
         {
-          matches = [
-            {
-              "namespace" = "^wallpaper$";
-            }
-          ];
+          match = {
+            namespace = "^wallpaper$";
+          };
           place-within-backdrop = true;
         }
       ];
