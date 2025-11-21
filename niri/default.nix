@@ -117,15 +117,17 @@
 
       animations = { };
 
-      layer-rules = [
-        {
-          match = {
-            namespace = "^wallpaper$";
-          };
-          place-within-backdrop = true;
-        }
-      ];
-
+      # layer-rules = [
+      #   {
+      #     matches = [
+      #       {
+      #         "namespace" = "^wallpaper$";
+      #       }
+      #     ];
+      #     place-within-backdrop = true;
+      #   }
+      # ];
+      #
       window-rules = [
         {
           matches = [ { "app-id" = ''^org\.wezfurlong\.wezterm$''; } ];
