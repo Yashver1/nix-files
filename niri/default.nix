@@ -94,7 +94,12 @@
       };
 
       spawn-at-startup = [
-        { argv = [ "noctalia-shell" ]; }
+        {
+          argv = [
+            "noctalia-shell"
+            "swaybg -i /home/yash/Downloads/wallpapers/minimal_c.png"
+          ];
+        }
       ];
 
       hotkey-overlay = { };
