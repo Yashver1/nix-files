@@ -117,16 +117,16 @@
 
       animations = { };
 
-      # layer-rules = [
-      #   {
-      #     matches = [
-      #       {
-      #         namespace = "^wallpaper$";
-      #       }
-      #     ];
-      #     place-within-backdrop = true;
-      #   }
-      # ];
+      layer-rules = [
+        {
+          matches = [
+            {
+              "namespace" = "^wallpaper$";
+            }
+          ];
+          place-within-backdrop = true;
+        }
+      ];
 
       window-rules = [
         {
