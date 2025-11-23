@@ -223,10 +223,6 @@
     defaultEditor = true;
   };
 
-  programs.yazi = {
-    enable = true;
-  };
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
@@ -253,7 +249,6 @@
     qemu-user
     ffmpeg
     nix-prefetch-git
-    qt6.full
     fd
     ripgrep
     statix

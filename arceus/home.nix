@@ -226,6 +226,10 @@
 
   };
 
+  programs.yazi = {
+    enable = true;
+  };
+
   programs.ghostty.settings = {
     command = "zsh";
     background-opacity = 0.8;
