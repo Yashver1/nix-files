@@ -35,8 +35,6 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
-    hello
-
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -118,6 +116,7 @@
   #
   #
   #
+
   home.sessionVariables = {
     CC = "${pkgs.gcc}/bin/gcc";
     CXX = "${pkgs.gcc}/bin/g++";
@@ -228,6 +227,348 @@
 
   programs.yazi = {
     enable = true;
+    theme = {
+      flavor = {
+        dark = "";
+        light = "";
+      };
+
+      mgr = {
+        cwd = {
+          fg = "#d7d7d7";
+          bold = true;
+        };
+        hovered = {
+          fg = "#ffffff";
+          bg = "#5a5a5a";
+        };
+        preview_hovered = {
+          fg = "#ffffff";
+          bg = "#4b4b4b";
+        };
+
+        find_keyword = {
+          fg = "#000000";
+          bg = "#c0c0c0";
+          bold = true;
+        };
+        find_position = {
+          fg = "#b0b0b0";
+          bold = true;
+        };
+
+        marker_copied = {
+          fg = "#bcbcbc";
+          bold = true;
+        };
+        marker_cut = {
+          fg = "#9c9c9c";
+          bold = true;
+        };
+        marker_marked = {
+          fg = "#ffffff";
+          bg = "#666666";
+        };
+        marker_selected = {
+          fg = "#ffffff";
+          bg = "#7a7a7a";
+        };
+
+        count_copied = {
+          fg = "#9e9e9e";
+        };
+        count_cut = {
+          fg = "#8e8e8e";
+        };
+        count_selected = {
+          fg = "#bdbdbd";
+        };
+
+        border_symbol = "│";
+        border_style = {
+          fg = "#4f4f4f";
+        };
+
+        syntect_theme = "";
+      };
+
+      tabs = {
+        active = {
+          fg = "#ffffff";
+          bg = "#6a6a6a";
+          bold = true;
+        };
+        inactive = {
+          fg = "#bdbdbd";
+          bg = "#3a3a3a";
+        };
+
+        sep_inner = {
+          open = "[";
+          close = "]";
+        };
+        sep_outer = {
+          open = "";
+          close = "";
+        };
+      };
+
+      mode = {
+        normal_main = {
+          fg = "#e0e0e0";
+        };
+        normal_alt = {
+          fg = "#c2c2c2";
+        };
+
+        select_main = {
+          fg = "#ffffff";
+          bg = "#5f5f5f";
+        };
+        select_alt = {
+          fg = "#e0e0e0";
+          bg = "#4a4a4a";
+        };
+
+        unset_main = {
+          fg = "#8c8c8c";
+        };
+        unset_alt = {
+          fg = "#6c6c6c";
+        };
+      };
+
+      status = {
+        overall = {
+          fg = "#d0d0d0";
+          bg = "#3a3a3a";
+        };
+
+        sep_left = {
+          open = "";
+          close = "]";
+        };
+        sep_right = {
+          open = "[";
+          close = "";
+        };
+
+        perm_type = {
+          fg = "#ffffff";
+          bold = true;
+        };
+        perm_read = {
+          fg = "#d0d0d0";
+        };
+        perm_write = {
+          fg = "#d0d0d0";
+        };
+        perm_exec = {
+          fg = "#d0d0d0";
+        };
+        perm_sep = {
+          fg = "#808080";
+        };
+
+        progress_label = {
+          fg = "#cfcfcf";
+        };
+        progress_normal = {
+          fg = "#ffffff";
+          bg = "#5e5e5e";
+        };
+        progress_error = {
+          fg = "#ffffff";
+          bg = "#8b0000";
+        };
+      };
+
+      which = {
+        cols = 2;
+
+        mask = {
+          fg = "#ffffff";
+          bg = "#3f3f3f";
+        };
+        cand = {
+          fg = "#ffffff";
+        };
+        rest = {
+          fg = "#bcbcbc";
+        };
+        desc = {
+          fg = "#9e9e9e";
+        };
+
+        separator = " -> ";
+        separator_style = {
+          fg = "#7a7a7a";
+        };
+      };
+
+      confirm = {
+        border = {
+          fg = "#4f4f4f";
+        };
+        title = {
+          fg = "#ffffff";
+          bold = true;
+        };
+        content = {
+          fg = "#dcdcdc";
+        };
+        list = {
+          fg = "#c0c0c0";
+        };
+
+        btn_yes = {
+          fg = "#ffffff";
+          bg = "#5a5a5a";
+        };
+        btn_no = {
+          fg = "#ffffff";
+          bg = "#7a7a7a";
+        };
+
+        btn_labels = [
+          "YES"
+          "NO"
+        ];
+      };
+
+      spot = {
+        border = {
+          fg = "#3f3f3f";
+        };
+        title = {
+          fg = "#ffffff";
+          bold = true;
+        };
+
+        tbl_col = {
+          fg = "#ffffff";
+          bg = "#5f5f5f";
+        };
+        tbl_cell = {
+          fg = "#e0e0e0";
+          bg = "#474747";
+        };
+      };
+
+      notify = {
+        title_info = {
+          fg = "#d0d0d0";
+        };
+        title_warn = {
+          fg = "#ffcc00";
+        };
+        title_error = {
+          fg = "#ff4444";
+        };
+      };
+
+      pick = {
+        border = {
+          fg = "#4f4f4f";
+        };
+        active = {
+          fg = "#ffffff";
+          bg = "#5a5a5a";
+        };
+        inactive = {
+          fg = "#bcbcbc";
+        };
+      };
+
+      input = {
+        border = {
+          fg = "#4f4f4f";
+        };
+        title = {
+          fg = "#ffffff";
+        };
+        value = {
+          fg = "#dedede";
+        };
+        selected = {
+          fg = "#ffffff";
+          bg = "#6a6a6a";
+        };
+      };
+
+      cmp = {
+        border = {
+          fg = "#4f4f4f";
+        };
+        active = {
+          fg = "#ffffff";
+          bg = "#5a5a5a";
+        };
+        inactive = {
+          fg = "#bcbcbc";
+        };
+
+        icon_file = "";
+        icon_folder = "";
+        icon_command = "";
+      };
+
+      tasks = {
+        border = {
+          fg = "#4f4f4f";
+        };
+        title = {
+          fg = "#ffffff";
+          bold = true;
+        };
+        hovered = {
+          fg = "#ffffff";
+          bg = "#616161";
+        };
+      };
+
+      help = {
+        on = {
+          fg = "#ffffff";
+        };
+        run = {
+          fg = "#d0d0d0";
+        };
+        desc = {
+          fg = "#9e9e9e";
+        };
+        hovered = {
+          fg = "#ffffff";
+          bg = "#5a5a5a";
+        };
+        footer = {
+          fg = "#bcbcbc";
+        };
+
+        icon_info = "";
+        icon_warn = "";
+        icon_error = "";
+      };
+
+      filetype = {
+        rules = [
+          {
+            name = "*/";
+            fg = "#c0c0c0";
+          }
+          {
+            name = "*";
+            fg = "#e6e6e6";
+          }
+        ];
+      };
+
+      icon = {
+        prepend_dirs = [ ];
+        append_exts = [ ];
+      };
+    };
+
   };
 
   programs.ghostty.settings = {
