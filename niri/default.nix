@@ -6,6 +6,15 @@
     package = pkgs.niri;
 
     settings = {
+      overview = {
+        workspace = {
+          shadow = {
+            enable = true;
+          };
+
+        };
+
+      };
 
       input = {
         keyboard = {
