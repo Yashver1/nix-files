@@ -234,7 +234,7 @@
     command = "zsh";
     background-opacity = 0.8;
     background-blur = true;
-    theme = "Jellybeans";
+    theme = "Front End Delight";
     window-decoration = "server";
     gtk-titlebar = false;
     gtk-tabs-location = "hidden";
