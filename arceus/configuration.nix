@@ -253,6 +253,7 @@
     qemu-user
     ffmpeg
     nix-prefetch-git
+    qt6.full
     fd
     ripgrep
     statix
