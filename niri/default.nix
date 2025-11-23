@@ -6,13 +6,8 @@
     package = pkgs.niri;
 
     settings = {
-      overview = {
-        workspace = {
-          shadow = {
-            enable = true;
-          };
-
-        };
+      workspace-shadow = {
+        enable = true;
       };
 
       input = {
