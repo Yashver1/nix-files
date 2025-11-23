@@ -8,7 +8,7 @@
     settings = {
       overview = {
         workspace-shadow = {
-          enable = true;
+          enable = false;
         };
       };
 
