@@ -254,6 +254,7 @@
     statix
     cpplint
     usbutils
+    cppman
     openssl
     ttyper
     obsidian
