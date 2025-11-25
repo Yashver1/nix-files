@@ -175,8 +175,13 @@
         };
 
         "Mod+M" = {
-          hotkey-overlay.title = "Open a Terminal: cider";
+          hotkey-overlay.title = "Open cider";
           action.spawn = [ "cider-2" ];
+        };
+
+        "Mod+P" = {
+          hotkey-overlay.title = "Open librepods";
+          action.spawn = [ "librepods" ];
         };
 
         "Mod+D" = {

@@ -252,40 +252,6 @@
     enable = true;
     settings = {
       image = "~/Downloads/wallpapers/minimal_c.png";
-      # color = "00000000";
-      #
-      # ring-color = "00000000";
-      # ring-clear-color = "00000000";
-      # ring-ver-color = "00000000";
-      # ring-wrong-color = "00000000";
-      # ring-caps-lock-color = "00000000";
-      #
-      # line-color = "00000000";
-      # line-clear-color = "00000000";
-      # line-ver-color = "00000000";
-      # line-wrong-color = "00000000";
-      # line-caps-lock-color = "00000000";
-      #
-      # inside-color = "00000000";
-      # inside-clear-color = "00000000";
-      # inside-ver-color = "00000000";
-      # inside-wrong-color = "00000000";
-      # inside-caps-lock-color = "00000000";
-      #
-      # text-color = "ffffffff";
-      # text-clear-color = "ffffffff";
-      # text-ver-color = "ffffffff";
-      # text-wrong-color = "ffffffff";
-      # text-caps-lock-color = "ffffffff";
-      #
-      # key-hl-color = "00000000";
-      # bs-hl-color = "00000000";
-      # separator-color = "00000000";
-      #
-      # layout-bg-color = "00000000";
-      # layout-border-color = "00000000";
-      # layout-text-color = "ffffffff";
-      #
       no-unlock-indicator = true;
       indicator-idle-visible = false;
     };
@@ -452,7 +418,7 @@
       "org/gnome/desktop/interface" = {
         font-name = "Inter Variable Medium 11";
         document-font-name = "Inter Variable Medium 11";
-        monospace-font-name = "Inter Variable Medium 11"; # Inter is not monospaced; see note below
+        monospace-font-name = "Inter Variable Medium 11";
       };
       "org/gnome/desktop/wm/preferences" = {
         titlebar-font = "Inter Variable Medium 11";
