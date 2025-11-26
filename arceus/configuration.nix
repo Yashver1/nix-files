@@ -306,6 +306,7 @@
     luajitPackages.luarocks
     elan
     uv
+    zmkBATx
 
     # NIRI pkgs
     swaybg
