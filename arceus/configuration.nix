@@ -307,6 +307,7 @@
     elan
     uv
     zmkBATx
+    simpleBluez
 
     # NIRI pkgs
     swaybg
