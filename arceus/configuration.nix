@@ -127,6 +127,9 @@
   #Bluetooth
   hardware.bluetooth = {
     enable = true;
+    General = {
+      Experimental = true;
+    };
   };
 
   programs.niri.enable = true;
