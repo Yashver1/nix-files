@@ -314,6 +314,7 @@
     uv
     zmkBATx
     simpleBluez
+    lazydocker
 
     # NIRI pkgs
     swaybg
