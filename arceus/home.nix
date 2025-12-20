@@ -84,6 +84,7 @@
       PROMPT="%(?:%{$fg_bold[green]%}%1{➜%} :%{$fg_bold[red]%}%1{➜%} ) %{$fg[cyan]%}%c%{$reset_color%}"
       PROMPT+=' $(git_prompt_info)'
 
+      # custom nix-shell indication
       if [[ "$IN_NIX_SHELL" == "impure" ]]; then
         RPROMPT="[%F{yellow}nix-shell%f]"
       else
