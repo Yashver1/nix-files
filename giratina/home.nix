@@ -105,7 +105,7 @@
       eval "$(pyenv init -)"
 
       # Zoxide
-      eval "$(zoxide init zsh)"
+      # eval "$(zoxide init zsh)"
 
       # fzf
       source <(fzf --zsh)
@@ -134,6 +134,11 @@
     "/Library/TeX/texbin"
     "$HOME/vcpkg"
   ];
+
+  programs.zoxide = {
+    enable = true;
+    options = [ "--cmd cd" ];
+  };
 
   home.sessionVariables = {
     EDITOR = "neovim";

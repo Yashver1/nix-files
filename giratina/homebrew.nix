@@ -42,7 +42,6 @@
       "rp"
       "wireshark"
       "yazi"
-      "zoxide"
       "fzf"
       "unixodbc"
       "openssl"
@@ -54,6 +53,7 @@
       "ruby"
       "pipx"
 
+      "tailscale"
       "llvm@20"
     ];
 
@@ -70,6 +70,8 @@
       "pgadmin4"
       "playcover-community"
       "stats"
+      "geekbench"
+      "tailscale-app"
     ];
 
     masApps = {

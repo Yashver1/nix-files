@@ -60,7 +60,6 @@
       enable = true;
       plugins = [
         "git"
-        "z"
         "vi-mode"
       ];
       theme = "robbyrussell";
