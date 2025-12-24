@@ -26,8 +26,18 @@
     })
   ];
 
-  # Fix wakeup
   services.udev.extraRules = ''
+    # DOLPHIN
+    SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="0079", ATTRS{idProduct}=="1844", MODE="0666", TAG+="uaccess"
+    SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="0079", ATTRS{idProduct}=="1802", MODE="0666", TAG+="uaccess"
+    SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="0a", MODE="0666", TAG+="uaccess"
+    SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ATTRS{idVendor}=="0a12", ATTRS{idProduct}=="0001", MODE="0666", TAG+="uaccess"
+    SUBSYSTEM=="hidraw*", ATTRS{idVendor}=="0079", ATTRS{idProduct}=="1844", MODE="0666", TAG+="uaccess"
+    SUBSYSTEM=="hidraw*", ATTRS{idVendor}=="0079", ATTRS{idProduct}=="1802", MODE="0666", TAG+="uaccess"
+    SUBSYSTEM=="hidraw*", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="0a", MODE="0666", TAG+="uaccess"
+    SUBSYSTEM=="hidraw*", ATTRS{idVendor}=="0a12", ATTRS{idProduct}=="0001", MODE="0666", TAG+="uaccess"
+
+    # Fix wakeup
     ACTION=="add|change", SUBSYSTEM=="usb", ATTRS{idVendor}=="706b", ATTRS{idProduct}=="0011", ATTR{power/wakeup}="enabled"
     ACTION=="add|change", SUBSYSTEM=="usb", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c08b", ATTR{power/wakeup}="enabled"
   '';
