@@ -205,8 +205,8 @@
     users = {
       "yash" = import ./home.nix;
     };
-    backupFileExtension = "bakup";
-
+    # backupFileExtension = "bakup";
+    backupFileExtension = "back";
   };
 
   # Steam
