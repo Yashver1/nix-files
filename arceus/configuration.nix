@@ -27,7 +27,7 @@
   ];
 
   services.udev.packages = [
-    pkgs.dolphinEmu
+    pkgs.dolphin-emu
   ];
 
   services.udev.extraRules = ''
