@@ -231,7 +231,13 @@
 
   };
 
-  programs.broot.enable = true;
+  programs.broot = {
+    enable = true;
+    settings = {
+      modal = true;
+    };
+
+  };
 
   programs.ghostty.settings = {
     command = "zsh";
