@@ -237,6 +237,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    vulkan-tools
     lsfg-vk-ui
     lsfg-vk
     azahar
