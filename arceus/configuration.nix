@@ -237,6 +237,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    pavucontrol
+    pamixer
     vulkan-tools
     lsfg-vk-ui
     lsfg-vk
@@ -327,6 +329,8 @@
     uv
     zmkBATx
     simpleBluez
+    bluez
+    bluez-tools
     lazydocker
 
     # NIRI pkgs
