@@ -242,7 +242,6 @@
     vulkan-tools
     lsfg-vk-ui
     lsfg-vk
-    azahar
     dolphin-emu
     anki-bin
     uget
