@@ -322,6 +322,10 @@
       name = "WhiteSur-cursors";
       package = pkgs.whitesur-cursors;
     };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+
   };
 
   dconf = {
