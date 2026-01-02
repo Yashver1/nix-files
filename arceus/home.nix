@@ -312,7 +312,7 @@
     colorScheme = "dark";
 
     theme = {
-      name = "WhiteSur-Dark-solid";
+      name = "WhiteSur-Dark";
       package = pkgs.whitesur-gtk-theme;
     };
     iconTheme = {
@@ -402,7 +402,7 @@
       };
 
       "org/gnome/desktop/interface" = {
-        gtk-theme = "WhiteSur-Dark-solid";
+        gtk-theme = "WhiteSur-Dark";
         icon-theme = "WhiteSur";
         cursor-theme = "WhiteSur-cursors";
       };
