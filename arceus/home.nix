@@ -309,7 +309,8 @@
 
   gtk = {
     enable = true;
-    # colorScheme = "dark";
+    colorScheme = "dark";
+
     theme = {
       name = "WhiteSur-Dark";
       package = pkgs.whitesur-gtk-theme;
