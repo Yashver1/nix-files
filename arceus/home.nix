@@ -122,6 +122,8 @@
     CC = "${pkgs.gcc}/bin/gcc";
     CXX = "${pkgs.gcc}/bin/g++";
     GDK_GL = "gles";
+    QT_QPA_PLATFORMTHEME = "gtk3";
+    QT_STYLE_OVERRIDE = "kvantum";
   };
 
   # Let Home Manager install and manage itself.
@@ -331,6 +333,13 @@
     gtk4.extraConfig = {
       gtk-application-prefer-dark-theme = 1;
     };
+
+  };
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    config.common.default = "*";
 
   };
 
