@@ -122,6 +122,9 @@
     CC = "${pkgs.gcc}/bin/gcc";
     CXX = "${pkgs.gcc}/bin/g++";
     GDK_GL = "gles";
+    GTK_THEME = "WhiteSur-Dark";
+    XCURSOR_THEME = "WhiteSur-cursors";
+    XCURSOR_SIZE = "24";
   };
 
   # Let Home Manager install and manage itself.
