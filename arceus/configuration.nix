@@ -332,7 +332,7 @@
     bluez
     bluez-tools
     lazydocker
-
+    libsForQt5.breeze-qt5
     # NIRI pkgs
     swaybg
     inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
