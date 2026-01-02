@@ -239,6 +239,7 @@
   environment.systemPackages = with pkgs; [
     pavucontrol
     pamixer
+    azahar
     vulkan-tools
     lsfg-vk-ui
     lsfg-vk
