@@ -122,9 +122,6 @@
     CC = "${pkgs.gcc}/bin/gcc";
     CXX = "${pkgs.gcc}/bin/g++";
     GDK_GL = "gles";
-    GTK_THEME = "WhiteSur-Dark";
-    XCURSOR_THEME = "WhiteSur-cursors";
-    XCURSOR_SIZE = "24";
   };
 
   # Let Home Manager install and manage itself.
@@ -312,7 +309,6 @@
 
   gtk = {
     enable = true;
-    colorScheme = "dark";
 
     theme = {
       name = "WhiteSur-Dark";
@@ -325,6 +321,14 @@
     cursorTheme = {
       name = "WhiteSur-cursors";
       package = pkgs.whitesur-cursors;
+    };
+
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
+    };
+
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme = 1;
     };
 
   };
