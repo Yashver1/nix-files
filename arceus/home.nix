@@ -122,8 +122,6 @@
     CC = "${pkgs.gcc}/bin/gcc";
     CXX = "${pkgs.gcc}/bin/g++";
     GDK_GL = "gles";
-    QT_QPA_PLATFORMTHEME = "gtk3";
-    QT_STYLE_OVERRIDE = "kvantum";
   };
 
   # Let Home Manager install and manage itself.
@@ -336,13 +334,6 @@
 
   };
 
-  xdg.portal = {
-    enable = true;
-    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
-    config.common.default = "*";
-
-  };
-
   dconf = {
     enable = true;
     settings = {
@@ -411,7 +402,7 @@
       };
 
       "org/gnome/desktop/interface" = {
-        gtk-theme = "WhiteSur-Dark";
+        gtk-theme = "WhiteSur-Dark-solid";
         icon-theme = "WhiteSur";
         cursor-theme = "WhiteSur-cursors";
       };
