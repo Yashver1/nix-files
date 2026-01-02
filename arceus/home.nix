@@ -311,18 +311,18 @@
     enable = true;
     colorScheme = "dark";
 
-    theme = {
-      name = "WhiteSur-Dark-solid";
-      package = pkgs.whitesur-gtk-theme;
-    };
-    iconTheme = {
-      name = "WhiteSur";
-      package = pkgs.whitesur-icon-theme;
-    };
-    cursorTheme = {
-      name = "WhiteSur-cursors";
-      package = pkgs.whitesur-cursors;
-    };
+    # theme = {
+    #   name = "WhiteSur-Dark-solid";
+    #   package = pkgs.whitesur-gtk-theme;
+    # };
+    # iconTheme = {
+    #   name = "WhiteSur";
+    #   package = pkgs.whitesur-icon-theme;
+    # };
+    # cursorTheme = {
+    #   name = "WhiteSur-cursors";
+    #   package = pkgs.whitesur-cursors;
+    # };
 
   };
 
