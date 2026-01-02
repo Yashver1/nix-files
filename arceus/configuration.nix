@@ -332,8 +332,6 @@
     bluez
     bluez-tools
     lazydocker
-    xdg-desktop-portal-gtk
-    kdePackages.qt6gtk2
 
     # NIRI pkgs
     swaybg

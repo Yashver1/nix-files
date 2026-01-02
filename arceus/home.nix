@@ -312,7 +312,7 @@
     colorScheme = "dark";
 
     theme = {
-      name = "WhiteSur-Dark";
+      name = "WhiteSur-Dark-solid";
       package = pkgs.whitesur-gtk-theme;
     };
     iconTheme = {
