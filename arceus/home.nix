@@ -66,11 +66,6 @@
     };
   };
 
-  xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
-    [General]
-    theme=WhiteSur-Dark
-  '';
-
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -236,10 +231,6 @@
 
     platformTheme.name = "gtk3";
 
-    style = {
-      name = "kvantum";
-      package = pkgs.libsForQt5.qtstyleplugin-kvantum;
-    };
   };
 
   programs.yazi = {
