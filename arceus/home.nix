@@ -228,11 +228,12 @@
 
   qt = {
     enable = true;
+
     platformTheme.name = "gtk3";
 
     style = {
-      name = "gtk2";
-      package = pkgs.libsForQt5.qtstyleplugins;
+      name = "kvantum";
+      package = pkgs.libsForQt5.qtstyleplugin-kvantum;
     };
   };
 
