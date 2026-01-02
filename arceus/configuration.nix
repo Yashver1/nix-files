@@ -332,7 +332,6 @@
     bluez
     bluez-tools
     lazydocker
-    gtk4
 
     # NIRI pkgs
     swaybg
