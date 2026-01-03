@@ -228,7 +228,11 @@
 
   qt = {
     enable = true;
-    platformTheme.name = "kde";
+    platformTheme.name = "qt5ct";
+    style = {
+      package = pkgs.utterly-nord-plasma;
+      name = "Utterly Nord Plasma";
+    };
 
   };
 

@@ -236,7 +236,11 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
+  #
+  environment.variables.QT_QPA_PLATFORMTHEME = "qt5ct";
   environment.systemPackages = with pkgs; [
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qt5ct
     pavucontrol
     pamixer
     azahar
