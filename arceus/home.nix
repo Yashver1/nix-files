@@ -226,11 +226,11 @@
 
   };
 
-  qt = {
-    enable = true;
-    # platformTheme.name = "adwaita";
-
-  };
+  # qt = {
+  #   enable = true;
+  #   # platformTheme.name = "adwaita";
+  #
+  # };
 
   programs.yazi = {
     enable = true;
