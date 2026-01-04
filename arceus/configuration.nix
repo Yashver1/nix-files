@@ -238,6 +238,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     libreoffice-qt-fresh
+
     pavucontrol
     pamixer
     azahar
