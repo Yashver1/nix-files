@@ -350,7 +350,7 @@
     whitesur-cursors
     whitesur-icon-theme
 
-    # wechat
+    wechat
 
   ];
 
