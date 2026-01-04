@@ -37,7 +37,7 @@
       };
 
       outputs."DP-2" = {
-        scale = 1.0;
+        scale = 1.5;
         mode = {
           height = 2160;
           width = 3840;
