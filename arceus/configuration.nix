@@ -339,6 +339,7 @@
 
     xwayland-satellite
     whatsapp-electron
+    wechat
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
