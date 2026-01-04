@@ -350,8 +350,6 @@
     whitesur-cursors
     whitesur-icon-theme
 
-    wechat
-
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
