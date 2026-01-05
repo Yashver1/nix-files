@@ -248,6 +248,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     libreoffice-qt-fresh
+    cava
 
     pavucontrol
     pamixer
