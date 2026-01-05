@@ -339,7 +339,7 @@
     inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
 
     xwayland-satellite
-    whatsapp-electron
+    zapzap
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
