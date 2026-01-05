@@ -211,7 +211,8 @@
     };
     # backupFileExtension = "bakup";
     # backupFileExtension = "back";
-    backupFileExtension = "baks";
+    # backupFileExtension = "baks";
+    backupFileExtension = "bakss";
   };
 
   # Steam
