@@ -110,7 +110,7 @@
           argv = [
             "swaybg"
             "-i"
-            "/home/yash/Downloads/wallpapers/minimal_c.png"
+            "/home/yash/Downloads/a_colorful_mask_on_a_black_background.jpg"
           ];
         }
       ];
