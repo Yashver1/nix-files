@@ -96,6 +96,17 @@
       ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}%1{✗%}"
       ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
     '';
+
+    ".config/clangd/config.yaml".text = ''
+      CompileFlags:
+        Compiler: g++
+        BuiltinHeaders: QueryDriver
+        Add:
+          - -Wextra
+          - -Wall
+          - -Werror
+          - -std=c++23
+    '';
   };
 
   # Home Manager can also manage your environment variables through
