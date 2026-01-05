@@ -210,7 +210,8 @@
       "yash" = import ./home.nix;
     };
     # backupFileExtension = "bakup";
-    backupFileExtension = "back";
+    # backupFileExtension = "back";
+    backupFileExtension = "baks";
   };
 
   # Steam
