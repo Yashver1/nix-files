@@ -340,6 +340,7 @@
 
     xwayland-satellite
     zapzap
+    wechat
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
