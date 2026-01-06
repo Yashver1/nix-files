@@ -262,7 +262,6 @@
     command = "zsh";
     background-opacity = 0.8;
     background-blur = true;
-    # theme = "GitLab Dark Grey";
     theme = "Monokai Remastered";
     window-decoration = "server";
     gtk-titlebar = false;
@@ -290,7 +289,7 @@
     enable = true;
     settings = {
       logo = {
-        source = "gnu";
+        source = "nix";
       };
 
       modules = [
