@@ -415,7 +415,7 @@
 
       "org/gnome/desktop/interface" = {
         gtk-theme = "WhiteSur-Dark-solid";
-        icon-theme = "WhiteSur";
+        # icon-theme = "WhiteSur";
         cursor-theme = "WhiteSur-cursors";
       };
 
