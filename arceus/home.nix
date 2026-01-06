@@ -52,7 +52,7 @@
   programs.rofi = {
     enable = true;
     theme = "/home/yash/.config/rofi/launchers/type-3/style-2.rasi";
-    font = "JetBrainsMono Nerd Font";
+    font = "Adwaita Mono";
   };
 
   xdg.mimeApps = {
