@@ -307,6 +307,7 @@
     betterdiscordctl
     discord
     tmux
+    nitch
     nixfmt
     fastfetch
     mangohud
