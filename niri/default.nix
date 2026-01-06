@@ -65,7 +65,7 @@
           enable = true;
           width = 2;
           active = {
-            color = "#8a8a8a";
+            color = "#fcf8fa";
           };
           inactive = {
             color = "#505050";
@@ -73,10 +73,10 @@
         };
 
         border = {
-          enable = true;
+          enable = false;
           width = 4;
           active = {
-            color = "#ffffff";
+            color = "#fcf8fa";
           };
           inactive = {
             color = "#505050";
