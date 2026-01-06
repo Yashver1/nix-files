@@ -335,10 +335,10 @@
       name = "WhiteSur-Dark-solid";
       package = pkgs.whitesur-gtk-theme;
     };
-    # iconTheme = {
-    #   name = "WhiteSur";
-    #   package = pkgs.whitesur-icon-theme;
-    # };
+    iconTheme = {
+      name = "black";
+      package = pkgs.tela-circle-icon-theme;
+    };
     cursorTheme = {
       name = "WhiteSur-cursors";
       package = pkgs.whitesur-cursors;
