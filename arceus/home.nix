@@ -51,8 +51,8 @@
 
   programs.rofi = {
     enable = true;
-    theme = "/home/yash/.config/rofi/launchers/type-3/style-2.rasi";
-    font = "Adwaita Mono";
+    theme = "/home/yash/.config/rofi/material.rasi";
+    font = "JetBrainsMono Nerd Font";
   };
 
   xdg.mimeApps = {
