@@ -336,7 +336,7 @@
       package = pkgs.whitesur-gtk-theme;
     };
     iconTheme = {
-      name = "Tela-circle-black";
+      name = "Tela-circle-dracula";
       package = pkgs.tela-circle-icon-theme;
     };
     cursorTheme = {
