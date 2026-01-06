@@ -251,6 +251,9 @@
   environment.systemPackages = with pkgs; [
     libreoffice-qt-fresh
     cava
+    adwaita-fonts
+    adwaita-qt
+    adwaita-icon-theme
 
     pavucontrol
     pamixer
