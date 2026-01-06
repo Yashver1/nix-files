@@ -331,8 +331,8 @@
     colorScheme = "dark";
 
     theme = {
-      name = "WhiteSur-Dark-solid";
-      package = pkgs.whitesur-gtk-theme;
+      name = "Graphite";
+      package = pkgs.graphite-gtk-theme;
     };
     iconTheme = {
       name = "Tela-circle-black-dark";
@@ -341,10 +341,10 @@
 
       };
     };
-    cursorTheme = {
-      name = "WhiteSur-cursors";
-      package = pkgs.whitesur-cursors;
-    };
+    # cursorTheme = {
+    #   name = "WhiteSur-cursors";
+    #   package = pkgs.whitesur-cursors;
+    # };
 
   };
 
@@ -411,15 +411,15 @@
         binding = "<Super>m";
       };
 
-      "org/gnome/shell/extensions/user-theme" = {
-        name = "WhiteSur-gtk-theme";
-      };
+      # "org/gnome/shell/extensions/user-theme" = {
+      #   name = "WhiteSur-gtk-theme";
+      # };
 
-      "org/gnome/desktop/interface" = {
-        gtk-theme = "WhiteSur-Dark-solid";
-        # icon-theme = "WhiteSur";
-        cursor-theme = "WhiteSur-cursors";
-      };
+      # "org/gnome/desktop/interface" = {
+      #   gtk-theme = "WhiteSur-Dark-solid";
+      #   # icon-theme = "WhiteSur";
+      #   cursor-theme = "WhiteSur-cursors";
+      # };
 
       # "org/gnome/mutter" = {
       #   experimental-features = [ "scale-monitor-framebuffer" ];
