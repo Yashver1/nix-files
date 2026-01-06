@@ -260,7 +260,7 @@
 
   programs.ghostty.settings = {
     command = "zsh";
-    background-opacity = 1.0;
+    background-opacity = 0.8;
     background-blur = true;
     # theme = "GitLab Dark Grey";
     theme = "Monokai Remastered";
