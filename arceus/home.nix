@@ -260,7 +260,7 @@
 
   programs.ghostty.settings = {
     command = "zsh";
-    background-opacity = 0.9;
+    background-opacity = 1.0;
     background-blur = true;
     # theme = "GitLab Dark Grey";
     theme = "Aura";
