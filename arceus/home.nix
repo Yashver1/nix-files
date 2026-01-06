@@ -263,7 +263,7 @@
     background-opacity = 1.0;
     background-blur = true;
     # theme = "GitLab Dark Grey";
-    theme = "Aura";
+    theme = "Vesper";
     window-decoration = "server";
     gtk-titlebar = false;
     gtk-tabs-location = "hidden";
