@@ -337,7 +337,10 @@
     };
     iconTheme = {
       name = "Tela-circle";
-      package = pkgs.tela-circle-icon-theme;
+      package = pkgs.tela-circle-icon-theme.override {
+        allColorVariants = true;
+
+      };
     };
     cursorTheme = {
       name = "WhiteSur-cursors";
