@@ -336,7 +336,7 @@
       package = pkgs.whitesur-gtk-theme;
     };
     iconTheme = {
-      name = "Tela-circle";
+      name = "Tela-circle-black";
       package = pkgs.tela-circle-icon-theme.override {
         allColorVariants = true;
 
