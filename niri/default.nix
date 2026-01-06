@@ -73,7 +73,7 @@
         };
 
         border = {
-          enable = false;
+          enable = true;
           width = 4;
           active = {
             color = "#ffffff";
