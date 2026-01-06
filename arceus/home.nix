@@ -336,11 +336,8 @@
       package = pkgs.whitesur-gtk-theme;
     };
     iconTheme = {
-      name = "Tela-circle-orange-dark";
-      package = pkgs.tela-circle-icon-theme.override {
-        colorVariants = [ "orange" ];
-
-      };
+      name = "Tela-circle";
+      package = pkgs.tela-circle-icon-theme;
     };
     cursorTheme = {
       name = "WhiteSur-cursors";
