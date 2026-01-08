@@ -332,7 +332,9 @@
 
     theme = {
       name = "Graphite";
-      package = pkgs.graphite-gtk-theme;
+      package = pkgs.graphite-gtk-theme.override {
+        tweaks = [ "black" ];
+      };
     };
     iconTheme = {
       name = "Tela-circle-black-dark";
