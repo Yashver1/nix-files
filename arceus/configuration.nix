@@ -254,8 +254,7 @@
     adwaita-fonts
     adwaita-qt
     adwaita-icon-theme
-    jdk
-
+    jdk17_headless
     pavucontrol
     pamixer
     azahar
