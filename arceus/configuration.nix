@@ -254,6 +254,7 @@
     adwaita-fonts
     adwaita-qt
     adwaita-icon-theme
+    jdk
 
     pavucontrol
     pamixer
