@@ -295,6 +295,7 @@
     cpplint
     usbutils
     cppman
+    emscripten
     openssl
     ttyper
     obsidian
