@@ -330,6 +330,11 @@
     enable = true;
     colorScheme = "dark";
 
+    font = {
+      name = "JetBrainsMono Nerd Font";
+
+    };
+
     theme = {
       name = "Graphite";
       package = pkgs.graphite-gtk-theme.override {
