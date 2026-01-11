@@ -51,7 +51,7 @@
 
   programs.rofi = {
     enable = true;
-    theme = "/home/yash/.config/rofi/material.rasi";
+    theme = "/home/yash/.config/rofi/custom.rasi";
     font = "JetBrainsMono Nerd Font";
   };
 
