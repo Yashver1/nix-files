@@ -351,13 +351,12 @@
     simpleBluez
     bluez
     bluez-tools
-    lazydocker
+    zapzap
+
     # NIRI pkgs
     swaybg
     inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
-
     xwayland-satellite
-    zapzap
 
     # GNOME Extensions
     gnomeExtensions.blur-my-shell
