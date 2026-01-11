@@ -455,14 +455,14 @@
         ];
       };
 
-      "org/gnome/desktop/interface" = {
-        font-name = "Inter Variable Medium 11";
-        document-font-name = "Inter Variable Medium 11";
-        monospace-font-name = "Inter Variable Medium 11";
-      };
-      "org/gnome/desktop/wm/preferences" = {
-        titlebar-font = "Inter Variable Medium 11";
-      };
+      # "org/gnome/desktop/interface" = {
+      #   font-name = "Inter Variable Medium 11";
+      #   document-font-name = "Inter Variable Medium 11";
+      #   monospace-font-name = "Inter Variable Medium 11";
+      # };
+      # "org/gnome/desktop/wm/preferences" = {
+      #   titlebar-font = "Inter Variable Medium 11";
+      # };
 
     };
   };
