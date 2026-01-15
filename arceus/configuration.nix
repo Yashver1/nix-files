@@ -296,6 +296,7 @@
     usbutils
     cppman
     emscripten
+    omnissa-horizon-client
     openssl
     ttyper
     obsidian
