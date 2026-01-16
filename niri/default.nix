@@ -573,7 +573,7 @@
         "Mod+Shift+E" = {
           action.quit = { };
         };
-        "Ctrl+Alt+Delete+Q" = {
+        "Ctrl+Alt+Delete+W" = {
           action.quit = { };
         };
         "Mod+Shift+P" = {
