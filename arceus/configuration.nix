@@ -297,6 +297,7 @@
     cppman
     emscripten
     omnissa-horizon-client
+    aider-chat-full
     openssl
     ttyper
     obsidian
