@@ -153,6 +153,7 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
+    dotDir = "${config.xdg.configHome}/zsh";
 
     history.size = 1000000;
     history.ignoreAllDups = true;
