@@ -106,13 +106,13 @@
           ];
 
         }
-        {
-          argv = [
-            "swaybg"
-            "-i"
-            "/home/yash/Downloads/wallpapers/a_colorful_mask_on_a_black_background.jpg"
-          ];
-        }
+        # {
+        #   argv = [
+        #     "swaybg"
+        #     "-i"
+        #     "/home/yash/Downloads/wallpapers/a_colorful_mask_on_a_black_background.jpg"
+        #   ];
+        # }
       ];
 
       hotkey-overlay = { };
@@ -127,7 +127,7 @@
         {
           matches = [
             {
-              "namespace" = "^wallpaper$";
+              "namespace" = "^noctalia-wallpaper*";
             }
           ];
           place-within-backdrop = true;
