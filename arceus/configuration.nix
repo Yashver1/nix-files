@@ -118,6 +118,7 @@
   # services.displayManager.gdm.enable = true;
   # services.desktopManager.gnome.enable = true;
 
+  services.displayManager.ly.enable = true;
   # Enable Opengl
   hardware.graphics = {
     enable = true;
