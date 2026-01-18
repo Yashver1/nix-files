@@ -347,7 +347,7 @@
       };
     };
     iconTheme = {
-      name = "Tela-circle-black-dark";
+      name = "Tela-circle";
       package = pkgs.tela-circle-icon-theme;
     };
     # cursorTheme = {
