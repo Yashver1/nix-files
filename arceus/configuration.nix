@@ -141,7 +141,10 @@
 
   };
 
-  programs.niri.enable = true;
+  programs.niri = {
+    enable = true;
+    useNautilus = true;
+  };
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -265,7 +268,6 @@
     lsfg-vk-ui
     lsfg-vk
     dolphin-emu
-    nautilus
     anki-bin
     uget
     shadps4
