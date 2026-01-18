@@ -120,7 +120,8 @@
 
   services.displayManager.ly.enable = true;
 
-  # Enable Opengl
+  #
+  #Enable Opengl
   hardware.graphics = {
     enable = true;
     enable32Bit = true;
