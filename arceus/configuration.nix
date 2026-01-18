@@ -269,6 +269,7 @@
     lsfg-vk
     dolphin-emu
     anki-bin
+    nautilus
     uget
     shadps4
     poppler
