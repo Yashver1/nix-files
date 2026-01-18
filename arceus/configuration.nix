@@ -116,7 +116,7 @@
 
   # Enable the GNOME Desktop Environment.
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  # services.desktopManager.gnome.enable = true;
 
   # Enable Opengl
   hardware.graphics = {
@@ -362,13 +362,13 @@
     xwayland-satellite
 
     # GNOME Extensions
-    gnomeExtensions.blur-my-shell
-    gnomeExtensions.space-bar
-    gnomeExtensions.forge
-    gnomeExtensions.just-perfection
-    gnomeExtensions.user-themes
-    gnomeExtensions.rounded-window-corners-reborn
-    gnome-tweaks
+    # gnomeExtensions.blur-my-shell
+    # gnomeExtensions.space-bar
+    # gnomeExtensions.forge
+    # gnomeExtensions.just-perfection
+    # gnomeExtensions.user-themes
+    # gnomeExtensions.rounded-window-corners-reborn
+    # gnome-tweaks
     whitesur-gtk-theme
     whitesur-cursors
     whitesur-icon-theme

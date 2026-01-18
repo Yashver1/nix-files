@@ -362,65 +362,65 @@
   dconf = {
     enable = true;
     settings = {
-      "org/gnome/desktop/wm/keybindings" = {
-        minimize = [ ];
-        switch-to-workspace-left = [
-          "<Super>Page_Up"
-          "<Super><Alt>Left"
-          "<Control><Alt>Left"
-          "<Shift><Alt>h"
-        ];
-        switch-to-workspace-right = [
-          "<Super>Page_Down"
-          "<Super><Alt>Right"
-          "<Control><Alt>Right"
-          "<Shift><Alt>l"
-        ];
-
-        switch-to-application-1 = [ ];
-        switch-to-application-2 = [ ];
-        switch-to-application-3 = [ ];
-        switch-to-application-4 = [ ];
-        switch-to-application-5 = [ ];
-        switch-to-application-6 = [ ];
-        switch-to-application-7 = [ ];
-        switch-to-application-8 = [ ];
-
-        switch-to-application-9 = [ ];
-
-        switch-to-workspace-1 = [ "<Shift><Alt>1" ];
-        switch-to-workspace-2 = [ "<Shift><Alt>2" ];
-        switch-to-workspace-3 = [ "<Shift><Alt>3" ];
-        switch-to-workspace-4 = [ "<Shift><Alt>4" ];
-        switch-to-workspace-5 = [ "<Shift><Alt>5" ];
-        switch-to-workspace-6 = [ "<Shift><Alt>6" ];
-        move-to-workspace-1 = [ "<Ctrl><Alt>1" ];
-        move-to-workspace-2 = [ "<Ctrl><Alt>2" ];
-        move-to-workspace-3 = [ "<Ctrl><Alt>3" ];
-        move-to-workspace-4 = [ "<Ctrl><Alt>4" ];
-        move-to-workspace-5 = [ "<Ctrl><Alt>5" ];
-        move-to-workspace-6 = [ "<Ctrl><Alt>6" ];
-        close = [ "<Super>q" ];
-      };
-
-      "org/gnome/settings-daemon/plugins/media-keys" = {
-        custom-keybindings = [
-          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cider/"
-          "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ghostty/"
-        ];
-      };
-
-      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ghostty" = {
-        name = "Launch Ghostty";
-        command = "/etc/profiles/per-user/yash/bin/ghostty";
-        binding = "<Super>t";
-      };
-
-      "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cider" = {
-        name = "Launch Cider";
-        command = "/run/current-system/sw/bin/cider-2 --disable-features=WaylandFractionalScaleV1 --platform-ozone-hint=wayland";
-        binding = "<Super>m";
-      };
+      # "org/gnome/desktop/wm/keybindings" = {
+      #   minimize = [ ];
+      #   switch-to-workspace-left = [
+      #     "<Super>Page_Up"
+      #     "<Super><Alt>Left"
+      #     "<Control><Alt>Left"
+      #     "<Shift><Alt>h"
+      #   ];
+      #   switch-to-workspace-right = [
+      #     "<Super>Page_Down"
+      #     "<Super><Alt>Right"
+      #     "<Control><Alt>Right"
+      #     "<Shift><Alt>l"
+      #   ];
+      #
+      #   switch-to-application-1 = [ ];
+      #   switch-to-application-2 = [ ];
+      #   switch-to-application-3 = [ ];
+      #   switch-to-application-4 = [ ];
+      #   switch-to-application-5 = [ ];
+      #   switch-to-application-6 = [ ];
+      #   switch-to-application-7 = [ ];
+      #   switch-to-application-8 = [ ];
+      #
+      #   switch-to-application-9 = [ ];
+      #
+      #   switch-to-workspace-1 = [ "<Shift><Alt>1" ];
+      #   switch-to-workspace-2 = [ "<Shift><Alt>2" ];
+      #   switch-to-workspace-3 = [ "<Shift><Alt>3" ];
+      #   switch-to-workspace-4 = [ "<Shift><Alt>4" ];
+      #   switch-to-workspace-5 = [ "<Shift><Alt>5" ];
+      #   switch-to-workspace-6 = [ "<Shift><Alt>6" ];
+      #   move-to-workspace-1 = [ "<Ctrl><Alt>1" ];
+      #   move-to-workspace-2 = [ "<Ctrl><Alt>2" ];
+      #   move-to-workspace-3 = [ "<Ctrl><Alt>3" ];
+      #   move-to-workspace-4 = [ "<Ctrl><Alt>4" ];
+      #   move-to-workspace-5 = [ "<Ctrl><Alt>5" ];
+      #   move-to-workspace-6 = [ "<Ctrl><Alt>6" ];
+      #   close = [ "<Super>q" ];
+      # };
+      #
+      # "org/gnome/settings-daemon/plugins/media-keys" = {
+      #   custom-keybindings = [
+      #     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cider/"
+      #     "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ghostty/"
+      #   ];
+      # };
+      #
+      # "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/ghostty" = {
+      #   name = "Launch Ghostty";
+      #   command = "/etc/profiles/per-user/yash/bin/ghostty";
+      #   binding = "<Super>t";
+      # };
+      #
+      # "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/cider" = {
+      #   name = "Launch Cider";
+      #   command = "/run/current-system/sw/bin/cider-2 --disable-features=WaylandFractionalScaleV1 --platform-ozone-hint=wayland";
+      #   binding = "<Super>m";
+      # };
 
       # "org/gnome/shell/extensions/user-theme" = {
       #   name = "WhiteSur-gtk-theme";
@@ -436,28 +436,28 @@
       #   experimental-features = [ "scale-monitor-framebuffer" ];
       # };
       #
-      "org/gnome/mutter" = {
-        dynamic-workspaces = false;
-      };
-
-      "org/gnome/desktop/wm/preferences" = {
-        num-workspaces = 6;
-      };
-
-      "org/gnome/terminal/legacy" = {
-        headerbar = false;
-      };
-      "org/gnome/shell" = {
-        enabled-extensions = [
-          pkgs.gnomeExtensions.blur-my-shell.extensionUuid
-          pkgs.gnomeExtensions.space-bar.extensionUuid
-          pkgs.gnomeExtensions.forge.extensionUuid
-          pkgs.gnomeExtensions.just-perfection.extensionUuid
-          pkgs.gnomeExtensions.user-themes.extensionUuid
-          pkgs.gnomeExtensions.rounded-window-corners-reborn.extensionUuid
-
-        ];
-      };
+      # "org/gnome/mutter" = {
+      #   dynamic-workspaces = false;
+      # };
+      #
+      # "org/gnome/desktop/wm/preferences" = {
+      #   num-workspaces = 6;
+      # };
+      #
+      # "org/gnome/terminal/legacy" = {
+      #   headerbar = false;
+      # };
+      # "org/gnome/shell" = {
+      #   enabled-extensions = [
+      #     pkgs.gnomeExtensions.blur-my-shell.extensionUuid
+      #     pkgs.gnomeExtensions.space-bar.extensionUuid
+      #     pkgs.gnomeExtensions.forge.extensionUuid
+      #     pkgs.gnomeExtensions.just-perfection.extensionUuid
+      #     pkgs.gnomeExtensions.user-themes.extensionUuid
+      #     pkgs.gnomeExtensions.rounded-window-corners-reborn.extensionUuid
+      #
+      #   ];
+      # };
 
       # "org/gnome/desktop/interface" = {
       #   font-name = "Inter Variable Medium 11";
