@@ -347,7 +347,7 @@
       };
     };
     iconTheme = {
-      name = "Tela-circle";
+      name = "Tela-circle-black-dark";
       package = pkgs.tela-circle-icon-theme.override {
         colorVariants = [ "black" ];
       };
