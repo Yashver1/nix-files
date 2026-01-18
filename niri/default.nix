@@ -110,7 +110,7 @@
           argv = [
             "swaybg"
             "-i"
-            "/home/yash/Downloads/a_colorful_mask_on_a_black_background.jpg"
+            "/home/yash/Downloads/wallpapers/a_colorful_mask_on_a_black_background.jpg"
           ];
         }
       ];
@@ -142,8 +142,8 @@
         {
           matches = [
             {
-              "app-id" = ''firefox$'';
-              title = ''^Picture-in-Picture$'';
+              "app-id" = "firefox$";
+              title = "^Picture-in-Picture$";
             }
           ];
           open-floating = true;
