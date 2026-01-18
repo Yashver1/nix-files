@@ -130,6 +130,8 @@
     ];
   };
 
+  hardware.i2c.enable = true;
+
   #Bluetooth
   hardware.bluetooth = {
     enable = true;
@@ -270,6 +272,7 @@
     dolphin-emu
     anki-bin
     nautilus
+    ddcutil
     uget
     shadps4
     poppler
