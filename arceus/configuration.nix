@@ -265,7 +265,7 @@
     lsfg-vk-ui
     lsfg-vk
     dolphin-emu
-    kdePackages.dolphin
+    nautilus
     anki-bin
     uget
     shadps4
