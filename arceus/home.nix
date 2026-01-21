@@ -242,6 +242,12 @@
 
   };
 
+  programs.ssh = {
+    enable = true;
+    publicKeyFile = "/home/yash/secrets/nixos_id_ed25519.pub";
+
+  };
+
   qt = {
     enable = true;
     platformTheme.name = "qtct";
