@@ -239,9 +239,19 @@
 
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = [ "yash" ];
-  virtualisation.libvirtd.enable = true;
-  virtualisation.spiceUSBRedirection.enable = true;
-  virtualisation.libvirtd.qemu.swtpm.enable = true;
+
+  virtualisation = {
+    libvirtd = {
+      enable = true;
+      qemu = {
+        swtpm.enable = true;
+        ovmf.enable = true;
+        ovmf.packages = [ pkgs.OVMFFull.fd ];
+      };
+    };
+    spiceUSBRedirection.enable = true;
+  };
+  services.spice-vdagentd.enable = true;
 
   virtualisation.docker = {
     enable = true;
@@ -264,6 +274,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    virt-viewer
+    spice
+    spice-gtk
+    spice-protocol
+    win-virtio
+    win-spice
     libreoffice-qt-fresh
     cava
     adwaita-fonts
