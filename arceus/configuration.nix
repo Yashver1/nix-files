@@ -241,6 +241,7 @@
   users.groups.libvirtd.members = [ "yash" ];
   virtualisation.libvirtd.enable = true;
   virtualisation.spiceUSBRedirection.enable = true;
+  virtualisation.tpm.enable = true;
 
   virtualisation.docker = {
     enable = true;
