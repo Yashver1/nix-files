@@ -56,7 +56,16 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.kernelModules = [
+    "vfio_pci"
+    "vfio"
+    "vfio_iommu_type1"
+  ];
 
+  boot.kernelParams = [
+    "module_blacklist=amdgpu"
+    "amd_iommu=on"
+  ];
   # ZSH
   programs.zsh.enable = true;
   # users.defaultUserShell = pkgs.zsh;

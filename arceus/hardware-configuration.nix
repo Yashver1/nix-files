@@ -25,7 +25,6 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amt" ];
   boot.extraModulePackages = [ ];
-  boot.kernelParams = [ "module_blacklist=amdgpu" ];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/cad69950-69c0-431e-bee6-480270c6d78d";
