@@ -273,6 +273,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     virt-viewer
+    swtpm
     spice
     spice-gtk
     spice-protocol
