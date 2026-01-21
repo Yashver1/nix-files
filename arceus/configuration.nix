@@ -205,7 +205,9 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.yash = {
-    openssh.authorizedKeys.keyFiles = [ "/home/yash/secrets/nixos_id_ed25519.pub" ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJGj+VDfDRSc49RFeHdQFsEQJ0XHc4bSV0k6AfCEb4MQ yashver"
+    ];
     isNormalUser = true;
     description = "Yashver Shori";
     extraGroups = [
