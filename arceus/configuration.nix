@@ -205,6 +205,7 @@
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.yash = {
+    openssh.authorizedKeys.keyFiles = [ "/home/yash/secrets/nixos_id_ed25519.pub" ];
     isNormalUser = true;
     description = "Yashver Shori";
     extraGroups = [
@@ -433,7 +434,8 @@
     enable = true;
     ports = [ 22 ];
     settings = {
-      PasswordAuthentication = true;
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
       AllowUsers = [ "yash" ]; # Allows all users by default. Can be [ "user1" "user2" ]
       UseDns = true;
       X11Forwarding = false;
