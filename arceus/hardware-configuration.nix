@@ -34,6 +34,7 @@
   boot.kernelParams = [
     "amd_iommu=on"
     "iommu=pt"
+    "module_blacklist=amdgpu"
   ];
   boot.extraModulePackages = [ ];
 
