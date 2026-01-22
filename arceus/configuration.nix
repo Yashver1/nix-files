@@ -63,7 +63,6 @@
   ];
 
   boot.kernelParams = [
-    "module_blacklist=amdgpu"
     "amd_iommu=on"
     "iommu=pt"
   ];
