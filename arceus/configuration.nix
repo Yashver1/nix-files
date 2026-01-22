@@ -53,19 +53,6 @@
 
   };
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.kernelModules = [
-    "vfio_pci"
-    "vfio"
-    "vfio_iommu_type1"
-  ];
-
-  boot.kernelParams = [
-    "amd_iommu=on"
-    "iommu=pt"
-  ];
   # ZSH
   programs.zsh.enable = true;
   # users.defaultUserShell = pkgs.zsh;

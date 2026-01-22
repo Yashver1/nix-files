@@ -23,7 +23,18 @@
     "sd_mod"
   ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amt" ];
+  boot.kernelModules = [
+    "kvm-amd"
+    "vfio-pci"
+  ];
+
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.kernelParams = [
+    "amd_iommu=on"
+    "iommu=pt"
+  ];
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
