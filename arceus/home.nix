@@ -187,7 +187,7 @@
         source "$(fzf-share)/completion.zsh"
       fi
 
-      source <(fzf --zsh)
+      eval "$(fzf --zsh)"
     '';
 
     envExtra = ''
