@@ -349,6 +349,7 @@
     mangohud
     protonup-ng
     fzf
+    gpu-screen-recorder-gtk
     virtualgl
     gcc
     gnumake
