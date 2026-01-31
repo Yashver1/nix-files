@@ -279,6 +279,7 @@
     swtpm
     spice
     spice-gtk
+    gemini-cli
     spice-protocol
     virtio-win
     win-spice
