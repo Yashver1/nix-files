@@ -279,6 +279,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     w3m
+    kavita
     wget
     lsof
     dnsmasq
