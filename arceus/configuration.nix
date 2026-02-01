@@ -279,7 +279,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     w3m
-    koreader
     wget
     lsof
     dnsmasq
