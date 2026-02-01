@@ -278,6 +278,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    w3m
     wget
     lsof
     dnsmasq
