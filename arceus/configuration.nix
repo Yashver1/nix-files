@@ -281,6 +281,7 @@
     w3m
     wget
     lsof
+    calibre
     dnsmasq
     virt-viewer
     swtpm
