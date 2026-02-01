@@ -114,7 +114,13 @@
   # services.displayManager.gdm.enable = true;
   # services.desktopManager.gnome.enable = true;
 
-  services.displayManager.ly.enable = true;
+  services.displayManager.ly = {
+    enable = true;
+    settings = {
+      session_log = "/home/yash/.local/state/ly-session.log";
+    };
+
+  };
 
   #Enable Opengl
   hardware.graphics = {
