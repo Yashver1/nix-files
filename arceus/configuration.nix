@@ -245,7 +245,6 @@
   nixpkgs.config.allowUnfree = true;
 
   #virtualisation
-
   programs.virt-manager.enable = true;
   users.groups.libvirtd.members = [ "yash" ];
 
