@@ -110,8 +110,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # enable KDE as an option
-  services.desktopManager.plasma6.enable = true;
+  # enable KDE as an option  (conflicts with gnome)
+  # services.desktopManager.plasma6.enable = true;
 
   # Enable the GNOME Desktop Environment.
   # services.displayManager.gdm.enable = true;
