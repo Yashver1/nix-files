@@ -239,7 +239,6 @@
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
-  programs.gpu-screen-recorder.enable = true;
 
   # Install firefox.
   programs.firefox.enable = true;
@@ -365,7 +364,6 @@
     mangohud
     protonup-ng
     fzf
-    gpu-screen-recorder-gtk
     gpu-screen-recorder
 
     virtualgl
