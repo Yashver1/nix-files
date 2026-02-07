@@ -365,6 +365,7 @@
     mangohud
     protonup-ng
     fzf
+    gpu-screen-recorder-gtk
     gpu-screen-recorder
 
     virtualgl
