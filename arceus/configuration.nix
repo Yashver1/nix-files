@@ -405,6 +405,7 @@
     bluez-tools
     zapzap
     ghc
+    hlint
 
     # NIRI pkgs
     swaybg
