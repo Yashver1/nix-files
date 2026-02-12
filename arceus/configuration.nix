@@ -387,6 +387,7 @@
     nix-search-tv
     ripgrep
     nodejs_24
+    pnpm
     libgccjit
     gdb
     unzip
