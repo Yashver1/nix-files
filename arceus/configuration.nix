@@ -388,6 +388,7 @@
     ripgrep
     nodejs_24
     pnpm
+    ngrok
     libgccjit
     gdb
     unzip
