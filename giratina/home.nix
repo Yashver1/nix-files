@@ -1,6 +1,17 @@
-{ config, pkgs, ... }:
+{
+  inputs,
+  config,
+  pkgs,
+  ...
+}:
 
 {
+
+  imports = [
+    ../terminal/zsh.nix
+    ../terminal/tmux.nix
+  ];
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "yashver";
@@ -41,13 +52,11 @@
     macos-titlebar-style = hidden
     macos-option-as-alt = true
     theme = Apple Classic
+    background-opacity = 0.8
     window-padding-balance = true
     window-padding-x = 25
     window-padding-y = 15
-    keybind = "alt+right=unbind";
-    keybind = "alt+left=unbind";
-    keybind = "alt+up=unbind";
-    keybind = "alt+down=unbind";
+    font-family = "JetBrainsMono Nerd Font Mono"
   '';
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -82,10 +91,6 @@
   #  /etc/profiles/per-user/yash/etc/profile.d/hm-session-vars.sh
   #
   #
-  imports = [
-    ../terminal/zsh.nix
-    ../terminal/tmux.nix
-  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -95,7 +100,7 @@
       l = "lsd -l";
       la = "lsd -la";
       ls = "lsd";
-      nb = "sudo darwin-rebuild switch --flake ~/.config/nix";
+      nb = " git -C /Users/yashver/.config/nix add . && git -C /Users/yashver/.config/nix commit -m 'flake update: nix-darwin (mac-pro)' && git -C /Users/yashver/.config/nix push  origin master && sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
     };
 
     initContent = ''
@@ -109,6 +114,9 @@
 
       # fzf
       source <(fzf --zsh)
+
+      #starship
+      eval "$(starship init zsh)"
 
       # NVM (Homebrew)
       export HOMEBREW_PREFIX="/opt/homebrew"

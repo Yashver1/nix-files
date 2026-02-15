@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "lazydocker"
       "rust-analyzer"
       "libpq"
       "ffmpeg"
