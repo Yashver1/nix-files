@@ -18,6 +18,7 @@
     cargo
     rustfmt
     nixfmt
+    broot
   ];
 
   system.primaryUser = "yashver";
