@@ -98,7 +98,7 @@
       l = "lsd -l";
       la = "lsd -la";
       ls = "lsd";
-      nb = "sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
+      nb = " git -C /Users/yashver/.config/nix add . && git -C /Users/yashver/.config/nix commit -m 'flake update: nix-darwin (mac-pro)' && git -C /Users/yashver/.config/nix push  origin master && sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
     };
 
     initContent = ''
