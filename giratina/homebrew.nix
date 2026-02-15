@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "statix"
       "rust-analyzer"
       "libpq"
       "ffmpeg"
@@ -18,6 +19,7 @@
       "ffuf"
       "fmt"
       "fswatch"
+      "starship"
       "gh"
       "git"
       "go"
@@ -52,9 +54,9 @@
       "lazygit"
       "ruby"
       "pipx"
-
       "tailscale"
       "llvm@20"
+      "btop"
     ];
 
     casks = [
@@ -64,7 +66,7 @@
       "dbeaver-community"
       "font-fira-code"
       "font-hack-nerd-font"
-      "hopper-disassembler"
+      # "hopper-disassembler"
       "mactex"
       "ngrok"
       "pgadmin4"
@@ -72,6 +74,8 @@
       "stats"
       "geekbench"
       "tailscale-app"
+      "soundsource"
+      "omniwm"
     ];
 
     masApps = {
@@ -92,10 +96,12 @@
       "WeChat" = 836500024;
       "Wireless@SGx" = 1449928544;
       "Yoink" = 457622435;
+      "Shadowrocket" = 932747118;
     };
 
     taps = [
       "nikitabobko/tap"
+      "BarutSRB/tap"
     ];
 
     onActivation.cleanup = "zap";
