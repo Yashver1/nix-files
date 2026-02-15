@@ -53,6 +53,7 @@
     macos-option-as-alt = true
     theme = Apple Classic
     background-opacity = 0.8
+    background-blur = true
     window-padding-balance = true
     window-padding-x = 25
     window-padding-y = 15
