@@ -54,15 +54,14 @@
       "lazygit"
       "ruby"
       "pipx"
-      "tailscale"
       "llvm@20"
       "btop"
+      "asmvik/formulae/yabai"
     ];
 
     casks = [
       "slack"
       "ghostty"
-      "aerospace"
       "dbeaver-community"
       "font-fira-code"
       "font-hack-nerd-font"
@@ -70,12 +69,9 @@
       "mactex"
       "ngrok"
       "pgadmin4"
-      "playcover-community"
       "stats"
       "geekbench"
-      "tailscale-app"
       "soundsource"
-      "omniwm"
     ];
 
     masApps = {
@@ -101,7 +97,7 @@
 
     taps = [
       "nikitabobko/tap"
-      "BarutSRB/tap"
+      "asmvik/formulae"
     ];
 
     onActivation.cleanup = "zap";
