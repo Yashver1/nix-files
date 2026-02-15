@@ -11,13 +11,14 @@
   ];
   nixpkgs.config.allowUnfree = true;
   nix.enable = false;
-  environment.systemPackages = with pkgs;[
+  environment.systemPackages = with pkgs; [
     ttyper
     fastfetch
     rustc
     cargo
     rustfmt
     nixfmt
+    nitch
   ];
 
   system.primaryUser = "yashver";
