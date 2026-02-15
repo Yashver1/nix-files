@@ -68,6 +68,7 @@
       "dbeaver-community"
       "font-fira-code"
       "font-hack-nerd-font"
+      "font-jetbrains-mono"
       # "hopper-disassembler"
       "mactex"
       "ngrok"
