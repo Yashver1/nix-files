@@ -57,9 +57,12 @@
       "llvm@20"
       "btop"
       "asmvik/formulae/yabai"
+      "asmvik/formulae/skhd"
+      "sketchybar"
     ];
 
     casks = [
+      "karabiner-elements"
       "slack"
       "ghostty"
       "dbeaver-community"
@@ -98,6 +101,7 @@
     taps = [
       "nikitabobko/tap"
       "asmvik/formulae"
+      "FelixKratz/formulae"
     ];
 
     onActivation.cleanup = "zap";
