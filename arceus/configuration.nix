@@ -408,6 +408,7 @@
     zapzap
     ghc
     hlint
+    bash-language-server
 
     # NIRI pkgs
     swaybg
