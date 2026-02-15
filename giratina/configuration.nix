@@ -19,6 +19,7 @@
     rustfmt
     nixfmt
     broot
+    claude-code
   ];
 
   system.primaryUser = "yashver";
