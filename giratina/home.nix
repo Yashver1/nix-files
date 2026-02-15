@@ -52,7 +52,7 @@
     macos-titlebar-style = hidden
     macos-option-as-alt = true
     theme = Apple Classic
-    background-opacity = 0.8
+    background-opacity = 0.7
     background-blur = true
     window-padding-balance = true
     window-padding-x = 25
