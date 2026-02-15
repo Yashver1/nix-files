@@ -56,7 +56,7 @@
     window-padding-balance = true
     window-padding-x = 25
     window-padding-y = 15
-    font-family = "JetBrainsMono"
+    font-family = "JetBrains Mono"
   '';
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
