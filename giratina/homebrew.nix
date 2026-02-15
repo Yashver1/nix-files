@@ -59,6 +59,7 @@
       "asmvik/formulae/yabai"
       "asmvik/formulae/skhd"
       "sketchybar"
+      "nitch"
     ];
 
     casks = [
