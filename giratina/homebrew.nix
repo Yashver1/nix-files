@@ -3,6 +3,11 @@
     enable = true;
 
     brews = [
+      "delta"
+      "eza"
+      "tldr"
+      "thefuck"
+      "bat"
       "lazydocker"
       "statix"
       "rust-analyzer"
