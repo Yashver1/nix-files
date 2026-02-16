@@ -119,6 +119,9 @@
       #starship
       eval "$(starship init zsh)"
 
+      # f*ck
+      eval $(thefuck --alias)
+
       # NVM (Homebrew)
       export HOMEBREW_PREFIX="/opt/homebrew"
       export NVM_DIR="$HOME/.nvm"
