@@ -99,8 +99,8 @@
   programs.zsh = {
     shellAliases = {
       l = "lsd -l";
-      la = "lsd -la";
-      ll = "exa -lT";
+      la = "eza -lTa";
+      ll = "eza -lT";
       ls = "lsd";
       nb = " git -C /Users/yashver/.config/nix add . && git -C /Users/yashver/.config/nix commit -m 'flake update: nix-darwin (mac-pro)' && git -C /Users/yashver/.config/nix push  origin master && sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
     };
