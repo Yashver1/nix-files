@@ -103,6 +103,10 @@
     };
   };
 
+  programs.yazi = {
+    enable = true;
+  };
+
   programs.zsh = {
     shellAliases = {
       la = "broot -sdph";
@@ -116,6 +120,15 @@
       export PYENV_ROOT="$HOME/.pyenv"
       [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
       eval "$(pyenv init -)"
+
+      # Yazi
+      function y() {
+        local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+        yazi "$@" --cwd-file="$tmp"
+        IFS= read -r -d \'\' cwd < "$tmp"
+        [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+        rm -f -- "$tmp"
+      }
 
       # Zoxide
       # eval "$(zoxide init zsh)"
