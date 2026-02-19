@@ -4,7 +4,7 @@
 
     brews = [
       "delta"
-      "eza"
+      # "eza"
       "tldr"
       "thefuck"
       "bat"
