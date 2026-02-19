@@ -96,6 +96,13 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  programs.broot = {
+    enable = true;
+    settings = {
+      modal = true;
+    };
+  };
+
   programs.zsh = {
     shellAliases = {
       la = "eza -lTa";

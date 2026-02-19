@@ -18,7 +18,6 @@
     cargo
     rustfmt
     nixfmt
-    broot
     claude-code
 
   ];
