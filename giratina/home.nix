@@ -98,7 +98,6 @@
 
   programs.zsh = {
     shellAliases = {
-      l = "lsd -l";
       la = "eza -lTa";
       ll = "eza -lT";
       ls = "lsd";
