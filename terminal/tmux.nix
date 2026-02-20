@@ -4,7 +4,6 @@
     enable = true;
 
     prefix = "C-\\\\";
-
     sensibleOnTop = true;
     plugins = with pkgs.tmuxPlugins; [
       sensible
@@ -16,8 +15,7 @@
           set -g @vim_navigator_mapping_right 'C-l'
           set -g @vim_navigator_mapping_up 'C-k'
           set -g @vim_navigator_mapping_down 'C-j'
-          # FIX 2: Never use '''''' in Nix strings. Use "" for empty.
-          set -g @vim_navigator_mapping_prev ""
+          set -g @vim_navigator_mapping_prev ''''''
         '';
       }
 
@@ -30,6 +28,7 @@
           set -g @minimal-tmux-status "bottom"
         '';
       }
+
     ];
 
     extraConfig = ''
@@ -39,11 +38,8 @@
       bind -n M-j resize-pane -D 5
       bind -n M-h resize-pane -L 5
       bind -n M-l resize-pane -R 5
-
-      # Ensure the prefix is bound correctly with quotes in the final config
-      unbind C-b
-      set -g prefix 'C-\'
-      bind-key 'C-\' send-prefix
     '';
+
   };
+
 }
