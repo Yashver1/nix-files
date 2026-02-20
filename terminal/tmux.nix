@@ -3,7 +3,7 @@
   programs.tmux = {
     enable = true;
 
-    prefix = "C-\\";
+    prefix = "C-\\\\";
     sensibleOnTop = true;
     plugins = with pkgs.tmuxPlugins; [
       sensible
