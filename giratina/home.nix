@@ -111,8 +111,7 @@
   programs.zsh = {
     shellAliases = {
       la = "broot -sdph";
-      ll = "broot -sdp";
-      ls = "lsd";
+      ls = "broot -sdp";
       nb = " git -C /Users/yashver/.config/nix add . && git -C /Users/yashver/.config/nix commit -m 'flake update: nix-darwin (mac-pro)' && git -C /Users/yashver/.config/nix push  origin master && sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
     };
 
