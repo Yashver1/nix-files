@@ -19,7 +19,6 @@
     rustfmt
     nixfmt
     claude-code
-    reattach-to-user-namespace
 
   ];
 
