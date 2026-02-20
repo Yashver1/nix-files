@@ -16,8 +16,8 @@
           set -g @vim_navigator_mapping_right 'C-l'
           set -g @vim_navigator_mapping_up 'C-k'
           set -g @vim_navigator_mapping_down 'C-j'
-          # Fix 2: Use regular double quotes for an empty value
-          set -g @vim_navigator_mapping_prev "" 
+          # FIX 2: Never use '''''' in Nix strings. Use "" for empty.
+          set -g @vim_navigator_mapping_prev ""
         '';
       }
 
@@ -40,9 +40,10 @@
       bind -n M-h resize-pane -L 5
       bind -n M-l resize-pane -R 5
 
-      # Explicitly bind the prefix again just in case
+      # Ensure the prefix is bound correctly with quotes in the final config
       unbind C-b
-      bind-key C-\\ send-prefix
+      set -g prefix 'C-\'
+      bind-key 'C-\' send-prefix
     '';
   };
 }
