@@ -2,6 +2,7 @@
 {
   programs.tmux = {
     enable = true;
+
     prefix = "C-\\\\";
     sensibleOnTop = true;
     plugins = with pkgs.tmuxPlugins; [
