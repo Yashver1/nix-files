@@ -179,11 +179,6 @@
     FZF_COMPLETION_TRIGGER = "~~";
   };
 
-  programs.tmux.shell = "${pkgs.zsh}/bin/zsh";
-  programs.tmux.extraConfig = ''
-    set-option -g default-command "/nix/store/d52zb40s3fi49ad26npvwh6gylpwf44x-reattach-to-user-namespace-2.9/bin/reattach-to-user-namespace -l ${pkgs.zsh}/bin/zsh"
-  '';
-
   programs.neovim = {
     enable = true;
   };
