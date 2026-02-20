@@ -4,9 +4,10 @@
     enable = true;
 
     prefix = "C-\\\\";
+
     sensibleOnTop = true;
     plugins = with pkgs.tmuxPlugins; [
-      # sensible
+      sensible
 
       {
         plugin = vim-tmux-navigator;
@@ -15,7 +16,8 @@
           set -g @vim_navigator_mapping_right 'C-l'
           set -g @vim_navigator_mapping_up 'C-k'
           set -g @vim_navigator_mapping_down 'C-j'
-          set -g @vim_navigator_mapping_prev ''''''
+          # Fix 2: Use regular double quotes for an empty value
+          set -g @vim_navigator_mapping_prev "" 
         '';
       }
 
@@ -28,7 +30,6 @@
           set -g @minimal-tmux-status "bottom"
         '';
       }
-
     ];
 
     extraConfig = ''
@@ -38,8 +39,10 @@
       bind -n M-j resize-pane -D 5
       bind -n M-h resize-pane -L 5
       bind -n M-l resize-pane -R 5
+
+      # Explicitly bind the prefix again just in case
+      unbind C-b
+      bind-key C-\\ send-prefix
     '';
-
   };
-
 }
