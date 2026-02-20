@@ -5,6 +5,7 @@
 
     prefix = "C-\\\\";
     sensibleOnTop = true;
+    shell = "${pkgs.zsh}/bin/zsh";
     plugins = with pkgs.tmuxPlugins; [
       sensible
 
