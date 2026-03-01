@@ -409,6 +409,11 @@
     ghc
     hlint
     bash-language-server
+    delta
+    eza
+    tldr
+    thefuck
+    bat
 
     # NIRI pkgs
     swaybg
