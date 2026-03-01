@@ -414,7 +414,6 @@
     swaybg
     inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
     xwayland-satellite
-
     # GNOME Extensions
     # gnomeExtensions.blur-my-shell
     # gnomeExtensions.space-bar
