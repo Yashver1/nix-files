@@ -412,7 +412,7 @@
     delta
     eza
     tldr
-    thefuck
+    pay-respects
     bat
 
     # NIRI pkgs
