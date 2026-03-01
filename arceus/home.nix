@@ -188,6 +188,7 @@
       fi
 
       eval "$(fzf --zsh)"
+      eval "$(pay-respects zsh --alias)"
     '';
 
     envExtra = ''
