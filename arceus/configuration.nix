@@ -414,7 +414,7 @@
     tldr
     pay-respects
     bat
-    nix-locate
+    nix-index
 
     # NIRI pkgs
     swaybg
