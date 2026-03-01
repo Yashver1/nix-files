@@ -414,7 +414,6 @@
     tldr
     pay-respects
     bat
-    nix-search
 
     # NIRI pkgs
     swaybg
