@@ -188,6 +188,7 @@
       fi
 
       eval "$(fzf --zsh)"
+      eval "$(pay-respects zsh --alias)"
     '';
 
     envExtra = ''
@@ -252,6 +253,7 @@
 
   programs.yazi = {
     enable = true;
+    shellWrapperName = "y";
 
   };
 
@@ -274,10 +276,6 @@
     window-padding-balance = true;
     window-padding-x = 25;
     window-padding-y = 15;
-  };
-
-  programs.claude-code = {
-    enable = true;
   };
 
   programs.zoxide = {

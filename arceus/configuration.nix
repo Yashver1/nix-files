@@ -409,12 +409,17 @@
     ghc
     hlint
     bash-language-server
+    delta
+    eza
+    tldr
+    pay-respects
+    bat
+    nix-index
 
     # NIRI pkgs
     swaybg
     inputs.noctalia.packages.${stdenv.hostPlatform.system}.default
     xwayland-satellite
-
     # GNOME Extensions
     # gnomeExtensions.blur-my-shell
     # gnomeExtensions.space-bar
