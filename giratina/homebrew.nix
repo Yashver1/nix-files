@@ -5,6 +5,7 @@
     brews = [
       "delta"
       # "eza"
+      "xcodegen"
       "tldr"
       "thefuck"
       "bat"
