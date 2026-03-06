@@ -432,6 +432,9 @@
     whitesur-cursors
     whitesur-icon-theme
 
+    # Extra
+    gbenchmark
+
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
