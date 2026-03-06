@@ -20,6 +20,7 @@
     nixfmt
     #
     claude-code
+    nix-search-tv
 
   ];
 
