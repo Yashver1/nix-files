@@ -432,7 +432,6 @@
     whitesur-cursors
     whitesur-icon-theme
 
-    # Extra
     gbenchmark
 
   ];
