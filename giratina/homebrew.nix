@@ -83,6 +83,7 @@
       "stats"
       "geekbench"
       "soundsource"
+      "sioyek"
     ];
 
     masApps = {

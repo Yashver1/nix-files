@@ -108,10 +108,6 @@
     shellWrapperName = "y";
   };
 
-  programs.sioyek = {
-    enable = true;
-  };
-
   programs.zsh = {
     shellAliases = {
       la = "broot -sdph";
