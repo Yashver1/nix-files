@@ -349,7 +349,7 @@
     ttyper
     obsidian
     cmake
-    gparted
+    gparted-full
     kmod
     pciutils
     gptfdisk
