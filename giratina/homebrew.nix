@@ -84,6 +84,7 @@
       "geekbench"
       "soundsource"
       "sioyek"
+      "monitorcontrol"
     ];
 
     masApps = {
