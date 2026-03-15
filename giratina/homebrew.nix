@@ -85,6 +85,7 @@
       "soundsource"
       "sioyek"
       "monitorcontrol"
+
     ];
 
     masApps = {
