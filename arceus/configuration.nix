@@ -349,6 +349,7 @@
     ttyper
     obsidian
     cmake
+
     gparted-full
     kmod
     pciutils
