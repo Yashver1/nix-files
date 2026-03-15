@@ -349,8 +349,8 @@
     ttyper
     obsidian
     cmake
-
-    gparted-full
+    gnome-disk-utility
+    gparted
     kmod
     pciutils
     gptfdisk
