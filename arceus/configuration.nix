@@ -282,14 +282,9 @@
     };
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-1.1.10"
-  ];
-
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    ventoy
     w3m
     wget
     lsof
