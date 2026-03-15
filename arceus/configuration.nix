@@ -174,6 +174,8 @@
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  security.polkit.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -351,6 +353,7 @@
     cmake
     gnome-disk-utility
     gparted
+    polkit_gnome
     kmod
     pciutils
     gptfdisk
