@@ -18,9 +18,9 @@
     cargo
     rustfmt
     nixfmt
-    #
     claude-code
     nix-search-tv
+    patchelf
 
   ];
 

@@ -174,7 +174,7 @@
   };
 
   home.sessionVariables = {
-    EDITOR = "neovim";
+    EDITOR = "nvim";
     VCPKG_ROOT = "$HOME/vcpkg";
     GOOGLE_APPLICATION_CREDENTIALS = "$HOME/Downloads/coin-lol-5015cc7b478d.json";
     FZF_COMPLETION_TRIGGER = "~~";

@@ -65,6 +65,7 @@
       "asmvik/formulae/yabai"
       "asmvik/formulae/skhd"
       "sketchybar"
+      "ghidra"
     ];
 
     casks = [
@@ -76,13 +77,13 @@
       "font-hack-nerd-font"
       "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
-      # "hopper-disassembler"
       "mactex"
       "ngrok"
       "pgadmin4"
       "stats"
       "geekbench"
       "soundsource"
+      "sioyek"
     ];
 
     masApps = {
