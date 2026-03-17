@@ -66,7 +66,6 @@
       "asmvik/formulae/skhd"
       "sketchybar"
       "ghidra"
-      "adobe-acrobat-reader"
     ];
 
     casks = [
@@ -86,7 +85,7 @@
       "soundsource"
       "sioyek"
       "monitorcontrol"
-
+      "adobe-acrobat-reader"
     ];
 
     masApps = {
