@@ -66,6 +66,7 @@
       "asmvik/formulae/skhd"
       "sketchybar"
       "ghidra"
+      "adobe-acrobat-reader"
     ];
 
     casks = [
