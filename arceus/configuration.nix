@@ -284,7 +284,6 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
-    gpg
     w3m
     wget
     lsof

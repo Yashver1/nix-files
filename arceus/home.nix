@@ -278,6 +278,10 @@
     window-padding-y = 15;
   };
 
+  programs.gpg = {
+    enable = true;
+  };
+
   programs.zoxide = {
     enable = true;
     options = [ "--cmd cd" ];
