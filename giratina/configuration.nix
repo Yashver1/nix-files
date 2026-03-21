@@ -21,7 +21,6 @@
     claude-code
     nix-search-tv
     patchelf
-
   ];
 
   services.tailscale.enable = true;
