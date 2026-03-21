@@ -24,6 +24,8 @@
 
   ];
 
+  services.tailscale.enable = true;
+
   system.primaryUser = "yashver";
   # Necessary for using flakes on this system.
   nix.settings.experimental-features = "nix-command flakes";
