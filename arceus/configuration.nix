@@ -219,7 +219,11 @@
     packages = with pkgs; [
     ];
     shell = pkgs.zsh;
+  };
 
+  users.users.jordan = {
+    isNormalUser = true;
+    shell = pkgs.zsh;
   };
 
   # Home Manager
