@@ -291,8 +291,13 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
+    ghidra.withExtensions
+    (
+      p: with p; [
+        ret-sync
+      ]
+    )
     checksec
-    ghidra
     xxd
     wireshark-cli
     wireshark
