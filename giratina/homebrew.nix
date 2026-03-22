@@ -50,6 +50,7 @@
       "rp"
       "wireshark"
       "zstd"
+
       "yazi"
       "fzf"
       "unixodbc"
