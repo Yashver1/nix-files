@@ -48,7 +48,6 @@
       "radare2"
       "ripgrep"
       "rp"
-      "wireshark"
       "yazi"
       "fzf"
       "unixodbc"
@@ -67,8 +66,6 @@
       "sketchybar"
       "ghidra"
       "gpg"
-
-      "wireshark"
     ];
 
     casks = [
