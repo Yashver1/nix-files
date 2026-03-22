@@ -291,6 +291,7 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
+    xxd
     wireshark-cli
     wireshark
     w3m
