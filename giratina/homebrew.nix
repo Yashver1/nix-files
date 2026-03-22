@@ -48,6 +48,7 @@
       "radare2"
       "ripgrep"
       "rp"
+      "wireshark"
       "yazi"
       "fzf"
       "unixodbc"
