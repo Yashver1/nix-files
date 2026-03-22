@@ -202,6 +202,7 @@
       # VI_MODE_CURSOR_OPPEND=6
       # MODE_INDICATOR=" "
       # INSERT_MODE_INDICATOR=" "
+      _JAVA_AWT_WM_NONREPARENTING=1
     '';
 
     plugins = [
