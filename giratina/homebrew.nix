@@ -67,6 +67,7 @@
       "sketchybar"
       "ghidra"
       "gpg"
+
       "wireshark"
     ];
 
