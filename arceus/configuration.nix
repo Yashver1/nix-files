@@ -105,6 +105,7 @@
     LC_PAPER = "en_SG.UTF-8";
     LC_TELEPHONE = "en_SG.UTF-8";
     LC_TIME = "en_SG.UTF-8";
+
   };
 
   # Enable the X11 windowing system.
