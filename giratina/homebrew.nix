@@ -68,6 +68,7 @@
       "asmvik/formulae/skhd"
       "sketchybar"
       "gpg"
+      "ghidra"
     ];
 
     casks = [
