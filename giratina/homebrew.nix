@@ -67,7 +67,6 @@
       "asmvik/formulae/yabai"
       "asmvik/formulae/skhd"
       "sketchybar"
-      "ghidra"
       "gpg"
     ];
 
