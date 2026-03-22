@@ -21,6 +21,7 @@
     claude-code
     nix-search-tv
     patchelf
+    zsteg
 
   ];
 
