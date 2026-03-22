@@ -287,16 +287,16 @@
     };
   };
 
+  programs.ghidra = {
+    enable = true;
+    gdb = true;
+  };
+
   services.tailscale.enable = true;
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
-    ghidra.withExtensions
-    (
-      p: with p; [
-        ret-sync
-      ]
-    )
+    ghidra-extensions.ret-sync
     checksec
     xxd
     wireshark-cli
