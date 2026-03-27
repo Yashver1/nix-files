@@ -50,6 +50,7 @@
       "rp"
       "wireshark"
       "yazi"
+      "mullvad-vpn"
       "fzf"
       "unixodbc"
       "openssl"
