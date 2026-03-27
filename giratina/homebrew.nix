@@ -50,7 +50,6 @@
       "rp"
       "wireshark"
       "yazi"
-      "mullvad-vpn"
       "fzf"
       "unixodbc"
       "openssl"
@@ -71,6 +70,7 @@
     ];
 
     casks = [
+      "mullvad-vpn"
       "karabiner-elements"
       "slack"
       "ghostty"
