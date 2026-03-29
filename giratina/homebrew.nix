@@ -53,6 +53,7 @@
       "fzf"
       "unixodbc"
       "openssl"
+      "wget"
       "mysql"
       "zstd"
       "zlib"
