@@ -68,7 +68,6 @@
       "sketchybar"
       "gpg"
       "ghidra"
-      "tree-sitter-cli@0.25.10"
     ];
 
     casks = [
