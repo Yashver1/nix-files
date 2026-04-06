@@ -1,7 +1,6 @@
 {
   homebrew = {
     enable = true;
-
     brews = [
       "delta"
       "xcodegen"
