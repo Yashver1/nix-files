@@ -117,7 +117,6 @@
       "nikitabobko/tap"
       "asmvik/formulae"
       "FelixKratz/formulae"
-
     ];
 
     onActivation.cleanup = "zap";
