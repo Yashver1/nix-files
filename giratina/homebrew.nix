@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "google-benchmark"
       "chafa"
       "delta"
       "xcodegen"
