@@ -68,6 +68,7 @@
       "sketchybar"
       "gpg"
       "ghidra"
+      "inkscape"
     ];
 
     casks = [
