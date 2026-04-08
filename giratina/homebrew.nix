@@ -68,10 +68,10 @@
       "sketchybar"
       "gpg"
       "ghidra"
-      "inkscape"
     ];
 
     casks = [
+      "inkscape"
       "mullvad-vpn"
       "karabiner-elements"
       "slack"
