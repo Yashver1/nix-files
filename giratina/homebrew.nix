@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "chafa"
       "delta"
       "xcodegen"
       "tldr"
