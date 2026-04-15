@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "nmap"
       "google-benchmark"
       "chafa"
       "delta"
