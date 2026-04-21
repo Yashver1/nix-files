@@ -95,6 +95,7 @@
     ];
 
     masApps = {
+
       "Amphetamine"       = 937984704;
       "Dynamic Wallpaper" = 1453504509;
       "GarageBand"        = 682658836;
