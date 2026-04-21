@@ -9,8 +9,10 @@
     ./homebrew.nix
     inputs.home-manager.darwinModules.home-manager
   ];
+
   nixpkgs.config.allowUnfree = true;
   nix.enable = false;
+
   environment.systemPackages = with pkgs; [
     ttyper
     fastfetch
@@ -22,7 +24,6 @@
     nix-search-tv
     patchelf
     zsteg
-
   ];
 
   services.tailscale.enable = true;
