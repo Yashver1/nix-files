@@ -16,7 +16,7 @@
           set -g @vim_navigator_mapping_right 'C-l'
           set -g @vim_navigator_mapping_up 'C-k'
           set -g @vim_navigator_mapping_down 'C-j'
-          set -g @vim_navigator_mapping_prev ''''''
+          set -g @vim_navigator_prefix_mapping_clear_screen ""
         '';
       }
 
@@ -30,6 +30,14 @@
         '';
       }
 
+      {
+        plugin = copycat;
+      }
+
+      {
+        plugin = yank;
+      }
+
     ];
 
     extraConfig = ''
@@ -39,6 +47,13 @@
       bind -n M-j resize-pane -D 5
       bind -n M-h resize-pane -L 5
       bind -n M-l resize-pane -R 5
+      bind-key Escape copy-mode
+      bind -r C-h previous-window
+      bind -r C-l next-window
+      bind-key L last-window
+
+      bind-key | split-window -h -c "#{pane_current_poath}"
+      bind-key _ split-window -v -c "#{pane_current_poath}"
     '';
 
   };
