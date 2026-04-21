@@ -134,8 +134,6 @@
         rm -f -- "$tmp"
       }
 
-      # Zoxide using homebrew opts
-
       # fzf
       source <(fzf --zsh)
 
