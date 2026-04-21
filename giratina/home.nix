@@ -116,7 +116,10 @@
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
     };
 
+    zprof = enable;
+
     initContent = ''
+      zmodload zsh/zprof
       # Pyenv
       export PYENV_ROOT="$HOME/.pyenv"
       [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
