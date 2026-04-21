@@ -116,6 +116,10 @@
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
     };
 
+    initExtra = ''
+      zstyle ':omz:plugins:nvm' lazy yes
+    '';
+
     zprof.enable = true;
 
     initContent = ''
@@ -146,11 +150,11 @@
       # f*ck
       eval $(thefuck --alias)
 
-      # NVM (Homebrew)
-      export HOMEBREW_PREFIX="/opt/homebrew"
-      export NVM_DIR="$HOME/.nvm"
-      [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
-      [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
+      # NVM (Homebrew) [WILL use omz plugin instead]
+      # export HOMEBREW_PREFIX="/opt/homebrew"
+      # export NVM_DIR="$HOME/.nvm"
+      # [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+      # [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
     '';
   };
 

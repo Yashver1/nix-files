@@ -61,6 +61,7 @@
       plugins = [
         "git"
         "vi-mode"
+        "nvm"
       ];
       theme = "robbyrussell";
       custom = "/home/yash/.config/custom-oh-my-zsh/";
