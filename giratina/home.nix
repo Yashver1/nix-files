@@ -116,7 +116,11 @@
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
     };
 
-    zprof.enable = true;
+    localVariables = {
+      ZSH_DISABLE_COMPFIX = "true"; 
+    };
+
+    # zprof.enable = true;
 
     initContent = ''
       # Pyenv
