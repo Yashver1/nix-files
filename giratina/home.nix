@@ -188,5 +188,4 @@
     "macos"
     "zsh-interactive-cd"
   ];
-
 }
