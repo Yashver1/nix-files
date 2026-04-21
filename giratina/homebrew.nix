@@ -82,7 +82,6 @@
       "dbeaver-community"
       "font-fira-code"
       "font-hack-nerd-font"
-      "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
       "mactex"
       "ngrok"
@@ -118,7 +117,6 @@
     };
 
     taps = [
-      "nikitabobko/tap"
       "asmvik/formulae"
       "FelixKratz/formulae"
     ];
