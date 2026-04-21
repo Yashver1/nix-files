@@ -116,10 +116,6 @@
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
     };
 
-    initExtra = ''
-      zstyle ':omz:plugins:nvm' lazy yes
-    '';
-
     zprof.enable = true;
 
     initContent = ''
@@ -139,7 +135,7 @@
       }
 
       # Zoxide
-      # eval "$(zoxide init zsh)"
+      eval "$(zoxide init zsh)"
 
       # fzf
       source <(fzf --zsh)
