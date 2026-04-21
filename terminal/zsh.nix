@@ -61,7 +61,7 @@
       enable = true;
       plugins = [
         "git"
-        "vi-mode"
+        # "vi-mode"
         "nvm"
       ];
       theme = "robbyrussell";
