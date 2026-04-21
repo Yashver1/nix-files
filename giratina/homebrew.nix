@@ -74,6 +74,7 @@
     ];
 
     casks = [
+      "dust"
       "inkscape"
       "mullvad-vpn"
       "karabiner-elements"
