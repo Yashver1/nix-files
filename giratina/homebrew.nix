@@ -95,26 +95,26 @@
       "adobe-acrobat-reader"
     ];
 
-    masApps = {
-      "Amphetamine" = 937984704;
-      "Dynamic Wallpaper" = 1453504509;
-      "GarageBand" = 682658836;
-      "Goodnotes" = 1444383602;
-      "iMovie" = 408981434;
-      "Keynote" = 409183694;
-      "Klack" = 6446206067;
-      "Microsoft Excel" = 462058435;
-      "Microsoft Word" = 462054704;
-      "Numbers" = 409203825;
-      "Pages" = 409201541;
-      "PDFgear" = 6469021132;
-      "SiteSucker" = 442168834;
-      "Telegram" = 747648890;
-      "WeChat" = 836500024;
-      "Wireless@SGx" = 1449928544;
-      "Yoink" = 457622435;
-      "Shadowrocket" = 932747118;
-    };
+    # masApps = {
+    #   "Amphetamine" = 937984704;
+    #   "Dynamic Wallpaper" = 1453504509;
+    #   "GarageBand" = 682658836;
+    #   "Goodnotes" = 1444383602;
+    #   "iMovie" = 408981434;
+    #   "Keynote" = 409183694;
+    #   "Klack" = 6446206067;
+    #   "Microsoft Excel" = 462058435;
+    #   "Microsoft Word" = 462054704;
+    #   "Numbers" = 409203825;
+    #   "Pages" = 409201541;
+    #   "PDFgear" = 6469021132;
+    #   "SiteSucker" = 442168834;
+    #   "Telegram" = 747648890;
+    #   "WeChat" = 836500024;
+    #   "Wireless@SGx" = 1449928544;
+    #   "Yoink" = 457622435;
+    #   "Shadowrocket" = 932747118;
+    # };
 
     taps = [
       "nikitabobko/tap"
