@@ -112,7 +112,6 @@
       "SiteSucker"        = 442168834;
       "Telegram"          = 747648890;
       "WeChat"            = 836500024;
-      "Wireless@SGx"      = 1449928544;
       "Xcode"             = 497799835;
       "Yoink"             = 457622435;
 
