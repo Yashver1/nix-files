@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "dust"
       "nmap"
       "google-benchmark"
       "chafa"
@@ -74,7 +75,6 @@
     ];
 
     casks = [
-      "dust"
       "inkscape"
       "mullvad-vpn"
       "karabiner-elements"
