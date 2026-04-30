@@ -45,7 +45,6 @@
 
         };
 
-
       outputs."DP-1" = {
         scale = 1.5;
         mode = {
@@ -54,7 +53,6 @@
           refresh = 144.000;
 
         };
-
       };
 
       layout = {
