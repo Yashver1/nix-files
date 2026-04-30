@@ -54,7 +54,6 @@
 
         };
       };
-
       layout = {
         gaps = 16;
         center-focused-column = "never";
