@@ -3,6 +3,10 @@
     enable = true;
 
     brews = [
+      "dust"
+      "nmap"
+      "google-benchmark"
+      "chafa"
       "delta"
       "xcodegen"
       "tldr"
@@ -53,6 +57,7 @@
       "fzf"
       "unixodbc"
       "openssl"
+      "wget"
       "mysql"
       "zstd"
       "zlib"
@@ -70,13 +75,14 @@
     ];
 
     casks = [
+      "inkscape"
+      "mullvad-vpn"
       "karabiner-elements"
       "slack"
       "ghostty"
       "dbeaver-community"
       "font-fira-code"
       "font-hack-nerd-font"
-      "font-jetbrains-mono"
       "font-jetbrains-mono-nerd-font"
       "mactex"
       "ngrok"
@@ -90,28 +96,27 @@
     ];
 
     masApps = {
-      "Amphetamine" = 937984704;
-      "Dynamic Wallpaper" = 1453504509;
-      "GarageBand" = 682658836;
-      "Goodnotes" = 1444383602;
-      "iMovie" = 408981434;
-      "Keynote" = 409183694;
-      "Klack" = 6446206067;
-      "Microsoft Excel" = 462058435;
-      "Microsoft Word" = 462054704;
-      "Numbers" = 409203825;
-      "Pages" = 409201541;
-      "PDFgear" = 6469021132;
-      "SiteSucker" = 442168834;
-      "Telegram" = 747648890;
-      "WeChat" = 836500024;
-      "Wireless@SGx" = 1449928544;
-      "Yoink" = 457622435;
-      "Shadowrocket" = 932747118;
+      # "Amphetamine"       = 937984704;
+      # "Dynamic Wallpaper" = 1453504509;
+      # "GarageBand"        = 682658836;
+      # "Goodnotes"         = 1444383602;
+      # "iMovie"            = 408981434;
+      # "Keynote"           = 409183694;
+      # "Klack"             = 6446206067;
+      # "Microsoft Excel"   = 462058435;
+      # "Microsoft Word"    = 462054704;
+      # "Numbers"           = 409203825;
+      # "Pages"             = 409201541;
+      # "PDFgear"           = 6469021132;
+      # "Shadowrocket"      = 932747118;
+      # "SiteSucker"        = 442168834;
+      # "Telegram"          = 747648890;
+      # "WeChat"            = 836500024;
+      # "Xcode"             = 497799835;
+      # "Yoink"             = 457622435;
     };
 
     taps = [
-      "nikitabobko/tap"
       "asmvik/formulae"
       "FelixKratz/formulae"
     ];

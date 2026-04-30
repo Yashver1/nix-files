@@ -112,9 +112,16 @@
     shellAliases = {
       la = "broot -sdph";
       ls = "lsd";
-      nb = " git -C /Users/yashver/.config/nix add . && git -C /Users/yashver/.config/nix commit -m 'flake update: nix-darwin (mac-pro)' && git -C /Users/yashver/.config/nix push  origin master && sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
+      gnb = " git -C /Users/yashver/.config/nix add . && git -C /Users/yashver/.config/nix commit -m 'flake update: nix-darwin (mac-pro)' && git -C /Users/yashver/.config/nix push  origin master && sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
+      nb = "sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
     };
+
+    localVariables = {
+      ZSH_DISABLE_COMPFIX = "true"; 
+    };
+
+    # zprof.enable = true;
 
     initContent = ''
       # Pyenv
@@ -131,8 +138,7 @@
         rm -f -- "$tmp"
       }
 
-      # Zoxide
-      # eval "$(zoxide init zsh)"
+      # Zoxide using homebrew opts
 
       # fzf
       source <(fzf --zsh)
@@ -143,11 +149,11 @@
       # f*ck
       eval $(thefuck --alias)
 
-      # NVM (Homebrew)
-      export HOMEBREW_PREFIX="/opt/homebrew"
-      export NVM_DIR="$HOME/.nvm"
-      [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
-      [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
+      # NVM (Homebrew) [WILL use omz plugin instead]
+      # export HOMEBREW_PREFIX="/opt/homebrew"
+      # export NVM_DIR="$HOME/.nvm"
+      # [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+      # [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
     '';
   };
 
@@ -188,5 +194,4 @@
     "macos"
     "zsh-interactive-cd"
   ];
-
 }
