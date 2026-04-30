@@ -44,6 +44,17 @@
           refresh = 144.000;
 
         };
+
+
+      outputs."DP-1" = {
+        scale = 1.5;
+        mode = {
+          height = 2160;
+          width = 3840;
+          refresh = 144.000;
+
+        };
+
       };
 
       layout = {
