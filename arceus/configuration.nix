@@ -296,6 +296,7 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
+    dust
     stress-ng
     ghidra-extensions.ret-sync
     checksec
