@@ -26,7 +26,10 @@
 
     nixCats.url = "github:BirdeeHub/nixCats-nvim";
 
-    nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    nix-homebrew = {
+      url = "github:zhaofengli/nix-homebrew";
+      inputs.brew-src.url = "github:Homebrew/brew/master";
+    };
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
