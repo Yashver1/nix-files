@@ -294,8 +294,15 @@
 
   services.tailscale.enable = true;
 
+  environment.sessionVariables = {
+    DOTNET_ROOT = "${pkgs.dotnet-sdk}/share/dotnet";
+  };
+
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
+    dotnet-sdk
+    dust
+    stress-ng
     ghidra-extensions.ret-sync
     checksec
     xxd
