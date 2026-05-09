@@ -51,6 +51,7 @@
       bind -r C-h previous-window
       bind -r C-l next-window
       bind-key L last-window
+      setw -g mode-keys vi
 
       bind-key | split-window -h -c "#{pane_current_poath}"
       bind-key _ split-window -v -c "#{pane_current_poath}"

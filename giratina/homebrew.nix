@@ -85,7 +85,6 @@
       "font-hack-nerd-font"
       "font-jetbrains-mono-nerd-font"
       "mactex"
-      "ngrok"
       "pgadmin4"
       "stats"
       "geekbench"
@@ -93,6 +92,7 @@
       "sioyek"
       "monitorcontrol"
       "adobe-acrobat-reader"
+      "google-gemini"
     ];
 
     masApps = {

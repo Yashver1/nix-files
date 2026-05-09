@@ -14,6 +14,7 @@
   nix.enable = false;
 
   environment.systemPackages = with pkgs; [
+    ngrok
     ttyper
     fastfetch
     rustc
