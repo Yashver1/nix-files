@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "gemini-cli"
       "dust"
       "nmap"
       "google-benchmark"
