@@ -12,7 +12,7 @@
       },
       "original": {
         "owner": "Homebrew",
-        "ref": "5.1.7",
+        "ref": "master",
         "repo": "brew",
         "type": "github"
       }
