@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "speedtest"
       "gemini-cli"
       "dust"
       "nmap"
@@ -120,6 +121,7 @@
     taps = [
       "asmvik/formulae"
       "FelixKratz/formulae"
+      "teamookla/speedtest"
     ];
 
     onActivation.cleanup = "zap";
