@@ -189,6 +189,8 @@
     enable = true;
   };
 
+  programs.man.generateCaches = true;
+
   programs.zsh.oh-my-zsh.plugins = [
     "macos"
     "zsh-interactive-cd"
