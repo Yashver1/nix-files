@@ -251,7 +251,10 @@
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
   programs.gamemode.enable = true;
-  programs.steam.extraCompatPackages = [ pkgs.proton-ge-bin ];
+  programs.steam.extraCompatPackages = [
+    pkgs.proton-ge-bin
+    inputs.nix-proton-cachyos.packages.${system}.proton-cachyos
+  ];
 
   # Install firefox.
   programs.firefox.enable = true;
