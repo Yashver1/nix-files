@@ -248,13 +248,16 @@
   boot.blacklistedKernelModules = [ "hid_logitech" ];
 
   # Steam
-  programs.steam.enable = true;
-  programs.steam.gamescopeSession.enable = true;
+  programs.steam = {
+    enable = true;
+    gamescopeSession.enable = true;
+    extraCompatPackages = [
+      pkgs.proton-ge-bin
+      inputs.nix-proton-cachyos.packages.${pkgs.stdenv.hostPlatform.system}.proton-cachyos
+    ];
+  };
+
   programs.gamemode.enable = true;
-  programs.steam.extraCompatPackages = [
-    pkgs.proton-ge-bin
-    inputs.nix-proton-cachyos.packages.${pkgs.system}.proton-cachyos
-  ];
 
   # Install firefox.
   programs.firefox.enable = true;
