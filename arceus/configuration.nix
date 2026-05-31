@@ -28,6 +28,7 @@
 
   services.udev.packages = [
     pkgs.dolphin-emu
+    pkgs.oversteer
   ];
 
   services.udev.extraRules = ''
@@ -242,6 +243,9 @@
     backupFileExtension = "baksss";
   };
 
+  # Wheel
+  hardware.new-lg4ff.enable = true;
+
   # Steam
   programs.steam.enable = true;
   programs.steam.gamescopeSession.enable = true;
@@ -300,6 +304,7 @@
 
   # List packages installed in system profile. To search, run:
   environment.systemPackages = with pkgs; [
+    oversteer
     dotnet-sdk
     dust
     sioyek
