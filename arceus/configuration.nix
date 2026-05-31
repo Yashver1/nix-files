@@ -253,7 +253,6 @@
     gamescopeSession.enable = true;
     extraCompatPackages = [
       pkgs.proton-ge-bin
-      inputs.nix-proton-cachyos.packages.${pkgs.stdenv.hostPlatform.system}.proton-cachyos
     ];
   };
 
