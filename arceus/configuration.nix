@@ -245,6 +245,7 @@
 
   # Wheel
   hardware.new-lg4ff.enable = true;
+  boot.blacklistedKernelModules = [ "hid_logitech" ];
 
   # Steam
   programs.steam.enable = true;
