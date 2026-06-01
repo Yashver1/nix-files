@@ -25,8 +25,6 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [
     "kvm-amd"
-    "vfio-pci"
-    "vfio-pci.ids=10de:2c02,10de:22e9"
   ];
 
   boot.loader.systemd-boot.enable = true;
