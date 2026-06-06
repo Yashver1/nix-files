@@ -124,8 +124,12 @@
       "teamookla/speedtest"
     ];
 
-    onActivation.cleanup = "zap";
-    onActivation.autoUpdate = true;
-    onActivation.upgrade = true;
+    onActivation = {
+      cleanup = "zap";
+      autoUpdate = true;
+      upgrade = true;
+      extraFlags = [ "--force-cleanup" ];
+    };
+
   };
 }
