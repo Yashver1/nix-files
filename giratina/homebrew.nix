@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "lsusb"
       "speedtest"
       "gemini-cli"
       "dust"
@@ -77,6 +78,7 @@
     ];
 
     casks = [
+      "logitech-g-hub"
       "inkscape"
       "mullvad-vpn"
       "karabiner-elements"
@@ -89,6 +91,7 @@
       "mactex"
       "pgadmin4"
       "stats"
+      "tailscale-app"
       "geekbench"
       "soundsource"
       "sioyek"

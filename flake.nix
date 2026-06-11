@@ -30,7 +30,7 @@
 
     nix-homebrew = {
       url = "github:zhaofengli/nix-homebrew";
-      inputs.brew-src.url = "github:Homebrew/brew/master";
+      # inputs.brew-src.url = "github:Homebrew/brew/master";
     };
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
