@@ -5,7 +5,6 @@
     brews = [
       "lsusb"
       "speedtest"
-      "gemini-cli"
       "dust"
       "nmap"
       "google-benchmark"
