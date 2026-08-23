@@ -51,7 +51,7 @@
   home.file.".config/ghostty/config".text = ''
     macos-titlebar-style = hidden
     macos-option-as-alt = true
-    theme = Raycast_Dark
+    theme = Raycast Dark
     background-opacity = 0.7
     background-blur = true
     window-padding-balance = true

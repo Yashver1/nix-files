@@ -77,12 +77,14 @@
     ];
 
     casks = [
-      "logitech-g-hub"
+      "claude-code"
+      "chatgpt-classic"
       "inkscape"
       "mullvad-vpn"
       "karabiner-elements"
       "slack"
       "ghostty"
+      "alfred"
       "dbeaver-community"
       "font-fira-code"
       "font-hack-nerd-font"
