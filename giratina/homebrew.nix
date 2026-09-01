@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "tdf"
       "lsusb"
       "speedtest"
       "dust"
@@ -77,6 +78,7 @@
     ];
 
     casks = [
+      "vorssaint"
       "claude-code"
       "chatgpt-classic"
       "inkscape"
@@ -84,7 +86,6 @@
       "karabiner-elements"
       "slack"
       "ghostty"
-      "alfred"
       "dbeaver-community"
       "font-fira-code"
       "font-hack-nerd-font"
