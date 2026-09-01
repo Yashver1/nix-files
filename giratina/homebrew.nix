@@ -99,7 +99,6 @@
       "sioyek"
       "monitorcontrol"
       "adobe-acrobat-reader"
-      "google-gemini"
     ];
 
     masApps = {
