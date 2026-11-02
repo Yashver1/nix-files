@@ -3,6 +3,7 @@
     enable = true;
 
     brews = [
+      "termshark"
       "tdf"
       "lsusb"
       "speedtest"
@@ -78,8 +79,10 @@
     ];
 
     casks = [
+      "wireshark-chmodbpf"
+      "codex"
       "vorssaint"
-      "claude-code"
+      "claude-code@latest"
       "chatgpt-classic"
       "inkscape"
       "mullvad-vpn"
@@ -129,10 +132,13 @@
     ];
 
     onActivation = {
-      cleanup = "zap";
+      cleanup = "none";
       autoUpdate = true;
       upgrade = true;
-      extraFlags = [ "--force-cleanup" ];
+      extraFlags = [
+        "--force-cleanup"
+        "--zap"
+      ];
     };
 
   };

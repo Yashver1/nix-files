@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    nixpkgs-nvim.url = "github:nixos/nixpkgs/0182a361324364ae3f436a63005877674cf45efb";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -30,7 +32,7 @@
 
     nix-homebrew = {
       url = "github:zhaofengli/nix-homebrew";
-      inputs.brew-src.url = "github:Homebrew/brew/master";
+      inputs.brew-src.url = "github:Homebrew/brew/main";
     };
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";

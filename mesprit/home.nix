@@ -90,7 +90,11 @@
     ../terminal/tmux.nix
   ];
 
-  programs.neovim.enable = true;
+  programs.neovim = {
+    enable = true;
+    withRuby = false;
+    withPython3 = false;
+  };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 

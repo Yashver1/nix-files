@@ -29,6 +29,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
+    inputs.nixpkgs-nvim.legacyPackages.${pkgs.system}.neovim
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -183,10 +184,6 @@
     EDITOR = "nvim";
     VCPKG_ROOT = "$HOME/vcpkg";
     FZF_COMPLETION_TRIGGER = "~~";
-  };
-
-  programs.neovim = {
-    enable = true;
   };
 
   programs.man.generateCaches = true;
