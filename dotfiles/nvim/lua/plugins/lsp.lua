@@ -10,7 +10,21 @@ lsps = {
       "--fallback-style=llvm",
     },
   },
-  lua_ls = {},
+  lua_ls = {
+    settings = {
+      Lua = {
+        diagnostics = {
+          globals = { 'vim' },
+        },
+        workspace = {
+          library = vim.api.nvim_get_runtime_file("", true),
+        },
+        telemetry = {
+          enable = false,
+        },
+      },
+    }
+  },
   termux_language_server = {},
   bashls = {},
   hyprls = {},
