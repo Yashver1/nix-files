@@ -101,7 +101,6 @@
       "soundsource"
       "sioyek"
       "monitorcontrol"
-      "adobe-acrobat-reader"
     ];
 
     masApps = {
