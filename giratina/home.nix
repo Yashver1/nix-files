@@ -125,7 +125,7 @@ in
     shellAliases = {
       la = "broot -sdph";
       ls = "lsd";
-      gnb = " git -C /Users/yashver/.config/nix add . && git -C /Users/yashver/.config/nix commit -m 'flake update: nix-darwin (mac-pro)' && git -C /Users/yashver/.config/nix push  origin master && sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
+      gnb = " git -C /Users/yashver/.config/nix add . && git -C /Users/yashver/.config/nix commit -m 'flake update: nix-darwin (mac-pro)' && git -C /Users/yashver/.config/nix push origin HEAD && sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
       ns = "nix-search-tv print | fzf --preview 'nix-search-tv preview {}' --scheme history";
       nb = "sudo darwin-rebuild switch --flake /Users/yashver/.config/nix/";
     };
@@ -227,16 +227,10 @@ in
     "$HOME/.local/bin"
     "$HOME/.avm/bin"
     "/opt/homebrew/bin"
-    "$HOME/.deno/env"
-    "$HOME/.deno/bin"
     "$HOME/go/bin"
-    "$HOME/.spicetify"
     "/Applications/010 Editor.app/Contents/CmdLine"
     "$HOME/.cargo/bin"
-    "/opt/homebrew/Cellar/libpq/17.6/bin"
-    "$HOME/workspace/dev-envs/rust/codeforces-extractor/result/bin"
     "/Library/TeX/texbin"
-    "$HOME/vcpkg"
   ];
 
   programs.zoxide = {
@@ -246,7 +240,6 @@ in
 
   home.sessionVariables = {
     EDITOR = "nvim";
-    VCPKG_ROOT = "$HOME/vcpkg";
     FZF_COMPLETION_TRIGGER = "~~";
   };
 
