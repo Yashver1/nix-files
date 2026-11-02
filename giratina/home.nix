@@ -1,15 +1,25 @@
 {
   inputs,
   config,
+  lib,
   pkgs,
   ...
 }:
-
+let
+  dotfiles = "${config.home.homeDirectory}/.config/nix/dotfiles";
+  link = path: config.lib.file.mkOutOfStoreSymlink "${dotfiles}/${path}";
+in
 {
+  xdg.configFile = {
+    "ghostty/config".source = link "ghostty/config";
+    "nvim".source = link "nvim";
+    "yabai".source = link "yabai";
+    "skhd".source = link "skhd";
+    "sketchybar".source = link "sketchybar";
+  };
+
 
   imports = [
-    ../terminal/zsh.nix
-    ../terminal/tmux.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -29,7 +39,7 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = with pkgs; [
-    inputs.nixpkgs-nvim.legacyPackages.${pkgs.system}.neovim
+    inputs.nixpkgs-nvim.legacyPackages.${pkgs.stdenv.hostPlatform.system}.neovim
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
@@ -48,18 +58,6 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
-
-  home.file.".config/ghostty/config".text = ''
-    macos-titlebar-style = hidden
-    macos-option-as-alt = true
-    theme = Raycast Dark
-    background-opacity = 0.7
-    background-blur = true
-    window-padding-balance = true
-    window-padding-x = 25
-    window-padding-y = 15
-    font-family = "JetBrainsMono Nerd Font Mono"
-  '';
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -110,6 +108,20 @@
   };
 
   programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+
+    history.size = 1000000;
+    history.ignoreAllDups = true;
+    history.path = "$HOME/.zsh_history";
+    history.ignorePatterns = [
+      "rm *"
+      "pkill *"
+      "cp *"
+    ];
+
     shellAliases = {
       la = "broot -sdph";
       ls = "lsd";
@@ -124,7 +136,18 @@
 
     # zprof.enable = true;
 
-    initContent = ''
+    initContent = lib.mkMerge [
+      (lib.mkOrder 550 ''
+        zstyle ':omz:plugins:nvm' lazy yes
+        function zvm_config() {
+          ZVM_NORMAL_MODE_CURSOR=$ZVM_CURSOR_BLOCK
+          ZVM_INSERT_MODE_CURSOR=$ZVM_CURSOR_BEAM
+          ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+          ZVM_VI_HIGHLIGHT_BACKGROUND=white
+          ZVM_VI_HIGHLIGHT_BACKGROUND=black
+        }
+      '')
+      ''
       # Pyenv
       export PYENV_ROOT="$HOME/.pyenv"
       [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
@@ -155,7 +178,48 @@
       # export NVM_DIR="$HOME/.nvm"
       # [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
       # [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
+      ''
+    ];
+
+    envExtra = ''
+      KEYTIMEOUT=1
+      # VI_MODE_SET_CURSOR=true
+      # VI_MODE_CURSOR_NORMAL=2
+      # VI_MODE_CURSOR_VISUAL=2
+      # VI_MODE_CURSOR_INSERT=6
+      # VI_MODE_CURSOR_OPPEND=6
+      # MODE_INDICATOR=" "
+      # INSERT_MODE_INDICATOR=" "
     '';
+
+    plugins = [
+      {
+        name = "zsh-nix-shell";
+        file = "nix-shell.plugin.zsh";
+        src = pkgs.fetchFromGitHub {
+          owner = "chisui";
+          repo = "zsh-nix-shell";
+          rev = "v0.8.0";
+          sha256 = "1lzrn0n4fxfcgg65v0qhnj7wnybybqzs4adz7xsrkgmcsr0ii8b7";
+        };
+      }
+      {
+        name = "vi-mode";
+        src = pkgs.zsh-vi-mode;
+        file = "share/zsh-vi-mode/zsh-vi-mode.plugin.zsh";
+      }
+    ];
+
+    oh-my-zsh = {
+      enable = true;
+      plugins = [
+        "git"
+        "nvm"
+        "macos"
+        "zsh-interactive-cd"
+      ];
+      theme = "robbyrussell";
+    };
   };
 
   home.sessionPath = [
@@ -186,10 +250,64 @@
     FZF_COMPLETION_TRIGGER = "~~";
   };
 
-  programs.man.generateCaches = true;
+  programs.tmux = {
+    enable = true;
 
-  programs.zsh.oh-my-zsh.plugins = [
-    "macos"
-    "zsh-interactive-cd"
-  ];
+    prefix = "C-\\\\";
+    sensibleOnTop = true;
+    shell = "${pkgs.zsh}/bin/zsh";
+    plugins = with pkgs.tmuxPlugins; [
+      sensible
+
+      {
+        plugin = vim-tmux-navigator;
+        extraConfig = ''
+          set -g @vim_navigator_mapping_left 'C-h'
+          set -g @vim_navigator_mapping_right 'C-l'
+          set -g @vim_navigator_mapping_up 'C-k'
+          set -g @vim_navigator_mapping_down 'C-j'
+          set -g @vim_navigator_prefix_mapping_clear_screen ""
+        '';
+      }
+
+      {
+        plugin = minimal-tmux-status;
+        extraConfig = ''
+          set -g @minimal-tmux-left false
+          set -g @minimal-tmux-fg "#000000"
+          set -g @minimal-tmux-bg "#d1cecb"
+          set -g @minimal-tmux-status "bottom"
+        '';
+      }
+
+      {
+        plugin = copycat;
+      }
+
+      {
+        plugin = yank;
+      }
+
+    ];
+
+    extraConfig = ''
+      set -g mouse on
+      set -g allow-passthrough on
+      bind -n M-k resize-pane -U 5
+      bind -n M-j resize-pane -D 5
+      bind -n M-h resize-pane -L 5
+      bind -n M-l resize-pane -R 5
+      bind-key Escape copy-mode
+      bind -r C-h previous-window
+      bind -r C-l next-window
+      bind-key L last-window
+      setw -g mode-keys vi
+
+      bind-key | split-window -h -c "#{pane_current_path}"
+      bind-key _ split-window -v -c "#{pane_current_path}"
+    '';
+
+  };
+
+  programs.man.generateCaches = true;
 }
